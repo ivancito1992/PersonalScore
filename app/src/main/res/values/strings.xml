@@ -1,0 +1,27 @@
+<resources>
+    <string name="app_name">Personal Score</string>
+
+    <!-- TESTO PARA MODO ESTADISTICO-->
+    <string name="local">HOME</string>
+    <string name="marcador_inicial">0</string>
+    <string name="puntos_jugador">0</string>
+    <string name="visitante">AWAY</string>
+    <string name="estadisticas_iniciales_acierto">0</string>
+    <string name="estadisticas_iniciales_barra"> / </string>
+    <string name="estadisticas_iniciales_total">0</string>
+    <string name="valor1">1</string>
+    <string name="valor2">2</string>
+    <string name="valor3">3</string>
+    <string name="rebotes">Rebotes</string>
+    <string name="asistencias">Asistencias</string>
+    <string name="tapones">Tapon</string>
+    <string name="robos">Robo</string>
+    <string name="tL">1P</string>
+    <string name="t2">2P</string>
+    <string name="t3">3P</string>
+    <string name="añadir">+</string>
+    <string name="nombre">Nombre</string>
+    <string name="esLocal">H</string>
+    <string name="esVisitante">A</string>
+    <string name="back">Deshacer ultima accion</string>
+</resources>

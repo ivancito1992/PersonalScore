@@ -1,0 +1,873 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:background="@drawable/fondo_stats_pc">
+
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:baselineAligned="false">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:id="@+id/estadisticasEquipos"
+            android:layout_weight="1"
+            android:layout_marginRight="10dp">
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="fill_parent"
+                android:layout_height="0dp"
+                android:id="@+id/estadisticasLocal"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:paddingBottom="5dp"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp"
+                android:paddingTop="5dp">
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/textosLocal"
+                    android:gravity="center_vertical">
+
+                    <TextView
+                        android:layout_width="fill_parent"
+                        android:layout_height="0dp"
+                        android:textAppearance="?android:attr/textAppearanceLarge"
+                        android:text="@string/local"
+                        android:id="@+id/equipoLocal"
+                        android:gravity="center"
+                        android:layout_weight="1" />
+
+                    <TextView
+                        android:layout_width="101dp"
+                        android:layout_height="0dp"
+                        android:textAppearance="?android:attr/textAppearanceLarge"
+                        android:text="@string/marcador_inicial"
+                        android:id="@+id/marcadorLocal"
+                        android:textSize="60sp"
+                        style="@style/Marcador"
+                        android:gravity="center"
+                        android:layout_weight="3" />
+
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:id="@+id/estadisticasTiroLocal"
+                        android:gravity="center"
+                        android:layout_weight="1">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textAppearance="?android:attr/textAppearanceLarge"
+                            android:text="@string/estadisticas_iniciales_acierto"
+                            android:id="@+id/tirosAcertadosLocal" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textAppearance="?android:attr/textAppearanceLarge"
+                            android:text="@string/estadisticas_iniciales_barra"
+                            android:id="@+id/barraLocal" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textAppearance="?android:attr/textAppearanceLarge"
+                            android:text="@string/estadisticas_iniciales_total"
+                            android:id="@+id/tirosTiradosLocal" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/botonesLocal"
+                    android:gravity="right">
+
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/botonesLocalTiro">
+
+                        <LinearLayout
+                            android:orientation="horizontal"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:id="@+id/botonesLocalTL">
+
+                            <Button
+                                style="?android:attr/buttonStyleSmall"
+                                android:layout_width="0dp"
+                                android:layout_height="34dp"
+                                android:text="@string/valor1"
+                                android:id="@+id/siLTL"
+                                android:layout_weight="2"
+                                android:layout_marginTop="3dp"
+                                android:layout_marginBottom="3dp"
+                                android:background="@drawable/btn_acierto_accion"
+                                android:layout_marginRight="3dp"
+                                android:textColor="@color/colorLetraBtn"
+                                android:layout_marginLeft="5dp" />
+
+                            <Button
+                                style="?android:attr/buttonStyleSmall"
+                                android:layout_width="0dp"
+                                android:layout_height="34dp"
+                                android:text="@string/valor1"
+                                android:id="@+id/noLTL1"
+                                android:layout_weight="2"
+                                android:layout_marginTop="3dp"
+                                android:layout_marginBottom="3dp"
+                                android:background="@drawable/btn_fallo_accion"
+                                android:textColor="@color/colorLetraBtn" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:orientation="horizontal"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:id="@+id/botonesLocalT2">
+
+                            <Button
+                                style="?android:attr/buttonStyleSmall"
+                                android:layout_width="0dp"
+                                android:layout_height="34dp"
+                                android:text="@string/valor2"
+                                android:id="@+id/siLT2"
+                                android:layout_weight="2"
+                                android:layout_marginTop="3dp"
+                                android:layout_marginBottom="3dp"
+                                android:background="@drawable/btn_acierto_accion"
+                                android:layout_marginRight="3dp"
+                                android:textColor="@color/colorLetraBtn"
+                                android:layout_marginLeft="5dp" />
+
+                            <Button
+                                style="?android:attr/buttonStyleSmall"
+                                android:layout_width="0dp"
+                                android:layout_height="34dp"
+                                android:text="@string/valor2"
+                                android:id="@+id/noLT2"
+                                android:layout_weight="2"
+                                android:layout_marginTop="3dp"
+                                android:layout_marginBottom="3dp"
+                                android:background="@drawable/btn_fallo_accion"
+                                android:textColor="@color/colorLetraBtn" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:orientation="horizontal"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:id="@+id/botonesLocalT3">
+
+                            <Button
+                                style="?android:attr/buttonStyleSmall"
+                                android:layout_width="0dp"
+                                android:layout_height="34dp"
+                                android:text="@string/valor3"
+                                android:id="@+id/siLT3"
+                                android:layout_weight="2"
+                                android:layout_marginTop="3dp"
+                                android:layout_marginBottom="3dp"
+                                android:background="@drawable/btn_acierto_accion"
+                                android:layout_marginRight="3dp"
+                                android:textColor="@color/colorLetraBtn"
+                                android:layout_marginLeft="5dp" />
+
+                            <Button
+                                style="?android:attr/buttonStyleSmall"
+                                android:layout_width="0dp"
+                                android:layout_height="34dp"
+                                android:text="@string/valor3"
+                                android:id="@+id/noLT3"
+                                android:layout_weight="2"
+                                android:layout_marginTop="3dp"
+                                android:layout_marginBottom="3dp"
+                                android:background="@drawable/btn_fallo_accion"
+                                android:textColor="@color/colorLetraBtn" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:gravity="center"
+                android:id="@+id/estadisticasVisitante"
+                android:layout_weight="1">
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/estadisticasVisitante3"
+                    android:paddingBottom="5dp"
+                    android:paddingLeft="5dp"
+                    android:paddingRight="5dp"
+                    android:paddingTop="5dp">
+
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/textosVisitante"
+                        android:gravity="center_vertical">
+
+                        <TextView
+                            android:layout_width="fill_parent"
+                            android:layout_height="0dp"
+                            android:textAppearance="?android:attr/textAppearanceLarge"
+                            android:text="@string/visitante"
+                            android:id="@+id/equipoVisitante"
+                            android:gravity="center"
+                            android:layout_weight="1" />
+
+                        <TextView
+                            android:layout_width="101dp"
+                            android:layout_height="0dp"
+                            android:textAppearance="?android:attr/textAppearanceLarge"
+                            android:text="@string/marcador_inicial"
+                            android:id="@+id/marcadorVisitante"
+                            android:textSize="60sp"
+                            style="@style/Marcador"
+                            android:gravity="center"
+                            android:layout_weight="3" />
+
+                        <LinearLayout
+                            android:orientation="horizontal"
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:id="@+id/estadisticasTiroVisitantes"
+                            android:gravity="center"
+                            android:layout_weight="1">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textAppearance="?android:attr/textAppearanceLarge"
+                                android:text="@string/estadisticas_iniciales_acierto"
+                                android:id="@+id/tirosAcertadosVisitantes" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textAppearance="?android:attr/textAppearanceLarge"
+                                android:text="@string/estadisticas_iniciales_barra"
+                                android:id="@+id/barraVisitante" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textAppearance="?android:attr/textAppearanceLarge"
+                                android:text="@string/estadisticas_iniciales_total"
+                                android:id="@+id/tirosTiradosVisitantes" />
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:id="@+id/botonesVisitante"
+                        android:gravity="center_vertical">
+
+                        <LinearLayout
+                            android:orientation="vertical"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/botonesVisitanteTiro">
+
+                            <LinearLayout
+                                android:orientation="horizontal"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:id="@+id/botonesVisitanteT1">
+
+                                <Button
+                                    style="?android:attr/buttonStyleSmall"
+                                    android:layout_width="0dp"
+                                    android:layout_height="34dp"
+                                    android:text="@string/valor1"
+                                    android:id="@+id/siVTL"
+                                    android:layout_weight="2"
+                                    android:layout_marginTop="3dp"
+                                    android:layout_marginBottom="3dp"
+                                    android:background="@drawable/btn_acierto_accion"
+                                    android:layout_marginRight="3dp"
+                                    android:textColor="@color/colorLetraBtn"
+                                    android:layout_marginLeft="5dp" />
+
+                                <Button
+                                    style="?android:attr/buttonStyleSmall"
+                                    android:layout_width="0dp"
+                                    android:layout_height="34dp"
+                                    android:text="@string/valor1"
+                                    android:id="@+id/noVTL"
+                                    android:layout_weight="2"
+                                    android:layout_marginTop="3dp"
+                                    android:layout_marginBottom="3dp"
+                                    android:background="@drawable/btn_fallo_accion"
+                                    android:textColor="@color/colorLetraBtn" />
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:orientation="horizontal"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:id="@+id/botonesVisitanteT2">
+
+                                <Button
+                                    style="?android:attr/buttonStyleSmall"
+                                    android:layout_width="0dp"
+                                    android:layout_height="34dp"
+                                    android:text="@string/valor2"
+                                    android:id="@+id/siVT2"
+                                    android:layout_weight="2"
+                                    android:layout_marginTop="3dp"
+                                    android:layout_marginBottom="3dp"
+                                    android:background="@drawable/btn_acierto_accion"
+                                    android:layout_marginRight="3dp"
+                                    android:textColor="@color/colorLetraBtn"
+                                    android:layout_marginLeft="5dp" />
+
+                                <Button
+                                    style="?android:attr/buttonStyleSmall"
+                                    android:layout_width="0dp"
+                                    android:layout_height="34dp"
+                                    android:text="@string/valor2"
+                                    android:id="@+id/noVT2"
+                                    android:layout_weight="2"
+                                    android:layout_marginTop="3dp"
+                                    android:layout_marginBottom="3dp"
+                                    android:background="@drawable/btn_fallo_accion"
+                                    android:textColor="@color/colorLetraBtn" />
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:orientation="horizontal"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:id="@+id/botonesVisitanteT3">
+
+                                <Button
+                                    style="?android:attr/buttonStyleSmall"
+                                    android:layout_width="0dp"
+                                    android:layout_height="34dp"
+                                    android:text="@string/valor3"
+                                    android:id="@+id/siVT3"
+                                    android:layout_weight="2"
+                                    android:layout_marginTop="3dp"
+                                    android:layout_marginBottom="3dp"
+                                    android:background="@drawable/btn_acierto_accion"
+                                    android:layout_marginRight="3dp"
+                                    android:textColor="@color/colorLetraBtn"
+                                    android:layout_marginLeft="5dp" />
+
+                                <Button
+                                    style="?android:attr/buttonStyleSmall"
+                                    android:layout_width="0dp"
+                                    android:layout_height="34dp"
+                                    android:text="@string/valor3"
+                                    android:id="@+id/noVT3"
+                                    android:layout_weight="2"
+                                    android:layout_marginTop="3dp"
+                                    android:layout_marginBottom="3dp"
+                                    android:background="@drawable/btn_fallo_accion"
+                                    android:textColor="@color/colorLetraBtn" />
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/estadisticasJugadores"
+            android:layout_weight="2"
+            android:background="#64000000"
+            android:paddingBottom="5dp"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:paddingTop="5dp">
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/datosJugador1"
+                android:gravity="center_vertical">
+
+                <EditText
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:text="@string/nombre"
+                    android:id="@+id/nombreJ1"
+                    android:layout_weight="1"
+                    android:textColor="@color/colorLetraBtn" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:text="@string/puntos_jugador"
+                    android:id="@+id/puntosJ1"
+                    android:gravity="center"
+                    android:layout_weight="1"
+                    android:textColor="@color/colorLetraBtn" />
+
+                <RadioGroup
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:id="@+id/equipoJ1"
+                    android:layout_weight="1"
+                    android:gravity="center">
+
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/esLocal"
+                        android:id="@+id/localJ1"
+                        android:checked="true"
+                        android:layout_marginLeft="5dp"
+                        android:textSize="20sp"
+                        android:textColor="@color/colorLetraBtn" />
+
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/esVisitante"
+                        android:id="@+id/visitanteJ1"
+                        android:checked="false"
+                        android:layout_marginLeft="5dp"
+                        android:textSize="20sp"
+                        android:textColor="@color/colorLetraBtn" />
+                </RadioGroup>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/datosJugador1TL"
+                android:gravity="center_vertical"
+                android:layout_weight="1">
+
+                <TextView
+                    android:layout_width="35dp"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:text="@string/tL"
+                    android:id="@+id/textoJ1TL"
+                    android:gravity="center_vertical"
+                    android:layout_weight="6"
+                    android:textSize="18sp"
+                    android:textColor="@color/colorLetraBtn" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:text="@string/estadisticas_iniciales_acierto"
+                    android:id="@+id/metidasJ1TL"
+                    android:textColor="@color/colorLetraBtn" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:text="@string/estadisticas_iniciales_barra"
+                    android:id="@+id/barraJ1TL"
+                    android:textColor="@color/colorLetraBtn" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:text="@string/estadisticas_iniciales_total"
+                    android:id="@+id/totalJ1TL"
+                    android:layout_weight="4"
+                    android:textColor="@color/colorLetraBtn" />
+
+                <Button
+                    style="?android:attr/buttonStyleSmall"
+                    android:layout_width="0dp"
+                    android:layout_height="34dp"
+                    android:text="@string/valor1"
+                    android:id="@+id/aciertoJ1TL"
+                    android:layout_weight="2"
+                    android:layout_marginTop="3dp"
+                    android:layout_marginBottom="3dp"
+                    android:background="@drawable/btn_acierto_accion"
+                    android:layout_marginRight="3dp"
+                    android:textColor="@color/colorLetraBtn" />
+
+                <Button
+                    style="?android:attr/buttonStyleSmall"
+                    android:layout_width="0dp"
+                    android:layout_height="34dp"
+                    android:text="@string/valor1"
+                    android:id="@+id/falloJ1TL"
+                    android:layout_weight="2"
+                    android:layout_marginTop="3dp"
+                    android:layout_marginBottom="3dp"
+                    android:background="@drawable/btn_fallo_accion"
+                    android:textColor="@color/colorLetraBtn"
+                    android:layout_marginRight="3dp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/datosJugador1T2"
+                android:gravity="center_vertical"
+                android:layout_weight="1">
+
+                <TextView
+                    android:layout_width="35dp"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:text="@string/t2"
+                    android:id="@+id/textoJ1T2"
+                    android:gravity="center_vertical"
+                    android:layout_weight="6"
+                    android:textSize="18sp"
+                    android:textColor="@color/colorLetraBtn" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:text="@string/estadisticas_iniciales_acierto"
+                    android:id="@+id/metidasJ1T2"
+                    android:textColor="@color/colorLetraBtn" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:text="@string/estadisticas_iniciales_barra"
+                    android:id="@+id/barraJ1T2"
+                    android:textColor="@color/colorLetraBtn" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:text="@string/estadisticas_iniciales_total"
+                    android:id="@+id/totalJ1T2"
+                    android:layout_weight="4"
+                    android:textColor="@color/colorLetraBtn" />
+
+                <Button
+                    style="?android:attr/buttonStyleSmall"
+                    android:layout_width="0dp"
+                    android:layout_height="34dp"
+                    android:text="@string/valor2"
+                    android:id="@+id/aciertoJ1T2"
+                    android:layout_weight="2"
+                    android:layout_marginTop="3dp"
+                    android:layout_marginBottom="3dp"
+                    android:background="@drawable/btn_acierto_accion"
+                    android:layout_marginRight="3dp"
+                    android:textColor="@color/colorLetraBtn" />
+
+                <Button
+                    style="?android:attr/buttonStyleSmall"
+                    android:layout_width="0dp"
+                    android:layout_height="34dp"
+                    android:text="@string/valor2"
+                    android:id="@+id/falloJ1T2"
+                    android:layout_weight="2"
+                    android:layout_marginTop="3dp"
+                    android:layout_marginBottom="3dp"
+                    android:background="@drawable/btn_fallo_accion"
+                    android:textColor="@color/colorLetraBtn"
+                    android:layout_marginRight="3dp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/datosJugador1T3"
+                android:gravity="center_vertical"
+                android:layout_weight="1">
+
+                <TextView
+                    android:layout_width="35dp"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:text="@string/t3"
+                    android:id="@+id/textoJ1T3"
+                    android:gravity="center_vertical"
+                    android:layout_weight="6"
+                    android:textSize="18sp"
+                    android:textColor="@color/colorLetraBtn" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:text="@string/estadisticas_iniciales_acierto"
+                    android:id="@+id/metidasJ1T3"
+                    android:textColor="@color/colorLetraBtn" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:text="@string/estadisticas_iniciales_barra"
+                    android:id="@+id/barraJ1T3"
+                    android:textColor="@color/colorLetraBtn" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:text="@string/estadisticas_iniciales_total"
+                    android:id="@+id/totalJ1T3"
+                    android:layout_weight="4"
+                    android:textColor="@color/colorLetraBtn" />
+
+                <Button
+                    style="?android:attr/buttonStyleSmall"
+                    android:layout_width="0dp"
+                    android:layout_height="34dp"
+                    android:text="@string/valor3"
+                    android:id="@+id/aciertoJ1T3"
+                    android:layout_weight="2"
+                    android:background="@drawable/btn_acierto_accion"
+                    android:layout_marginTop="3dp"
+                    android:layout_marginBottom="3dp"
+                    android:layout_marginRight="3dp"
+                    android:textColor="@color/colorLetraBtn" />
+
+                <Button
+                    style="?android:attr/buttonStyleSmall"
+                    android:layout_width="0dp"
+                    android:layout_height="34dp"
+                    android:text="@string/valor3"
+                    android:id="@+id/falloJ1T3"
+                    android:layout_weight="2"
+                    android:layout_marginTop="3dp"
+                    android:layout_marginBottom="3dp"
+                    android:background="@drawable/btn_fallo_accion"
+                    android:textColor="@color/colorLetraBtn"
+                    android:layout_marginRight="3dp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/datosJ1Rebotes"
+                android:gravity="center_vertical"
+                android:layout_weight="1">
+
+                <TextView
+                    android:layout_width="35dp"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:text="@string/rebotes"
+                    android:id="@+id/textoRebotesJ1"
+                    android:gravity="center_vertical"
+                    android:layout_weight="6"
+                    android:textSize="18sp"
+                    android:textColor="@color/colorLetraBtn" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:text="@string/estadisticas_iniciales_total"
+                    android:id="@+id/numRebotesJ1"
+                    android:layout_weight="4"
+                    android:layout_marginRight="10dp"
+                    android:textColor="@color/colorLetraBtn" />
+
+                <Button
+                    style="?android:attr/buttonStyleSmall"
+                    android:layout_width="0dp"
+                    android:layout_height="34dp"
+                    android:text="@string/añadir"
+                    android:id="@+id/sumarReboteJ1"
+                    android:layout_weight="2"
+                    android:layout_marginTop="3dp"
+                    android:layout_marginBottom="3dp"
+                    android:background="@drawable/btn_acierto_accion"
+                    android:textColor="@color/colorLetraBtn"
+                    android:layout_marginRight="23dp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/datosJ1Asistencias"
+                android:gravity="center_vertical"
+                android:layout_weight="1">
+
+                <TextView
+                    android:layout_width="35dp"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:text="@string/asistencias"
+                    android:id="@+id/textoAsistenciasJ1"
+                    android:gravity="center_vertical"
+                    android:layout_weight="6"
+                    android:textSize="18sp"
+                    android:textColor="@color/colorLetraBtn" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:text="@string/estadisticas_iniciales_total"
+                    android:id="@+id/numAsistenciasJ1"
+                    android:layout_weight="4"
+                    android:layout_marginRight="10dp"
+                    android:textColor="@color/colorLetraBtn" />
+
+                <Button
+                    style="?android:attr/buttonStyleSmall"
+                    android:layout_width="0dp"
+                    android:layout_height="34dp"
+                    android:text="@string/añadir"
+                    android:id="@+id/sumarAsistenciaJ1"
+                    android:layout_weight="2"
+                    android:layout_marginTop="3dp"
+                    android:layout_marginBottom="3dp"
+                    android:background="@drawable/btn_acierto_accion"
+                    android:textColor="@color/colorLetraBtn"
+                    android:layout_marginRight="23dp" />
+
+            </LinearLayout>
+
+            <RadioGroup
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/datosExtraJ1"
+                android:gravity="center_vertical"
+                android:layout_weight="1">
+
+                <RadioButton
+                    android:layout_width="17dp"
+                    android:layout_height="wrap_content"
+                    android:text="@string/robos"
+                    android:id="@+id/textoRoboJ1"
+                    android:checked="true"
+                    android:layout_weight="3"
+                    android:textColor="@color/colorLetraBtn" />
+
+                <RadioButton
+                    android:layout_width="18dp"
+                    android:layout_height="wrap_content"
+                    android:text="@string/tapones"
+                    android:id="@+id/textoTaponJ1"
+                    android:checked="false"
+                    android:layout_weight="3"
+                    android:textColor="@color/colorLetraBtn" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:text="@string/estadisticas_iniciales_acierto"
+                    android:id="@+id/numRobosJ1"
+                    android:textColor="@color/colorLetraBtn" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:text="@string/estadisticas_iniciales_barra"
+                    android:id="@+id/barraExtraJ1"
+                    android:textColor="@color/colorLetraBtn" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:text="@string/estadisticas_iniciales_total"
+                    android:id="@+id/numTaponesJ1"
+                    android:layout_weight="3"
+                    android:layout_marginRight="15dp"
+                    android:textColor="@color/colorLetraBtn" />
+
+                <Button
+                    style="?android:attr/buttonStyleSmall"
+                    android:layout_width="0dp"
+                    android:layout_height="34dp"
+                    android:text="@string/añadir"
+                    android:id="@+id/sumarExtraJ1"
+                    android:layout_weight="2"
+                    android:layout_marginTop="3dp"
+                    android:layout_marginBottom="3dp"
+                    android:background="@drawable/btn_acierto_accion"
+                    android:textColor="@color/colorLetraBtn"
+                    android:layout_marginRight="23dp" />
+
+            </RadioGroup>
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="34dp"
+                android:text="@string/back"
+                android:id="@+id/deshacer"
+                android:textSize="13sp"
+                android:gravity="center"
+                android:background="@drawable/btn_deshacer"
+                android:layout_marginTop="3dp"
+                android:layout_marginBottom="3dp"
+                android:textColor="@color/colorLetraBtn"
+                android:layout_marginRight="3dp" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>

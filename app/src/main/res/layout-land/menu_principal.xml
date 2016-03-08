@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent">
+    <!--android:background="@drawable/fondo_menu"-->
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:id="@+id/layout_inicial"
+        android:background="@drawable/fondo_menu">
+
+        <ImageButton
+            android:layout_width="160dp"
+            android:layout_height="120dp"
+            android:id="@+id/btn_estadisticas"
+            android:layout_marginRight="30dp"
+            android:background="@drawable/icono_marcador" />
+
+        <Space
+            android:layout_width="70dp"
+            android:layout_height="match_parent"
+            android:id="@+id/entreBTNiniciales" />
+
+        <ImageButton
+            android:layout_width="160dp"
+            android:layout_height="120dp"
+            android:id="@+id/btn_jugadas"
+            android:layout_marginLeft="30dp"
+            android:background="@drawable/icono_jugadas" />
+    </LinearLayout>
+</RelativeLayout>

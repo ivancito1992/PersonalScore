@@ -1,0 +1,828 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    >
+
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:id="@+id/estadisticasEquipos">
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/estadisticasLocal">
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/textosLocal"
+                    android:gravity="center_vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceLarge"
+                        android:text="@string/local"
+                        android:id="@+id/equipoLocal" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceLarge"
+                        android:text="@string/marcador_inicial"
+                        android:id="@+id/marcadorLocal"
+                        android:textSize="70sp"
+                        style="@style/Marcador"
+                        android:gravity="center"
+                        android:paddingEnd="10dp"
+                        android:paddingStart="10dp" />
+
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/estadisticasTiroLocal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textAppearance="?android:attr/textAppearanceLarge"
+                            android:text="@string/estadisticas_iniciales_acierto"
+                            android:id="@+id/tirosAcertadosLocal" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textAppearance="?android:attr/textAppearanceLarge"
+                            android:text="@string/estadisticas_iniciales_barra"
+                            android:id="@+id/textView4" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textAppearance="?android:attr/textAppearanceLarge"
+                            android:text="@string/estadisticas_iniciales_total"
+                            android:id="@+id/tirosTiradosLocal" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/botonesLocal"
+                    android:gravity="right">
+
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/botonesLocalTiro">
+
+                        <LinearLayout
+                            android:orientation="horizontal"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:id="@+id/botonesLocalTL">
+
+                            <Button
+                                style="?android:attr/buttonStyleSmall"
+                                android:layout_width="40dp"
+                                android:layout_height="40dp"
+                                android:text="@string/valor1"
+                                android:id="@+id/siLTL" />
+
+                            <Button
+                                style="?android:attr/buttonStyleSmall"
+                                android:layout_width="40dp"
+                                android:layout_height="40dp"
+                                android:text="@string/valor1"
+                                android:id="@+id/noLTL1" />
+
+                            <ImageButton
+                                style="?android:attr/buttonStyleSmall"
+                                android:layout_width="40dp"
+                                android:layout_height="40dp"
+                                android:text="New Button"
+                                android:id="@+id/deshacerL1"
+                                android:src="@drawable/abc_ic_ab_back_mtrl_am_alpha" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:orientation="horizontal"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:id="@+id/botonesLocalT2">
+
+                            <Button
+                                style="?android:attr/buttonStyleSmall"
+                                android:layout_width="40dp"
+                                android:layout_height="40dp"
+                                android:text="@string/valor2"
+                                android:id="@+id/siLT2" />
+
+                            <Button
+                                style="?android:attr/buttonStyleSmall"
+                                android:layout_width="40dp"
+                                android:layout_height="40dp"
+                                android:text="@string/valor2"
+                                android:id="@+id/noLT2" />
+
+                            <ImageButton
+                                style="?android:attr/buttonStyleSmall"
+                                android:layout_width="40dp"
+                                android:layout_height="40dp"
+                                android:text="New Button"
+                                android:id="@+id/deshacerL2"
+                                android:src="@drawable/abc_ic_ab_back_mtrl_am_alpha" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:orientation="horizontal"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:id="@+id/botonesLocalT3">
+
+                            <Button
+                                style="?android:attr/buttonStyleSmall"
+                                android:layout_width="40dp"
+                                android:layout_height="40dp"
+                                android:text="@string/valor3"
+                                android:id="@+id/siLT3" />
+
+                            <Button
+                                style="?android:attr/buttonStyleSmall"
+                                android:layout_width="40dp"
+                                android:layout_height="40dp"
+                                android:text="@string/valor3"
+                                android:id="@+id/noLT3" />
+
+                            <ImageButton
+                                style="?android:attr/buttonStyleSmall"
+                                android:layout_width="40dp"
+                                android:layout_height="40dp"
+                                android:text="New Button"
+                                android:id="@+id/deshacerL3"
+                                android:src="@drawable/abc_ic_ab_back_mtrl_am_alpha" />
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="bottom"
+                android:id="@+id/estadisticasVisitante">
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/estadisticasVisitante2">
+
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:id="@+id/estadisticasVisitante3">
+
+                        <LinearLayout
+                            android:orientation="vertical"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/textosVisitante"
+                            android:gravity="center_vertical">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textAppearance="?android:attr/textAppearanceLarge"
+                                android:text="@string/visitante"
+                                android:id="@+id/equipoVisitante" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textAppearance="?android:attr/textAppearanceLarge"
+                                android:text="@string/marcador_inicial"
+                                android:id="@+id/marcadorVisitante"
+                                android:textSize="70sp"
+                                style="@style/Marcador"
+                                android:gravity="center"
+                                android:paddingEnd="10dp"
+                                android:paddingStart="10dp" />
+
+                            <LinearLayout
+                                android:orientation="horizontal"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/estadisticasTiroVisitantes" >
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:textAppearance="?android:attr/textAppearanceLarge"
+                                    android:text="@string/estadisticas_iniciales_acierto"
+                                    android:id="@+id/tirosAcertadosVisitantes" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:textAppearance="?android:attr/textAppearanceLarge"
+                                    android:text="@string/estadisticas_iniciales_barra"
+                                    android:id="@+id/textView5" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:textAppearance="?android:attr/textAppearanceLarge"
+                                    android:text="@string/estadisticas_iniciales_total"
+                                    android:id="@+id/tirosTotalesVisitantes" />
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:orientation="horizontal"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:id="@+id/botonesVisitante"
+                            android:gravity="center_vertical">
+
+                            <LinearLayout
+                                android:orientation="vertical"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/botonesVisitanteTiro">
+
+                                <LinearLayout
+                                    android:orientation="horizontal"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:id="@+id/botonesVisitanteT1">
+
+                                    <Button
+                                        style="?android:attr/buttonStyleSmall"
+                                        android:layout_width="40dp"
+                                        android:layout_height="40dp"
+                                        android:text="@string/valor1"
+                                        android:id="@+id/siVTL" />
+
+                                    <Button
+                                        style="?android:attr/buttonStyleSmall"
+                                        android:layout_width="40dp"
+                                        android:layout_height="40dp"
+                                        android:text="@string/valor1"
+                                        android:id="@+id/noVTL" />
+
+                                    <ImageButton
+                                        style="?android:attr/buttonStyleSmall"
+                                        android:layout_width="40dp"
+                                        android:layout_height="40dp"
+                                        android:text="New Button"
+                                        android:id="@+id/deshacerV1"
+                                        android:src="@drawable/abc_ic_ab_back_mtrl_am_alpha" />
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:orientation="horizontal"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:id="@+id/botonesVisitanteT2">
+
+                                    <Button
+                                        style="?android:attr/buttonStyleSmall"
+                                        android:layout_width="40dp"
+                                        android:layout_height="40dp"
+                                        android:text="@string/valor2"
+                                        android:id="@+id/siVT2" />
+
+                                    <Button
+                                        style="?android:attr/buttonStyleSmall"
+                                        android:layout_width="40dp"
+                                        android:layout_height="40dp"
+                                        android:text="@string/valor2"
+                                        android:id="@+id/noVT2" />
+
+                                    <ImageButton
+                                        style="?android:attr/buttonStyleSmall"
+                                        android:layout_width="40dp"
+                                        android:layout_height="40dp"
+                                        android:text="New Button"
+                                        android:id="@+id/deshacerV2"
+                                        android:src="@drawable/abc_ic_ab_back_mtrl_am_alpha" />
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:orientation="horizontal"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:id="@+id/botonesVisitanteT3">
+
+                                    <Button
+                                        style="?android:attr/buttonStyleSmall"
+                                        android:layout_width="40dp"
+                                        android:layout_height="40dp"
+                                        android:text="@string/valor3"
+                                        android:id="@+id/siVT3" />
+
+                                    <Button
+                                        style="?android:attr/buttonStyleSmall"
+                                        android:layout_width="40dp"
+                                        android:layout_height="40dp"
+                                        android:text="@string/valor3"
+                                        android:id="@+id/noVT3" />
+
+                                    <ImageButton
+                                        style="?android:attr/buttonStyleSmall"
+                                        android:layout_width="40dp"
+                                        android:layout_height="40dp"
+                                        android:text="New Button"
+                                        android:id="@+id/deshacerV3"
+                                        android:src="@drawable/abc_ic_ab_back_mtrl_am_alpha" />
+                                </LinearLayout>
+
+                            </LinearLayout>
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <Space
+            android:layout_width="10dp"
+            android:layout_height="match_parent" />
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/scrollJugadores"
+            android:fillViewport="false">
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/estadisticasJugadores">
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:id="@+id/datosJugador1"
+                    android:gravity="center">
+
+                    <EditText
+                        android:layout_width="120dp"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceLarge"
+                        android:text="@string/nombre"
+                        android:id="@+id/nombreJ1" />
+
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center">
+
+                        <TextView
+                            android:layout_width="91dp"
+                            android:layout_height="wrap_content"
+                            android:textAppearance="?android:attr/textAppearanceLarge"
+                            android:text="@string/marcador_inicial"
+                            android:id="@+id/puntosJ1"
+                            android:gravity="center" />
+
+                        <RadioGroup
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="horizontal"
+                            android:gravity="center_vertical|end"
+                            android:id="@+id/LoVJ1">
+
+                            <RadioButton
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/esLocal"
+                                android:id="@+id/esLocalJ1"
+                                android:checked="true" />
+
+                            <RadioButton
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/esVisitante"
+                                android:id="@+id/esVisitanteJ1"
+                                android:checked="false" />
+                        </RadioGroup>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:id="@+id/datosJugador1TL"
+                    android:gravity="center_vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:textAppearance="?android:attr/textAppearanceLarge"
+                        android:text="@string/tL"
+                        android:id="@+id/textoJ1TL"
+                        android:gravity="center_vertical" />
+
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="right"
+                        android:id="@+id/botonesJ1TL">
+
+                        <LinearLayout
+                            android:orientation="horizontal"
+                            android:layout_width="70dp"
+                            android:layout_height="match_parent"
+                            android:id="@+id/estadisticasJ1TL"
+                            android:gravity="center">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textAppearance="?android:attr/textAppearanceLarge"
+                                android:text="@string/estadisticas_iniciales_acierto"
+                                android:id="@+id/aciertosJ1TL" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textAppearance="?android:attr/textAppearanceLarge"
+                                android:text="@string/estadisticas_iniciales_barra" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textAppearance="?android:attr/textAppearanceLarge"
+                                android:text="@string/estadisticas_iniciales_total"
+                                android:id="@+id/totalJ1TL" />
+                        </LinearLayout>
+
+                        <Button
+                            style="?android:attr/buttonStyleSmall"
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:text="@string/valor1"
+                            android:id="@+id/aciertoJ1TL" />
+
+                        <Button
+                            style="?android:attr/buttonStyleSmall"
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:text="@string/valor1"
+                            android:id="@+id/falloJ1TL" />
+
+                        <ImageButton
+                            style="?android:attr/buttonStyleSmall"
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:text="New Button"
+                            android:id="@+id/deshacerJ1TL"
+                            android:src="@drawable/abc_ic_ab_back_mtrl_am_alpha" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:id="@+id/datosJugador1T2"
+                    android:gravity="center_vertical" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:textAppearance="?android:attr/textAppearanceLarge"
+                        android:text="@string/t2"
+                        android:id="@+id/textoJ1T2"
+                        android:gravity="center_vertical" />
+
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="right"
+                        android:id="@+id/botonesJ1T2" >
+
+                        <LinearLayout
+                            android:orientation="horizontal"
+                            android:layout_width="70dp"
+                            android:layout_height="match_parent"
+                            android:id="@+id/estadisticasJ1T2"
+                            android:gravity="center" >
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textAppearance="?android:attr/textAppearanceLarge"
+                                android:text="@string/estadisticas_iniciales_acierto"
+                                android:id="@+id/aciertosJ1T2" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textAppearance="?android:attr/textAppearanceLarge"
+                                android:text="@string/estadisticas_iniciales_barra"
+                                android:id="@+id/textView7" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textAppearance="?android:attr/textAppearanceLarge"
+                                android:text="@string/estadisticas_iniciales_total"
+                                android:id="@+id/totalJ1T2" />
+                        </LinearLayout>
+
+                        <Button
+                            style="?android:attr/buttonStyleSmall"
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:text="@string/valor2"
+                            android:id="@+id/aciertoJ1T2" />
+
+                        <Button
+                            style="?android:attr/buttonStyleSmall"
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:text="@string/valor2"
+                            android:id="@+id/falloJ1T2" />
+
+                        <ImageButton
+                            style="?android:attr/buttonStyleSmall"
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:text="New Button"
+                            android:id="@+id/deshacerJ1T2"
+                            android:src="@drawable/abc_ic_ab_back_mtrl_am_alpha" />
+
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:id="@+id/datosJugador1T3"
+                    android:gravity="center_vertical" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:textAppearance="?android:attr/textAppearanceLarge"
+                        android:text="@string/t3"
+                        android:id="@+id/textoJ1T3"
+                        android:gravity="center_vertical" />
+
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="right"
+                        android:id="@+id/botonesJ1T3" >
+
+                        <LinearLayout
+                            android:orientation="horizontal"
+                            android:layout_width="70dp"
+                            android:layout_height="match_parent"
+                            android:id="@+id/estadisticasJ1T3"
+                            android:gravity="center" >
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textAppearance="?android:attr/textAppearanceLarge"
+                                android:text="@string/estadisticas_iniciales_acierto"
+                                android:id="@+id/aciertosJ1T3" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textAppearance="?android:attr/textAppearanceLarge"
+                                android:text="@string/estadisticas_iniciales_barra"
+                                android:id="@+id/textView10" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textAppearance="?android:attr/textAppearanceLarge"
+                                android:text="@string/estadisticas_iniciales_total"
+                                android:id="@+id/totalJ1T3" />
+                        </LinearLayout>
+
+                        <Button
+                            style="?android:attr/buttonStyleSmall"
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:text="@string/valor3"
+                            android:id="@+id/aciertoJ1T3" />
+
+                        <Button
+                            style="?android:attr/buttonStyleSmall"
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:text="@string/valor3"
+                            android:id="@+id/falloJ1T3" />
+
+                        <ImageButton
+                            style="?android:attr/buttonStyleSmall"
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:text="New Button"
+                            android:id="@+id/deshacerJ1T3"
+                            android:src="@drawable/abc_ic_ab_back_mtrl_am_alpha" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:id="@+id/datosRebotesJ1"
+                    android:gravity="center_vertical" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:textAppearance="?android:attr/textAppearanceLarge"
+                        android:text="@string/rebotes"
+                        android:id="@+id/rebotesJ1"
+                        android:gravity="center_vertical" />
+
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="right"
+                        android:id="@+id/linearLayout2" >
+
+                        <TextView
+                            android:layout_width="50dp"
+                            android:layout_height="match_parent"
+                            android:textAppearance="?android:attr/textAppearanceLarge"
+                            android:text="@string/estadisticas_iniciales_acierto"
+                            android:id="@+id/contRebotesJ1"
+                            android:gravity="center" />
+
+                        <Button
+                            style="?android:attr/buttonStyleSmall"
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:text="@string/añadir"
+                            android:id="@+id/sumarReboteJ1" />
+
+                        <ImageButton
+                            style="?android:attr/buttonStyleSmall"
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:text="New Button"
+                            android:id="@+id/deshacerReboteJ1"
+                            android:src="@drawable/abc_ic_ab_back_mtrl_am_alpha" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:id="@+id/datosAsistenciasJ1"
+                    android:gravity="center_vertical" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:textAppearance="?android:attr/textAppearanceLarge"
+                        android:text="@string/asistencias"
+                        android:id="@+id/asistenciasJ1"
+                        android:gravity="center_vertical" />
+
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="right"
+                        android:id="@+id/linearLayout" >
+
+                        <TextView
+                            android:layout_width="50dp"
+                            android:layout_height="match_parent"
+                            android:textAppearance="?android:attr/textAppearanceLarge"
+                            android:text="@string/estadisticas_iniciales_acierto"
+                            android:id="@+id/contAsistenciasJ1"
+                            android:gravity="center" />
+
+                        <Button
+                            style="?android:attr/buttonStyleSmall"
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:text="@string/añadir"
+                            android:id="@+id/sumarAsistenciaJ1" />
+
+                        <ImageButton
+                            style="?android:attr/buttonStyleSmall"
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:text="New Button"
+                            android:id="@+id/deshacerAsistenciasJ1"
+                            android:src="@drawable/abc_ic_ab_back_mtrl_am_alpha" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:id="@+id/datosFaltasJ1"
+                    android:gravity="center_vertical" >
+
+                    <RadioGroup
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal"
+                        android:gravity="center_vertical|end"
+                        android:id="@+id/radioGroup" >
+
+                        <RadioButton
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/tapones"
+                            android:id="@+id/radioButton"
+                            android:checked="true" />
+
+                        <RadioButton
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/robos"
+                            android:id="@+id/radioButton2"
+                            android:checked="false" />
+                    </RadioGroup>
+
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/linearLayout5"
+                        android:gravity="right">
+
+                        <TextView
+                            android:layout_width="50dp"
+                            android:layout_height="match_parent"
+                            android:textAppearance="?android:attr/textAppearanceLarge"
+                            android:text="@string/estadisticas_iniciales_acierto"
+                            android:id="@+id/contOtroJ1"
+                            android:gravity="center" />
+
+                        <Button
+                            style="?android:attr/buttonStyleSmall"
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:text="@string/añadir"
+                            android:id="@+id/sumarOtroJ1" />
+
+                        <ImageButton
+                            style="?android:attr/buttonStyleSmall"
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:text="New Button"
+                            android:id="@+id/deshacerOtroJ1"
+                            android:src="@drawable/abc_ic_ab_back_mtrl_am_alpha" />
+                    </LinearLayout>
+                </LinearLayout>
+
+            </LinearLayout>
+        </ScrollView>
+
+    </LinearLayout>
+
+</RelativeLayout>

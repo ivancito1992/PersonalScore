@@ -5,9 +5,7 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.widget.TextView;
 
-/**
- * Created by ivanb on 29/02/2016.
- */
+
 public class Estadisticas extends AppCompatActivity {
 
     TextView tvLocal, tvVisitante, tvNombrej1, tvPuntosj1, tvLocalj1, tvVisitantej1;
@@ -76,6 +74,7 @@ public class Estadisticas extends AppCompatActivity {
         tvEquipoLocal.setTypeface(tfTexto);
         tvEquipoVisitante.setTypeface(tfTexto);
         tvAcertadosLocal.setTypeface(tfTexto);
+        tvBarraLocal.setTypeface(tfTexto);
         tvTotalLocal.setTypeface(tfTexto);
         tvAcertadosVisitante.setTypeface(tfTexto);
         tvTotalesVisitantes.setTypeface(tfTexto);

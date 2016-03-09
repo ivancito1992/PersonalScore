@@ -10,10 +10,10 @@
 
     <style name="Marcador">
         <item name="android:background">@color/fondoLetrasMarcador</item>
-        <item name="android:textColor">@color/colorLetrasMarcador</item>
-        <item name="android:shadowColor">@color/sombraLetrasMarcador</item>
-        <item name="android:shadowRadius">2</item>
-        <item name="android:shadowDx">2</item>
+        <item name="android:textColor">@color/sombraLetrasMarcador</item>sombraLetrasMarcador
+        <item name="android:shadowColor">@color/colorLetrasMarcador</item>
+        <item name="android:shadowRadius">3</item>
+        <item name="android:shadowDx">3</item>
         <item name="android:shadowDy">3</item>
     </style>
 

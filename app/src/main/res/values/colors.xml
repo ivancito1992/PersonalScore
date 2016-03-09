@@ -6,8 +6,9 @@
 
     <!-- COLOR DE LAS LETRAS Y ESTILOS -->
     <color name="colorLetrasMarcador">#ff6a00</color>
-    <color name="sombraLetrasMarcador">#fa0021</color>
+    <color name="sombraLetrasMarcador">#be0019</color>
     <color name="fondoLetrasMarcador">#262626</color>
+    <color name="letrasBtnEquipos">#000000</color>
 
     <!-- COLOR DE LOS BOTONES -->
     <color name="btnAcierto">#b400a300</color>
@@ -19,4 +20,8 @@
     <color name="btnDeshacer">#b4000000</color>
     <color name="marcoBtnDeshacer">#000000</color>
     <color name="colorLetraBtn">#ffffff</color>
+    <color name="btnEquipos">#50ffffff</color>
+    <color name="btnEquiposSelect">#ffffff</color>
+    <color name="marcoBtnEquipos">#b4000000</color>
+
 </resources>

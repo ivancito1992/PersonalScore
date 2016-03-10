@@ -243,14 +243,33 @@
                 android:id="@+id/datosJugador1"
                 android:gravity="center_vertical">
 
-                <EditText
+                <RadioGroup
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:textAppearance="?android:attr/textAppearanceLarge"
-                    android:text="@string/nombre"
-                    android:id="@+id/nombreJ1"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:id="@+id/equipoJ1"
                     android:layout_weight="1"
-                    android:textColor="@color/colorLetraBtn" />
+                    android:gravity="left|center_vertical">
+
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/esLocal"
+                        android:id="@+id/esLocalJ1"
+                        android:checked="true"
+                        android:textSize="20sp"
+                        android:textColor="@color/colorLetraBtn" />
+
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/esVisitante"
+                        android:id="@+id/esVisitanteJ1"
+                        android:checked="false"
+                        android:layout_marginLeft="30dp"
+                        android:textSize="20sp"
+                        android:textColor="@color/colorLetraBtn" />
+                </RadioGroup>
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -261,37 +280,7 @@
                     android:gravity="center"
                     android:layout_weight="1"
                     style="@style/Marcador"
-                    android:textSize="32sp"
-                    android:layout_marginLeft="30dp" />
-
-                <RadioGroup
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:orientation="horizontal"
-                    android:id="@+id/equipoJ1"
-                    android:layout_weight="1"
-                    android:gravity="center_vertical|right">
-
-                    <RadioButton
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="@string/esLocal"
-                        android:id="@+id/esLocalJ1"
-                        android:checked="true"
-                        android:layout_marginLeft="5dp"
-                        android:textSize="20sp"
-                        android:textColor="@color/colorLetraBtn" />
-
-                    <RadioButton
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="@string/esVisitante"
-                        android:id="@+id/esVisitanteJ1"
-                        android:checked="false"
-                        android:layout_marginLeft="5dp"
-                        android:textSize="20sp"
-                        android:textColor="@color/colorLetraBtn" />
-                </RadioGroup>
+                    android:textSize="32sp" />
 
             </LinearLayout>
 

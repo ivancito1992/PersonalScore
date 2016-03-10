@@ -11,8 +11,7 @@ import android.widget.TextView;
 
 public class Estadisticas extends AppCompatActivity implements View.OnClickListener {
 
-    TextView tvLocal, tvVisitante, tvNombrej1, tvPuntosj1;
-    TextView tvEquipoLocal, tvEquipoVisitante;
+    TextView tvLocal, tvVisitante, tvPuntosj1, tvEquipoLocal, tvEquipoVisitante;
     TextView tvTextoj1tl, tvMetidasj1tl, tvBarraj1tl, tvTotalj1tl;
     TextView tvTextoj1t2, tvMetidasj1t2, tvBarraj1t2, tvTotalj1t2;
     TextView tvTextoj1t3, tvMetidasj1t3, tvBarraj1t3, tvTotalj1t3;
@@ -27,8 +26,8 @@ public class Estadisticas extends AppCompatActivity implements View.OnClickListe
 
     RadioButton esLocal, esVisitante, esRobo, esTapon;
 
-    int contadorAciertosJ1TL, contadorAciertosJ1T2, contadorAciertosJ1T3, contadorTiradosJ1TL,
-            contadorTiradosJ1T2, contadorTiradosJ1T3, contadorRebotesJ1, contadorAsistenciasJ1, contadorRobosJ1, contadorTaponesJ1, marcadorLocal, marcadorVisitante, puntosJ1 = 0;
+    int contadorAciertosJ1TL, contadorAciertosJ1T2, contadorAciertosJ1T3, contadorTiradosJ1TL, contadorTiradosJ1T2, contadorTiradosJ1T3, contadorRebotesJ1,
+            contadorAsistenciasJ1, contadorRobosJ1, contadorTaponesJ1, marcadorLocal, marcadorVisitante, puntosJ1 = 0;
 
     boolean siLTL, siLT2, siLT3, siVTL, siVT2, siVT3, siJ1TL, siJ1T2, siJ1T3, noJ1TL, noJ1T2, noJ1T3, reboteBJ1, asistenciaBJ1, roboBJ1, taponBJ1;
 
@@ -40,7 +39,6 @@ public class Estadisticas extends AppCompatActivity implements View.OnClickListe
         /* CARGAR LOS TV CON LOS DATOS DEL LAYOUT */
         tvLocal = (TextView) findViewById(R.id.marcadorLocal);
         tvVisitante = (TextView) findViewById(R.id.marcadorVisitante);
-        tvNombrej1 = (TextView) findViewById(R.id.nombreJ1);
         tvPuntosj1 = (TextView) findViewById(R.id.puntosJ1);
         tvTextoj1tl = (TextView) findViewById(R.id.textoJ1TL);
         tvMetidasj1tl = (TextView) findViewById(R.id.metidasJ1TL);
@@ -81,7 +79,6 @@ public class Estadisticas extends AppCompatActivity implements View.OnClickListe
         Typeface tfTexto = Typeface.createFromAsset(getAssets(),font_path_texto);
         tvEquipoLocal.setTypeface(tfTexto);
         tvEquipoVisitante.setTypeface(tfTexto);
-        tvNombrej1.setTypeface(tfTexto);
         esLocal.setTypeface(tfTexto);
         esVisitante.setTypeface(tfTexto);
         tvTextoj1tl.setTypeface(tfTexto);

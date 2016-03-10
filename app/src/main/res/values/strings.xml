@@ -21,7 +21,7 @@
     <string name="t3">3P</string>
     <string name="añadir">+</string>
     <string name="nombre">Nombre</string>
-    <string name="esLocal">H</string>
-    <string name="esVisitante">A</string>
+    <string name="esLocal">HOME</string>
+    <string name="esVisitante">AWAY</string>
     <string name="back">Deshacer ultima accion</string>
 </resources>

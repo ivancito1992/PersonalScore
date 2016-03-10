@@ -11,25 +11,26 @@ import android.widget.TextView;
 
 public class Estadisticas extends AppCompatActivity implements View.OnClickListener {
 
-    TextView tvLocal, tvVisitante, tvNombrej1, tvPuntosj1, tvLocalj1, tvVisitantej1;
-    TextView tvEquipoLocal, tvEquipoVisitante, tvAcertadosLocal, tvBarraLocal, tvTotalLocal, tvAcertadosVisitante, tvBarraVisitante, tvTotalesVisitante;
+    TextView tvLocal, tvVisitante, tvNombrej1, tvPuntosj1;
+    TextView tvEquipoLocal, tvEquipoVisitante;
     TextView tvTextoj1tl, tvMetidasj1tl, tvBarraj1tl, tvTotalj1tl;
     TextView tvTextoj1t2, tvMetidasj1t2, tvBarraj1t2, tvTotalj1t2;
     TextView tvTextoj1t3, tvMetidasj1t3, tvBarraj1t3, tvTotalj1t3;
     TextView tvTextoRebotesj1, tvNumRebotesj1;
     TextView tvTextoAsistenciasj1, tvNumAsistenciasj1;
-    TextView tvTextoRobosj1, tvTextoTaponesj1, tvNumRobosj1, tvBarraExtraj1, tvNumTaponesj1;
+    TextView tvNumRobosj1, tvBarraExtraj1, tvNumTaponesj1;
 
     Button aciertoLTL, aciertoLT2, aciertoLT3;
     Button aciertoVTL, aciertoVT2, aciertoVT3;
     Button aciertoJ1TL, aciertoJ1T2, aciertoJ1T3, falloJ1TL, falloJ1T2, falloJ1T3;
-    Button sumRebotesJ1, sumAsistenciasJ1, sumExtraJ1;
+    Button aumentarRebJ1, aumentarAsisJ1, aumentarExtraJ1, deshacerUltimo;
+
     RadioButton esLocal, esVisitante, esRobo, esTapon;
 
     int contadorAciertosJ1TL, contadorAciertosJ1T2, contadorAciertosJ1T3, contadorTiradosJ1TL,
             contadorTiradosJ1T2, contadorTiradosJ1T3, contadorRebotesJ1, contadorAsistenciasJ1, contadorRobosJ1, contadorTaponesJ1, marcadorLocal, marcadorVisitante, puntosJ1 = 0;
 
-    boolean siLTL, siLT2, siLT3, siVTL, siVT2, siVT3, siJ1TL, siJ1T2, siJ1T3, noJ1TL, noJ1T2, noJ1T3, reboteBJ1, asistenciaBJ1, roboBJ1, taponBJ1 = false;
+    boolean siLTL, siLT2, siLT3, siVTL, siVT2, siVT3, siJ1TL, siJ1T2, siJ1T3, noJ1TL, noJ1T2, noJ1T3, reboteBJ1, asistenciaBJ1, roboBJ1, taponBJ1;
 
 
     protected void onCreate(Bundle savedInstanceState) {
@@ -41,8 +42,6 @@ public class Estadisticas extends AppCompatActivity implements View.OnClickListe
         tvVisitante = (TextView) findViewById(R.id.marcadorVisitante);
         tvNombrej1 = (TextView) findViewById(R.id.nombreJ1);
         tvPuntosj1 = (TextView) findViewById(R.id.puntosJ1);
-        tvLocalj1 = (TextView) findViewById(R.id.localJ1);
-        tvVisitantej1 = (TextView) findViewById(R.id.visitanteJ1);
         tvTextoj1tl = (TextView) findViewById(R.id.textoJ1TL);
         tvMetidasj1tl = (TextView) findViewById(R.id.metidasJ1TL);
         tvBarraj1tl = (TextView) findViewById(R.id.barraJ1TL);
@@ -59,19 +58,16 @@ public class Estadisticas extends AppCompatActivity implements View.OnClickListe
         tvNumRebotesj1 = (TextView) findViewById(R.id.numRebotesJ1);
         tvTextoAsistenciasj1 = (TextView) findViewById(R.id.textoAsistenciasJ1);
         tvNumAsistenciasj1 = (TextView) findViewById(R.id.numAsistenciasJ1);
-        tvTextoRobosj1 = (TextView) findViewById(R.id.textoRoboJ1);
-        tvTextoTaponesj1 = (TextView) findViewById(R.id.textoTaponJ1);
         tvNumRobosj1 = (TextView) findViewById(R.id.numRobosJ1);
         tvBarraExtraj1 = (TextView) findViewById(R.id.barraExtraJ1);
         tvNumTaponesj1 = (TextView) findViewById(R.id.numTaponesJ1);
         tvEquipoLocal = (TextView) findViewById(R.id.equipoLocal);
         tvEquipoVisitante = (TextView) findViewById(R.id.equipoVisitante);
-        tvAcertadosLocal = (TextView) findViewById(R.id.tirosAcertadosLocal);
-        tvBarraLocal = (TextView) findViewById(R.id.barraLocal);
-        tvBarraVisitante = (TextView) findViewById(R.id.barraVisitante);
-        tvTotalLocal = (TextView) findViewById(R.id.tirosTiradosLocal);
-        tvAcertadosVisitante = (TextView) findViewById(R.id.tirosAcertadosVisitantes);
-        tvTotalesVisitante = (TextView) findViewById(R.id.tirosTiradosVisitantes);
+
+        esLocal = (RadioButton) findViewById(R.id.esLocalJ1);
+        esVisitante = (RadioButton) findViewById(R.id.esVisitanteJ1);
+        esRobo = (RadioButton) findViewById(R.id.esRoboJ1);
+        esTapon = (RadioButton) findViewById(R.id.esTaponJ1);
 
         /* CAMBIAR FUENTE DE LOS TEXTOS */
         String font_path_marcador = "fonts/scoreboard.ttf";
@@ -80,19 +76,14 @@ public class Estadisticas extends AppCompatActivity implements View.OnClickListe
         Typeface tfMarcador = Typeface.createFromAsset(getAssets(),font_path_marcador);
         tvLocal.setTypeface(tfMarcador);
         tvVisitante.setTypeface(tfMarcador);
+        tvPuntosj1.setTypeface(tfMarcador);
 
         Typeface tfTexto = Typeface.createFromAsset(getAssets(),font_path_texto);
         tvEquipoLocal.setTypeface(tfTexto);
         tvEquipoVisitante.setTypeface(tfTexto);
-        tvAcertadosLocal.setTypeface(tfTexto);
-        tvBarraLocal.setTypeface(tfTexto);
-        tvTotalLocal.setTypeface(tfTexto);
-        tvAcertadosVisitante.setTypeface(tfTexto);
-        tvTotalesVisitante.setTypeface(tfTexto);
         tvNombrej1.setTypeface(tfTexto);
-        tvPuntosj1.setTypeface(tfTexto);
-        tvLocalj1.setTypeface(tfTexto);
-        tvVisitantej1.setTypeface(tfTexto);
+        esLocal.setTypeface(tfTexto);
+        esVisitante.setTypeface(tfTexto);
         tvTextoj1tl.setTypeface(tfTexto);
         tvMetidasj1tl.setTypeface(tfTexto);
         tvTotalj1tl.setTypeface(tfTexto);
@@ -106,8 +97,8 @@ public class Estadisticas extends AppCompatActivity implements View.OnClickListe
         tvNumRebotesj1.setTypeface(tfTexto);
         tvTextoAsistenciasj1.setTypeface(tfTexto);
         tvNumAsistenciasj1.setTypeface(tfTexto);
-        tvTextoRobosj1.setTypeface(tfTexto);
-        tvTextoTaponesj1.setTypeface(tfTexto);
+        esRobo.setTypeface(tfTexto);
+        esTapon.setTypeface(tfTexto);
         tvNumRobosj1.setTypeface(tfTexto);
         tvNumTaponesj1.setTypeface(tfTexto);
 
@@ -138,14 +129,14 @@ public class Estadisticas extends AppCompatActivity implements View.OnClickListe
         falloJ1T3 = (Button) findViewById(R.id.falloJ1T3);
         falloJ1T3.setOnClickListener(this);
 
-        sumRebotesJ1 = (Button) findViewById(R.id.sumarReboteJ1);
-        sumAsistenciasJ1 = (Button) findViewById(R.id.sumarAsistenciaJ1);
-        sumExtraJ1 = (Button) findViewById(R.id.sumarExtraJ1);
-
-        esLocal = (RadioButton) findViewById(R.id.esLocalJ1);
-        esVisitante = (RadioButton) findViewById(R.id.esVisitanteJ1);
-        esRobo = (RadioButton) findViewById(R.id.textoRoboJ1);
-        esTapon = (RadioButton) findViewById(R.id.textoTaponJ1);
+        aumentarRebJ1 = (Button) findViewById(R.id.btnRebotesJ1);
+        aumentarRebJ1.setOnClickListener(this);
+        aumentarAsisJ1 = (Button) findViewById(R.id.btnAsistenciasJ1);
+        aumentarAsisJ1.setOnClickListener(this);
+        aumentarExtraJ1 = (Button) findViewById(R.id.btnExtraJ1);
+        aumentarExtraJ1.setOnClickListener(this);
+        deshacerUltimo = (Button) findViewById(R.id.deshacer);
+        deshacerUltimo.setOnClickListener(this);
 
     }
 
@@ -296,11 +287,11 @@ public class Estadisticas extends AppCompatActivity implements View.OnClickListe
                 siJ1TL = false; siJ1T2 = false; siJ1T3 = false; noJ1TL = false; noJ1T2 = false; noJ1T3 = true;
                 reboteBJ1 = false; asistenciaBJ1 = false; roboBJ1 = false; taponBJ1 = false;
 
-                contadorTiradosJ1T2++;
-                tvTotalj1tl.setText(Integer.toString(contadorTiradosJ1TL));
+                contadorTiradosJ1T3++;
+                tvTotalj1t3.setText(Integer.toString(contadorTiradosJ1T3));
                 break;
 
-            case R.id.sumarReboteJ1:
+            case R.id.btnRebotesJ1:
                 siLTL = false; siLT2 = false; siLT3 = false; siVTL = false; siVT2 = false; siVT3 = false;
                 siJ1TL = false; siJ1T2 = false; siJ1T3 = false; noJ1TL = false; noJ1T2 = false; noJ1T3 = false;
                 reboteBJ1 = true; asistenciaBJ1 = false; roboBJ1 = false; taponBJ1 = false;
@@ -309,7 +300,7 @@ public class Estadisticas extends AppCompatActivity implements View.OnClickListe
                 tvNumRebotesj1.setText(Integer.toString(contadorRebotesJ1));
                 break;
 
-            case R.id.sumarAsistenciaJ1:
+            case R.id.btnAsistenciasJ1:
                 siLTL = false; siLT2 = false; siLT3 = false; siVTL = false; siVT2 = false; siVT3 = false;
                 siJ1TL = false; siJ1T2 = false; siJ1T3 = false; noJ1TL = false; noJ1T2 = false; noJ1T3 = false;
                 reboteBJ1 = false; asistenciaBJ1 = true; roboBJ1 = false; taponBJ1 = false;
@@ -318,7 +309,7 @@ public class Estadisticas extends AppCompatActivity implements View.OnClickListe
                 tvNumAsistenciasj1.setText(Integer.toString(contadorAsistenciasJ1));
                 break;
 
-            case R.id.sumarExtraJ1:
+            case R.id.btnExtraJ1:
                 if(esRobo.isChecked()){
                     siLTL = false; siLT2 = false; siLT3 = false; siVTL = false; siVT2 = false; siVT3 = false;
                     siJ1TL = false; siJ1T2 = false; siJ1T3 = false; noJ1TL = false; noJ1T2 = false; noJ1T3 = false;
@@ -328,7 +319,7 @@ public class Estadisticas extends AppCompatActivity implements View.OnClickListe
                     tvNumRobosj1.setText(Integer.toString(contadorRobosJ1));
                 }
 
-                if(esVisitante.isChecked()){
+                if(esTapon.isChecked()){
                     siLTL = false; siLT2 = false; siLT3 = false; siVTL = false; siVT2 = false; siVT3 = false;
                     siJ1TL = false; siJ1T2 = false; siJ1T3 = false; noJ1TL = false; noJ1T2 = false; noJ1T3 = false;
                     reboteBJ1 = false; asistenciaBJ1 = false; roboBJ1 = false; taponBJ1 = true;
@@ -338,6 +329,7 @@ public class Estadisticas extends AppCompatActivity implements View.OnClickListe
                 }
                 break;
 
+            /* BOTON DESHACER */
             case R.id.deshacer:
                 if(siLTL && marcadorLocal > 0){
                     marcadorLocal--;
@@ -435,13 +427,13 @@ public class Estadisticas extends AppCompatActivity implements View.OnClickListe
                     noJ1TL = false;
                     break;
                 }
-                if(siJ1T2 && contadorTiradosJ1T2 > 0) {
+                if(noJ1T2 && contadorTiradosJ1T2 > 0) {
                     contadorTiradosJ1T2--;
                     tvTotalj1t2.setText(Integer.toString(contadorTiradosJ1T2));
                     noJ1T2 = false;
                     break;
                 }
-                if(siJ1T3 && contadorTiradosJ1T3 > 0) {
+                if(noJ1T3 && contadorTiradosJ1T3 > 0) {
                     contadorTiradosJ1T3--;
                     tvTotalj1t3.setText(Integer.toString(contadorTiradosJ1T3));
                     noJ1T3 = false;

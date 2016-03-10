@@ -21,7 +21,7 @@
     <color name="marcoBtnDeshacer">#000000</color>
     <color name="colorLetraBtn">#ffffff</color>
     <color name="btnEquipos">#50ffffff</color>
-    <color name="btnEquiposSelect">#ffffff</color>
+    <color name="btnEquiposSelect">#50ffffff</color>
     <color name="marcoBtnEquipos">#b4000000</color>
 
 </resources>

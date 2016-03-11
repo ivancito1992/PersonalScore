@@ -307,7 +307,9 @@
                     android:textAppearance="?android:attr/textAppearanceLarge"
                     android:text="@string/estadisticas_iniciales_acierto"
                     android:id="@+id/metidasJ1TL"
-                    android:textColor="@color/colorLetraBtn" />
+                    android:textColor="@color/colorLetraBtn"
+                    android:layout_weight="1"
+                    android:gravity="right" />
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -381,7 +383,9 @@
                     android:textAppearance="?android:attr/textAppearanceLarge"
                     android:text="@string/estadisticas_iniciales_acierto"
                     android:id="@+id/metidasJ1T2"
-                    android:textColor="@color/colorLetraBtn" />
+                    android:textColor="@color/colorLetraBtn"
+                    android:layout_weight="1"
+                    android:gravity="right" />
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -455,7 +459,9 @@
                     android:textAppearance="?android:attr/textAppearanceLarge"
                     android:text="@string/estadisticas_iniciales_acierto"
                     android:id="@+id/metidasJ1T3"
-                    android:textColor="@color/colorLetraBtn" />
+                    android:textColor="@color/colorLetraBtn"
+                    android:layout_weight="1"
+                    android:gravity="right" />
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -624,7 +630,9 @@
                     android:textAppearance="?android:attr/textAppearanceLarge"
                     android:text="@string/estadisticas_iniciales_acierto"
                     android:id="@+id/numRobosJ1"
-                    android:textColor="@color/colorLetraBtn" />
+                    android:textColor="@color/colorLetraBtn"
+                    android:layout_weight="1"
+                    android:gravity="right" />
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -642,7 +650,7 @@
                     android:textAppearance="?android:attr/textAppearanceLarge"
                     android:text="@string/estadisticas_iniciales_total"
                     android:id="@+id/numTaponesJ1"
-                    android:layout_weight="3"
+                    android:layout_weight="2"
                     android:layout_marginRight="14dp"
                     android:textColor="@color/colorLetraBtn" />
 

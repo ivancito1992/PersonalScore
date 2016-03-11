@@ -291,7 +291,7 @@
                 android:layout_weight="1">
 
                 <TextView
-                    android:layout_width="35dp"
+                    android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:textAppearance="?android:attr/textAppearanceLarge"
                     android:text="@string/tL"
@@ -327,7 +327,7 @@
                     android:textAppearance="?android:attr/textAppearanceLarge"
                     android:text="@string/estadisticas_iniciales_total"
                     android:id="@+id/totalJ1TL"
-                    android:layout_weight="4"
+                    android:layout_weight="3"
                     android:textColor="@color/colorLetraBtn" />
 
                 <Button
@@ -367,7 +367,7 @@
                 android:layout_weight="1">
 
                 <TextView
-                    android:layout_width="35dp"
+                    android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:textAppearance="?android:attr/textAppearanceLarge"
                     android:text="@string/t2"
@@ -403,7 +403,7 @@
                     android:textAppearance="?android:attr/textAppearanceLarge"
                     android:text="@string/estadisticas_iniciales_total"
                     android:id="@+id/totalJ1T2"
-                    android:layout_weight="4"
+                    android:layout_weight="3"
                     android:textColor="@color/colorLetraBtn" />
 
                 <Button
@@ -443,7 +443,7 @@
                 android:layout_weight="1">
 
                 <TextView
-                    android:layout_width="35dp"
+                    android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:textAppearance="?android:attr/textAppearanceLarge"
                     android:text="@string/t3"
@@ -479,7 +479,7 @@
                     android:textAppearance="?android:attr/textAppearanceLarge"
                     android:text="@string/estadisticas_iniciales_total"
                     android:id="@+id/totalJ1T3"
-                    android:layout_weight="4"
+                    android:layout_weight="3"
                     android:textColor="@color/colorLetraBtn" />
 
                 <Button
@@ -519,7 +519,7 @@
                 android:layout_weight="1">
 
                 <TextView
-                    android:layout_width="35dp"
+                    android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:textAppearance="?android:attr/textAppearanceLarge"
                     android:text="@string/rebotes"
@@ -563,7 +563,7 @@
                 android:layout_weight="1">
 
                 <TextView
-                    android:layout_width="35dp"
+                    android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:textAppearance="?android:attr/textAppearanceLarge"
                     android:text="@string/asistencias"
@@ -607,21 +607,21 @@
                 android:layout_weight="1">
 
                 <RadioButton
-                    android:layout_width="17dp"
+                    android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:text="@string/robos"
                     android:id="@+id/esRoboJ1"
                     android:checked="true"
-                    android:layout_weight="3"
+                    android:layout_weight="5"
                     android:textColor="@color/colorLetraBtn" />
 
                 <RadioButton
-                    android:layout_width="18dp"
+                    android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:text="@string/tapones"
                     android:id="@+id/esTaponJ1"
                     android:checked="false"
-                    android:layout_weight="3"
+                    android:layout_weight="5"
                     android:textColor="@color/colorLetraBtn" />
 
                 <TextView
@@ -631,7 +631,7 @@
                     android:text="@string/estadisticas_iniciales_acierto"
                     android:id="@+id/numRobosJ1"
                     android:textColor="@color/colorLetraBtn"
-                    android:layout_weight="1"
+                    android:layout_weight="2"
                     android:gravity="right" />
 
                 <TextView
@@ -651,8 +651,8 @@
                     android:text="@string/estadisticas_iniciales_total"
                     android:id="@+id/numTaponesJ1"
                     android:layout_weight="2"
-                    android:layout_marginRight="14dp"
-                    android:textColor="@color/colorLetraBtn" />
+                    android:textColor="@color/colorLetraBtn"
+                    android:layout_marginRight="10dp" />
 
                 <Button
                     style="?android:attr/buttonStyleSmall"
@@ -660,7 +660,7 @@
                     android:layout_height="34dp"
                     android:text="@string/añadir"
                     android:id="@+id/btnExtraJ1"
-                    android:layout_weight="2"
+                    android:layout_weight="3"
                     android:layout_marginTop="3dp"
                     android:layout_marginBottom="3dp"
                     android:background="@drawable/btn_acierto_accion"

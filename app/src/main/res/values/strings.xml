@@ -1,7 +1,7 @@
 <resources>
     <string name="app_name">Personal Score</string>
 
-    <!-- TESTO PARA MODO ESTADISTICO-->
+    <!-- TEXTO PARA MODO ESTADISTICO-->
     <string name="local">HOME</string>
     <string name="marcador_inicial">0</string>
     <string name="puntos_jugador">0</string>
@@ -24,4 +24,7 @@
     <string name="esLocal">HOME</string>
     <string name="esVisitante">AWAY</string>
     <string name="back">Deshacer ultima accion</string>
+
+    <!-- TEXTO PARA MODO JUGADAS-->
+    <string name="pista">cancha</string>
 </resources>

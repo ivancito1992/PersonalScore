@@ -6,76 +6,10 @@
     android:rowCount="7"
     android:background="#6a6a6a">
 
-    <Space
-        android:layout_width="20px"
-        android:layout_height="20px"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentStart="true"
-        android:layout_above="@+id/linearLayout2"
-        android:layout_toStartOf="@+id/imageView"
-        android:id="@+id/space" />
-
-    <LinearLayout
-        android:orientation="horizontal"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/linearLayout"
-        android:layout_toEndOf="@+id/space">
-
-        <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="New Button"
-            android:id="@+id/button8"
-            android:layout_alignParentTop="true"
-            android:layout_toEndOf="@+id/button"
-            android:layout_alignParentEnd="false"
-            android:layout_alignParentStart="false"
-            android:layout_alignParentRight="false"
-            android:layout_weight="1" />
-
-        <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="New Button"
-            android:id="@+id/button9"
-            android:layout_alignParentTop="true"
-            android:layout_toEndOf="@+id/button8"
-            android:layout_alignParentEnd="false"
-            android:layout_alignParentStart="false"
-            android:layout_alignParentRight="false"
-            android:layout_weight="1" />
-
-        <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="New Button"
-            android:id="@+id/button10"
-            android:layout_alignParentTop="true"
-            android:layout_toEndOf="@+id/button9"
-            android:layout_alignParentEnd="false"
-            android:layout_alignParentStart="false"
-            android:layout_alignParentRight="false"
-            android:layout_weight="1" />
-
-        <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="New Button"
-            android:id="@+id/button11"
-            android:layout_alignParentTop="true"
-            android:layout_toEndOf="@+id/button10"
-            android:layout_alignParentEnd="false"
-            android:layout_alignParentStart="false"
-            android:layout_alignParentRight="false"
-            android:layout_weight="1" />
-    </LinearLayout>
-
     <LinearLayout
         android:orientation="vertical"
-        android:layout_width="wrap_content"
+        android:layout_width="55dp"
         android:layout_height="match_parent"
-        android:layout_below="@+id/linearLayout"
         android:id="@+id/linearLayout2">
 
         <Button
@@ -83,53 +17,105 @@
             android:layout_height="wrap_content"
             android:text="New Button"
             android:id="@+id/button2"
-            android:layout_alignParentStart="true"
-            android:layout_weight="1" />
+            android:layout_weight="1"
+            android:gravity="center" />
 
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="New Button"
             android:id="@+id/button3"
-            android:layout_below="@+id/button2"
-            android:layout_alignParentStart="true"
-            android:layout_weight="1" />
+            android:layout_weight="1"
+            android:gravity="center" />
 
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="New Button"
             android:id="@+id/button4"
-            android:layout_below="@+id/button3"
-            android:layout_alignParentStart="true"
-            android:layout_weight="1" />
+            android:layout_weight="1"
+            android:gravity="center" />
 
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="New Button"
             android:id="@+id/button5"
-            android:layout_below="@+id/button4"
-            android:layout_alignParentStart="true"
-            android:layout_weight="1" />
+            android:layout_weight="1"
+            android:gravity="center" />
 
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="New Button"
             android:id="@+id/button6"
-            android:layout_below="@+id/button5"
-            android:layout_alignParentStart="true"
-            android:layout_weight="1" />
+            android:layout_weight="1"
+            android:gravity="center" />
 
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="New Button"
             android:id="@+id/button7"
-            android:layout_below="@+id/button6"
-            android:layout_alignParentStart="true"
-            android:layout_weight="1" />
+            android:layout_weight="1"
+            android:gravity="center" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="55dp"
+        android:layout_height="match_parent"
+        android:id="@+id/linearLayout3"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true">
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="New Button"
+            android:id="@+id/button12"
+            android:layout_weight="1"
+            android:gravity="center" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="New Button"
+            android:id="@+id/button13"
+            android:layout_weight="1"
+            android:gravity="center" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="New Button"
+            android:id="@+id/button14"
+            android:layout_weight="1"
+            android:gravity="center" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="New Button"
+            android:id="@+id/button15"
+            android:layout_weight="1"
+            android:gravity="center" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="New Button"
+            android:id="@+id/button16"
+            android:layout_weight="1"
+            android:gravity="center" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="New Button"
+            android:id="@+id/button17"
+            android:layout_weight="1"
+            android:gravity="center" />
     </LinearLayout>
 
     <ImageView
@@ -137,7 +123,8 @@
         android:layout_height="match_parent"
         android:id="@+id/imageView"
         android:background="@drawable/icono_jugadas"
-        android:layout_below="@+id/linearLayout"
-        android:layout_toEndOf="@+id/linearLayout2" />
+        android:layout_toEndOf="@+id/linearLayout2"
+        android:layout_toStartOf="@+id/linearLayout3"
+        android:contentDescription="@string/pista" />
 
 </RelativeLayout>

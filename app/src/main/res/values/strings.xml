@@ -16,9 +16,9 @@
     <string name="asistencias">Asistencias</string>
     <string name="tapones">Tapon</string>
     <string name="robos">Robo</string>
-    <string name="tL">1P</string>
-    <string name="t2">2P</string>
-    <string name="t3">3P</string>
+    <string name="tL">1 Punto</string>
+    <string name="t2">2 Puntos</string>
+    <string name="t3">3 Puntos</string>
     <string name="añadir">+</string>
     <string name="nombre">Nombre</string>
     <string name="esLocal">HOME</string>

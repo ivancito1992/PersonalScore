@@ -238,7 +238,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:id="@+id/datosJugador1"
-                android:gravity="center_vertical">
+                android:gravity="center_vertical"
+                android:background="@color/btnDeshacer">
 
                 <RadioGroup
                     android:layout_width="wrap_content"
@@ -253,7 +254,7 @@
                         android:text="@string/esLocal"
                         android:id="@+id/esLocalJ1"
                         android:checked="false"
-                        android:textColor="@color/colorLetraBtn"
+                        android:textColor="@color/colorLocal"
                         android:layout_weight="1"
                         android:textSize="16sp" />
 
@@ -263,14 +264,14 @@
                         android:text="@string/esVisitante"
                         android:id="@+id/esVisitanteJ1"
                         android:checked="false"
-                        android:textColor="@color/colorLetraBtn"
+                        android:textColor="@color/colorVisitante"
                         android:layout_weight="1"
                         android:textSize="16sp" />
                 </RadioGroup>
 
                 <TextView
                     android:layout_width="0dp"
-                    android:layout_height="wrap_content"
+                    android:layout_height="match_parent"
                     android:textAppearance="?android:attr/textAppearanceLarge"
                     android:text="@string/puntos_jugador"
                     android:id="@+id/puntosJ1"
@@ -278,9 +279,7 @@
                     android:layout_weight="1"
                     style="@style/Marcador"
                     android:textSize="32sp"
-                    android:layout_marginLeft="10dp"
-                    android:layout_marginTop="3dp"
-                    android:layout_marginRight="3dp" />
+                    android:layout_marginLeft="10dp" />
 
             </LinearLayout>
 

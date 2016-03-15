@@ -30,7 +30,7 @@ public class MenuInicial extends AppCompatActivity implements View.OnClickListen
     public void onClick(View v) {
         switch (v.getId()){
             case R.id.btn_estadisticas:
-                startActivity(new Intent(MenuInicial.this, Estadisticas.class));
+                startActivity(new Intent(MenuInicial.this, SeleccionNombre.class));
                 break;
             case R.id.btn_jugadas:
                 startActivity(new Intent(MenuInicial.this, JugadasCompleto.class));

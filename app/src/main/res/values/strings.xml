@@ -24,6 +24,9 @@
     <string name="esLocal">HOME</string>
     <string name="esVisitante">AWAY</string>
     <string name="back">Deshacer ultima accion</string>
+    <string name="nombreLocal">Nombre Equipo Local</string>
+    <string name="nombreVisitante">Nombre Equipo Visitante</string>
+    <string name="comenzar">Comenzar</string>
 
     <!-- TEXTO PARA MODO JUGADAS-->
     <string name="pista">cancha</string>

@@ -41,8 +41,9 @@
                         android:id="@+id/equipoLocal"
                         android:gravity="center"
                         android:layout_weight="1"
-                        android:background="#64000000"
-                        android:textColor="@color/colorLetraBtn" />
+                        android:background="#b4000000"
+                        android:textColor="@color/colorLocal"
+                        android:textSize="18sp" />
 
                     <TextView
                         android:layout_width="125dp"
@@ -142,8 +143,9 @@
                         android:id="@+id/equipoVisitante"
                         android:gravity="center"
                         android:layout_weight="1"
-                        android:background="#64000000"
-                        android:textColor="@color/colorLetraBtn" />
+                        android:background="#b4000000"
+                        android:textColor="@color/colorVisitante"
+                        android:textSize="18sp" />
 
                     <TextView
                         android:layout_width="125dp"
@@ -242,18 +244,18 @@
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
                     android:orientation="horizontal"
-                    android:id="@+id/equipoJ1"
-                    android:layout_weight="1"
-                    android:gravity="left|center_vertical">
+                    android:gravity="left|center_vertical"
+                    android:layout_weight="1">
 
                     <RadioButton
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="@string/esLocal"
                         android:id="@+id/esLocalJ1"
-                        android:checked="true"
-                        android:textSize="20sp"
-                        android:textColor="@color/colorLetraBtn" />
+                        android:checked="false"
+                        android:textColor="@color/colorLetraBtn"
+                        android:layout_weight="1"
+                        android:textSize="16sp" />
 
                     <RadioButton
                         android:layout_width="wrap_content"
@@ -261,13 +263,13 @@
                         android:text="@string/esVisitante"
                         android:id="@+id/esVisitanteJ1"
                         android:checked="false"
-                        android:layout_marginLeft="30dp"
-                        android:textSize="20sp"
-                        android:textColor="@color/colorLetraBtn" />
+                        android:textColor="@color/colorLetraBtn"
+                        android:layout_weight="1"
+                        android:textSize="16sp" />
                 </RadioGroup>
 
                 <TextView
-                    android:layout_width="wrap_content"
+                    android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:textAppearance="?android:attr/textAppearanceLarge"
                     android:text="@string/puntos_jugador"
@@ -276,7 +278,7 @@
                     android:layout_weight="1"
                     style="@style/Marcador"
                     android:textSize="32sp"
-                    android:layout_marginLeft="3dp"
+                    android:layout_marginLeft="10dp"
                     android:layout_marginTop="3dp"
                     android:layout_marginRight="3dp" />
 
@@ -298,8 +300,8 @@
                     android:id="@+id/textoJ1TL"
                     android:gravity="center_vertical"
                     android:layout_weight="6"
-                    android:textSize="18sp"
-                    android:textColor="@color/colorLetraBtn" />
+                    android:textColor="@color/colorLetraBtn"
+                    android:textSize="16sp" />
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -374,7 +376,7 @@
                     android:id="@+id/textoJ1T2"
                     android:gravity="center_vertical"
                     android:layout_weight="6"
-                    android:textSize="18sp"
+                    android:textSize="16sp"
                     android:textColor="@color/colorLetraBtn" />
 
                 <TextView
@@ -450,7 +452,7 @@
                     android:id="@+id/textoJ1T3"
                     android:gravity="center_vertical"
                     android:layout_weight="6"
-                    android:textSize="18sp"
+                    android:textSize="16sp"
                     android:textColor="@color/colorLetraBtn" />
 
                 <TextView
@@ -526,7 +528,7 @@
                     android:id="@+id/textoRebotesJ1"
                     android:gravity="center_vertical"
                     android:layout_weight="6"
-                    android:textSize="18sp"
+                    android:textSize="16sp"
                     android:textColor="@color/colorLetraBtn" />
 
                 <TextView
@@ -570,7 +572,7 @@
                     android:id="@+id/textoAsistenciasJ1"
                     android:gravity="center_vertical"
                     android:layout_weight="6"
-                    android:textSize="18sp"
+                    android:textSize="16sp"
                     android:textColor="@color/colorLetraBtn" />
 
                 <TextView
@@ -613,7 +615,8 @@
                     android:id="@+id/esRoboJ1"
                     android:checked="true"
                     android:layout_weight="5"
-                    android:textColor="@color/colorLetraBtn" />
+                    android:textColor="@color/colorLetraBtn"
+                    android:textSize="16sp" />
 
                 <RadioButton
                     android:layout_width="0dp"
@@ -622,7 +625,8 @@
                     android:id="@+id/esTaponJ1"
                     android:checked="false"
                     android:layout_weight="5"
-                    android:textColor="@color/colorLetraBtn" />
+                    android:textColor="@color/colorLetraBtn"
+                    android:textSize="16sp" />
 
                 <TextView
                     android:layout_width="wrap_content"

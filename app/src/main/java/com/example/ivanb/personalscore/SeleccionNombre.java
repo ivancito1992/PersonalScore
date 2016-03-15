@@ -18,11 +18,11 @@ public class SeleccionNombre extends AppCompatActivity implements View.OnClickLi
     Button continuar;
     String cadenaLocal, cadenaVisitante;
 
-    protected void onCreate(Bundle savedInstanceState) {
+    public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
                 WindowManager.LayoutParams.FLAG_FULLSCREEN);
-        setContentView(R.layout.seleccion_nombres_equipo);
+        setContentView(R.layout.seleccion_nombres);
 
         textoLocal = (TextView) findViewById(R.id.nombreLocal);
         textoVisitante = (TextView) findViewById(R.id.nombreVisitante);
@@ -49,11 +49,11 @@ public class SeleccionNombre extends AppCompatActivity implements View.OnClickLi
             case R.id.comenzar:
                 cadenaLocal = nombreLocal.getText().toString();
                 cadenaVisitante = nombreVisitante.getText().toString();
-                tvEquipoLocal.setText(cadenaLocal);
-                tvEquipoVisitante.setText(cadenaVisitante);
-                startActivity(new Intent(SeleccionNombre.this, Estadisticas.class));
+                Intent i = new Intent(this, Estadisticas.class);
+                i.putExtra("nel", cadenaLocal);
+                i.putExtra("nev", cadenaVisitante);
+                startActivity(i);
                 break;
-
         }
     }
 }

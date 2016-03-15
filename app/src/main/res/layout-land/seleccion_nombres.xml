@@ -4,6 +4,10 @@
     android:layout_height="match_parent"
     android:background="@drawable/fondo_stats_pc">
 
+    <Space
+        android:layout_width="20px"
+        android:layout_height="20px" />
+
     <LinearLayout
         android:orientation="vertical"
         android:layout_width="wrap_content"
@@ -68,6 +72,10 @@
             android:paddingEnd="10dp"
             android:paddingStart="10dp" />
     </LinearLayout>
+
+    <Space
+        android:layout_width="20px"
+        android:layout_height="20px" />
 
     <Button
         android:layout_width="match_parent"

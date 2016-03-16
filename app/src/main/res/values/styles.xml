@@ -17,10 +17,4 @@
         <item name="android:shadowDx">3</item>
         <item name="android:shadowDy">3</item>
     </style>
-
-    <!-- ESTILO DE LOS RADIOBUTTON -->
-    <style name="seleccionEquipo">
-        <item name="android:button">@drawable/btn_acierto_accion</item>
-    </style>
-
 </resources>

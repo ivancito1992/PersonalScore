@@ -10,25 +10,54 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     android:background="@drawable/fondo_menu">
 
-    <ImageButton
-        android:layout_width="0dp"
-        android:layout_height="120dp"
-        android:id="@+id/btn_estadisticas"
-        android:layout_marginRight="30dp"
-        android:background="@drawable/icono_marcador"
-        android:layout_weight="4" />
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:gravity="left|center_vertical"
+        android:layout_marginRight="35dp">
+
+        <ImageButton
+            android:layout_width="200dp"
+            android:layout_height="125dp"
+            android:id="@+id/btn_estadisticas"
+            android:background="@drawable/icono_marcador" />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/estadistico"
+            android:id="@+id/tutorialEstadisticas"
+            android:layout_marginTop="30dp"
+            android:background="@drawable/btn_equipos_accion"
+            android:textColor="#ffffff" />
+    </LinearLayout>
 
     <Space
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:id="@+id/entreBTNiniciales"
-        android:layout_weight="3" />
+        android:layout_width="80dp"
+        android:layout_height="wrap_content" />
 
-    <ImageButton
-        android:layout_width="0dp"
-        android:layout_height="120dp"
-        android:id="@+id/btn_jugadas"
-        android:layout_marginLeft="30dp"
-        android:background="@drawable/icono_jugadas"
-        android:layout_weight="4" />
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:gravity="center_vertical|right"
+        android:layout_marginLeft="35dp">
+
+        <ImageButton
+            android:layout_width="200dp"
+            android:layout_height="125dp"
+            android:id="@+id/btn_jugadas"
+            android:background="@drawable/icono_jugadas" />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/jugadas"
+            android:id="@+id/tutorialJugadas"
+            android:layout_marginTop="30dp"
+            android:background="@drawable/btn_equipos_accion"
+            android:textColor="#ffffff" />
+    </LinearLayout>
+
 </LinearLayout>

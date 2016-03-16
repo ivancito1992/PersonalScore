@@ -5,6 +5,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.view.WindowManager;
+import android.widget.Button;
 import android.widget.ImageButton;
 
 public class MenuInicial extends AppCompatActivity implements View.OnClickListener {
@@ -21,6 +22,10 @@ public class MenuInicial extends AppCompatActivity implements View.OnClickListen
     private void siguiente() {
         ImageButton estadisticas = (ImageButton) findViewById(R.id.btn_estadisticas);
         ImageButton jugadas = (ImageButton) findViewById(R.id.btn_jugadas);
+        Button tutorialEstadisticas = (Button) findViewById(R.id.tutorialEstadisticas);
+        Button tutorialJugadas = (Button) findViewById(R.id.tutorialJugadas);
+        tutorialEstadisticas.setOnClickListener(this);
+        tutorialJugadas.setOnClickListener(this);
         estadisticas.setOnClickListener(this);
         jugadas.setOnClickListener(this);
 
@@ -35,6 +40,8 @@ public class MenuInicial extends AppCompatActivity implements View.OnClickListen
             case R.id.btn_jugadas:
                 startActivity(new Intent(MenuInicial.this, JugadasCompleto.class));
                 break;
+            case R.id.tutorialEstadisticas:
+                startActivity(new Intent(MenuInicial.this, TutorialEstadisticas.class));
         }
     }
 }

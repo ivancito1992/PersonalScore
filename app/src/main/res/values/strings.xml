@@ -33,6 +33,8 @@
     <!-- TEXTO PARA LOS TUTORIALES -->
     <string name="estadistico">Tutorial estadisticas</string>
     <string name="jugadas">Tutorial Jugadas</string>
+    <string name="descripcionEstadistico">Modo estadisticas</string>
+    <string name="descripcionJugadas">Modo Jugadas</string>
 
     <!-- TEXTO PARA MODO JUGADAS-->
     <string name="pista">cancha</string>

@@ -8,6 +8,7 @@
         <item name="colorAccent">@color/colorAccent</item>
     </style>
 
+    <!-- ESTILO DE LOS MARCADORES -->
     <style name="Marcador">
         <item name="android:background">@color/fondoLetrasMarcador</item>
         <item name="android:textColor">@color/sombraLetrasMarcador</item>sombraLetrasMarcador
@@ -15,6 +16,11 @@
         <item name="android:shadowRadius">3</item>
         <item name="android:shadowDx">3</item>
         <item name="android:shadowDy">3</item>
+    </style>
+
+    <!-- ESTILO DE LOS RADIOBUTTON -->
+    <style name="seleccionEquipo">
+        <item name="android:button">@drawable/btn_acierto_accion</item>
     </style>
 
 </resources>

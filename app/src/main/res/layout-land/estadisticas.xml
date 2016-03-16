@@ -256,7 +256,8 @@
                         android:checked="false"
                         android:textColor="@color/colorLocal"
                         android:layout_weight="1"
-                        android:textSize="16sp" />
+                        android:textSize="16sp"
+                        android:buttonTint="@color/colorLocal" />
 
                     <RadioButton
                         android:layout_width="wrap_content"
@@ -266,7 +267,8 @@
                         android:checked="false"
                         android:textColor="@color/colorVisitante"
                         android:layout_weight="1"
-                        android:textSize="16sp" />
+                        android:textSize="16sp"
+                        android:buttonTint="@color/colorVisitante" />
                 </RadioGroup>
 
                 <TextView
@@ -614,7 +616,8 @@
                     android:checked="true"
                     android:layout_weight="5"
                     android:textColor="@color/colorLetraBtn"
-                    android:textSize="16sp" />
+                    android:textSize="16sp"
+                    android:buttonTint="#ffffff" />
 
                 <RadioButton
                     android:layout_width="0dp"
@@ -624,7 +627,8 @@
                     android:checked="false"
                     android:layout_weight="5"
                     android:textColor="@color/colorLetraBtn"
-                    android:textSize="16sp" />
+                    android:textSize="16sp"
+                    android:buttonTint="#ffffff" />
 
                 <TextView
                     android:layout_width="wrap_content"

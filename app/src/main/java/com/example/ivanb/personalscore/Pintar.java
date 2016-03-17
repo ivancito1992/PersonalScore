@@ -10,6 +10,7 @@ import android.graphics.Canvas;
 import android.graphics.Paint;
 import android.graphics.Path;
 import android.view.MotionEvent;
+import android.widget.Button;
 
 
 public class Pintar extends View {
@@ -77,9 +78,5 @@ public class Pintar extends View {
         drawPaint.setStrokeJoin(Paint.Join.ROUND);
         drawPaint.setStrokeCap(Paint.Cap.ROUND);
         canvasPaint = new Paint(Paint.DITHER_FLAG);
-    }
-
-    public void BorrarCanvas(){
-        drawCanvas.drawColor(Color.TRANSPARENT);
     }
 }

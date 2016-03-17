@@ -1,5 +1,7 @@
 package com.example.ivanb.personalscore;
 
+
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.util.AttributeSet;
@@ -11,7 +13,8 @@ public class JugadasMediaPista extends AppCompatActivity implements View.OnClick
 
     Button borrar;
     AttributeSet attrs;
-   protected void onCreate(Bundle savedInstanceState) {
+
+    protected void onCreate(Bundle savedInstanceState) {
        super.onCreate(savedInstanceState);
        setContentView(R.layout.jugadas_media_pista);
        borrar = (Button) findViewById(R.id.borrar);
@@ -20,9 +23,9 @@ public class JugadasMediaPista extends AppCompatActivity implements View.OnClick
 
     @Override
     public void onClick(View v) {
-        Pintar pintar = new Pintar(this, attrs);
-        //if(v.getId()==R.id.borrar){
-            //pintar.BorrarCanvas();
-       // }
+        if(v.getId()==R.id.borrar){
+            startActivity(new Intent(JugadasMediaPista.this, JugadasMediaPista.class));
+            finish();
+        }
     }
 }

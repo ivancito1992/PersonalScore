@@ -4,6 +4,10 @@
     <dimen name="activity_vertical_margin">10dp</dimen>
 
     <!-- TAMAÑO DEL TRAZO -->
-    <dimen name="trazo">6dp</dimen>
+    <dimen name="trazo_corto">6dp</dimen>
     <integer name="trazo_pequeño">6</integer>
+    <dimen name="trazo_medio">8dp</dimen>
+    <integer name="trazo_mediano">8</integer>
+    <dimen name="trazo_largo">10dp</dimen>
+    <integer name="trazo_grande">10</integer>
 </resources>

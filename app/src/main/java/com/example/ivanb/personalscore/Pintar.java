@@ -1,5 +1,6 @@
 package com.example.ivanb.personalscore;
 
+import android.graphics.Color;
 import android.graphics.PorterDuff;
 import android.view.View;
 import android.content.Context;
@@ -19,8 +20,8 @@ public class Pintar extends View {
     private Bitmap canvasBitmap;
 
 
-    public Pintar(Context context) {
-        super(context);
+    public Pintar(Context context, AttributeSet attrs) {
+        super(context, attrs);
         setupDrawing();
     }
 
@@ -71,7 +72,7 @@ public class Pintar extends View {
 
         /* MIRAR ESTO QUE ES LO QUE HACE */
         drawPaint.setAntiAlias(true);
-        drawPaint.setStrokeWidth(10);
+        drawPaint.setStrokeWidth(5);
         drawPaint.setStyle(Paint.Style.STROKE);
         drawPaint.setStrokeJoin(Paint.Join.ROUND);
         drawPaint.setStrokeCap(Paint.Cap.ROUND);
@@ -79,6 +80,6 @@ public class Pintar extends View {
     }
 
     public void BorrarCanvas(){
-        drawCanvas.drawColor(0, PorterDuff.Mode.CLEAR);
+        drawCanvas.drawColor(Color.TRANSPARENT);
     }
 }

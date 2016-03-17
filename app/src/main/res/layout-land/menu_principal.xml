@@ -8,24 +8,25 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    android:background="@drawable/fondo_menu">
+    android:background="@drawable/fondo_menu"
+    android:baselineAligned="false">
 
     <LinearLayout
         android:orientation="vertical"
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
         android:gravity="left|center_vertical"
-        android:layout_marginRight="65dp">
+        android:layout_weight="1">
 
         <ImageButton
-            android:layout_width="175dp"
-            android:layout_height="110dp"
+            android:layout_width="200dp"
+            android:layout_height="125dp"
             android:id="@+id/btn_estadisticas"
             android:background="@drawable/icono_marcador"
             android:contentDescription="@string/descripcionEstadistico" />
 
         <Button
-            android:layout_width="match_parent"
+            android:layout_width="175dp"
             android:layout_height="wrap_content"
             android:text="@string/estadistico"
             android:id="@+id/tutorialEstadisticas"
@@ -34,26 +35,22 @@
             android:textColor="#ffffff" />
     </LinearLayout>
 
-    <Space
-        android:layout_width="80dp"
-        android:layout_height="wrap_content" />
-
     <LinearLayout
         android:orientation="vertical"
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
         android:gravity="center_vertical|right"
-        android:layout_marginLeft="65dp">
+        android:layout_weight="1">
 
         <ImageButton
-            android:layout_width="175dp"
-            android:layout_height="110dp"
+            android:layout_width="200dp"
+            android:layout_height="125dp"
             android:id="@+id/btn_jugadas"
             android:background="@drawable/icono_jugadas"
             android:contentDescription="@string/descripcionJugadas" />
 
         <Button
-            android:layout_width="match_parent"
+            android:layout_width="175dp"
             android:layout_height="wrap_content"
             android:text="@string/jugadas"
             android:id="@+id/tutorialJugadas"

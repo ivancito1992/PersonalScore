@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal"
+    android:rowCount="7"
+    android:background="#6a6a6a">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="80dp"
+        android:layout_height="match_parent"
+        android:id="@+id/linearLayout2"
+        android:background="@color/btnDeshacer"
+        android:gravity="center">
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/jugada1"
+            android:id="@+id/jugada1Media"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:background="@drawable/btn_deshacer"
+            android:textColor="#ffffff" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/jugada2"
+            android:id="@+id/jugada2Media"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:background="@drawable/btn_deshacer"
+            android:textColor="#ffffff" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/jugada3"
+            android:id="@+id/jugada3Media"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:background="@drawable/btn_deshacer"
+            android:textColor="#ffffff" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/jugada4"
+            android:id="@+id/jugada4Media"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:background="@drawable/btn_deshacer"
+            android:textColor="#ffffff" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/jugada5"
+            android:id="@+id/jugada5Media"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:background="@drawable/btn_deshacer"
+            android:textColor="#ffffff" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="90dp"
+        android:layout_height="match_parent"
+        android:id="@+id/linearLayout3"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:background="@color/btnDeshacer"
+        android:gravity="center">
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/vista"
+            android:id="@+id/cvAcompleto"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:background="@drawable/btn_deshacer"
+            android:textColor="#ffffff" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/borrar"
+            android:id="@+id/borrarPistaMedia"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:background="@drawable/btn_deshacer"
+            android:textColor="#ffffff" />
+    </LinearLayout>
+
+    <com.example.ivanb.personalscore.Pintar
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/view"
+        android:layout_alignParentTop="true"
+        android:layout_toEndOf="@+id/linearLayout2"
+        android:layout_toStartOf="@+id/linearLayout3"
+        android:background="@drawable/jugadas_medio_campo" />
+
+</RelativeLayout>

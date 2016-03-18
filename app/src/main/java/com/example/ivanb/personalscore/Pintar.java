@@ -71,7 +71,6 @@ public class Pintar extends View {
 
         drawPaint.setColor(paintColor);
 
-        /* MIRAR ESTO QUE ES LO QUE HACE */
         drawPaint.setAntiAlias(true);
         drawPaint.setStrokeWidth(5);
         drawPaint.setStyle(Paint.Style.STROKE);

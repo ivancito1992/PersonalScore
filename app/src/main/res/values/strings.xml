@@ -38,7 +38,12 @@
 
     <!-- TEXTO PARA MODO JUGADAS-->
     <string name="pista">cancha</string>
-    <string name="sml">small</string>
-    <string name="med">medium</string>
-    <string name="lrg">large</string>
+    <string name="borrar">Reiniciar</string>
+    <string name="vista">Cambiar vista</string>
+    <string name="jugada1">1</string>
+    <string name="jugada2">2</string>
+    <string name="jugada3">3</string>
+    <string name="jugada4">4</string>
+    <string name="jugada5">5</string>
+
 </resources>

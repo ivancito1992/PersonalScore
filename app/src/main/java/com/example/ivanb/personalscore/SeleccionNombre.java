@@ -49,6 +49,12 @@ public class SeleccionNombre extends AppCompatActivity implements View.OnClickLi
             case R.id.comenzar:
                 cadenaLocal = nombreLocal.getText().toString();
                 cadenaVisitante = nombreVisitante.getText().toString();
+                if (cadenaLocal.isEmpty()){
+                    cadenaLocal = "Home";
+                }
+                if (cadenaVisitante.isEmpty()){
+                    cadenaVisitante = "Away";
+                }
                 Intent i = new Intent(this, Estadisticas.class);
                 i.putExtra("nel", cadenaLocal);
                 i.putExtra("nev", cadenaVisitante);

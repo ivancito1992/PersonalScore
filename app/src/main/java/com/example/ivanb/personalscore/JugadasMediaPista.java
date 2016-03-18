@@ -26,7 +26,7 @@ public class JugadasMediaPista extends AppCompatActivity implements View.OnClick
 
     @Override
     public void onClick(View v) {
-        if(v.getId()==R.id.borrarPistaCompleta){
+        if(v.getId()==R.id.borrarPistaMedia){
             startActivity(new Intent(JugadasMediaPista.this, JugadasMediaPista.class));
             finish();
         }

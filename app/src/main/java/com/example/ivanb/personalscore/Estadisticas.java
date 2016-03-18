@@ -79,7 +79,7 @@ public class Estadisticas extends AppCompatActivity implements View.OnClickListe
         esTapon = (RadioButton) findViewById(R.id.esTaponJ1);
 
         /* CAMBIAR FUENTE DE LOS TEXTOS */
-        String font_path_marcador = "fonts/ledconfondo.ttf";
+        String font_path_marcador = "fonts/puntitos1.ttf";
         String font_path_texto = "fonts/displaylcd.ttf";
 
         Typeface tfMarcador = Typeface.createFromAsset(getAssets(),font_path_marcador);

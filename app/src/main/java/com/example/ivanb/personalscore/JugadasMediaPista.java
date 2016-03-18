@@ -18,7 +18,7 @@ public class JugadasMediaPista extends AppCompatActivity implements View.OnClick
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
                 WindowManager.LayoutParams.FLAG_FULLSCREEN);
         setContentView(R.layout.jugadas_pista_media);
-        borrar = (Button) findViewById(R.id.borrarPistaCompleta);
+        borrar = (Button) findViewById(R.id.borrarPistaMedia);
         borrar.setOnClickListener(this);
         vista = (Button) findViewById(R.id.cvAcompleto);
         vista.setOnClickListener(this);

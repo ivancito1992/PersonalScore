@@ -19,7 +19,7 @@
             android:id="@+id/cvAmedia"
             android:layout_weight="1"
             android:textColor="#ffffff"
-            android:background="@drawable/btn_deshacer" />
+            android:background="@drawable/btn_jugadas_accion" />
 
         <Button
             android:layout_width="wrap_content"
@@ -28,7 +28,7 @@
             android:id="@+id/borrarPistaCompleta"
             android:layout_weight="1"
             android:textColor="#ffffff"
-            android:background="@drawable/btn_deshacer" />
+            android:background="@drawable/btn_jugadas_accion" />
     </LinearLayout>
 
     <LinearLayout
@@ -49,7 +49,7 @@
                 android:id="@+id/jugada1Completa"
                 android:layout_weight="1"
                 android:textColor="#ffffff"
-                android:background="@drawable/btn_deshacer" />
+                android:background="@drawable/btn_jugadas_accion" />
 
             <Button
                 android:layout_width="match_parent"
@@ -58,7 +58,7 @@
                 android:id="@+id/jugada2Completa"
                 android:layout_weight="1"
                 android:textColor="#ffffff"
-                android:background="@drawable/btn_deshacer" />
+                android:background="@drawable/btn_jugadas_accion" />
 
             <Button
                 android:layout_width="match_parent"
@@ -67,7 +67,7 @@
                 android:id="@+id/jugada3Completa"
                 android:layout_weight="1"
                 android:textColor="#ffffff"
-                android:background="@drawable/btn_deshacer" />
+                android:background="@drawable/btn_jugadas_accion" />
 
             <Button
                 android:layout_width="match_parent"
@@ -76,7 +76,7 @@
                 android:id="@+id/jugada4Completa"
                 android:layout_weight="1"
                 android:textColor="#ffffff"
-                android:background="@drawable/btn_deshacer" />
+                android:background="@drawable/btn_jugadas_accion" />
 
             <Button
                 android:layout_width="match_parent"
@@ -85,14 +85,14 @@
                 android:id="@+id/jugada5Completa"
                 android:layout_weight="1"
                 android:textColor="#ffffff"
-                android:background="@drawable/btn_deshacer" />
+                android:background="@drawable/btn_jugadas_accion" />
         </LinearLayout>
 
         <com.example.ivanb.personalscore.Pintar
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:id="@+id/paraPintarPistaCompleta"
-            android:background="@drawable/icono_jugadas" />
+            android:background="@drawable/pista_completa" />
     </LinearLayout>
 
 </LinearLayout>

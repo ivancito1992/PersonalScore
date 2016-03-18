@@ -16,7 +16,7 @@ import android.widget.Button;
 public class Pintar extends View {
     private Path drawPath;
     private Paint drawPaint, canvasPaint;
-    private int paintColor = 0xff000000; // color para el trazo
+    private int paintColor = 0xffff0000; // color para el trazo
     private Canvas drawCanvas;
     private Bitmap canvasBitmap;
 

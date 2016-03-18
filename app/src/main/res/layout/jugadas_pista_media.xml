@@ -3,8 +3,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="horizontal"
-    android:rowCount="7"
-    android:background="#6a6a6a">
+    android:rowCount="7">
 
     <LinearLayout
         android:orientation="vertical"
@@ -21,7 +20,7 @@
             android:id="@+id/jugada1Media"
             android:layout_weight="1"
             android:gravity="center"
-            android:background="@drawable/btn_deshacer"
+            android:background="@drawable/btn_jugadas_accion"
             android:textColor="#ffffff" />
 
         <Button
@@ -31,7 +30,7 @@
             android:id="@+id/jugada2Media"
             android:layout_weight="1"
             android:gravity="center"
-            android:background="@drawable/btn_deshacer"
+            android:background="@drawable/btn_jugadas_accion"
             android:textColor="#ffffff" />
 
         <Button
@@ -41,7 +40,7 @@
             android:id="@+id/jugada3Media"
             android:layout_weight="1"
             android:gravity="center"
-            android:background="@drawable/btn_deshacer"
+            android:background="@drawable/btn_jugadas_accion"
             android:textColor="#ffffff" />
 
         <Button
@@ -51,7 +50,7 @@
             android:id="@+id/jugada4Media"
             android:layout_weight="1"
             android:gravity="center"
-            android:background="@drawable/btn_deshacer"
+            android:background="@drawable/btn_jugadas_accion"
             android:textColor="#ffffff" />
 
         <Button
@@ -61,7 +60,7 @@
             android:id="@+id/jugada5Media"
             android:layout_weight="1"
             android:gravity="center"
-            android:background="@drawable/btn_deshacer"
+            android:background="@drawable/btn_jugadas_accion"
             android:textColor="#ffffff" />
 
     </LinearLayout>
@@ -83,7 +82,7 @@
             android:id="@+id/cvAcompleto"
             android:layout_weight="1"
             android:gravity="center"
-            android:background="@drawable/btn_deshacer"
+            android:background="@drawable/btn_jugadas_accion"
             android:textColor="#ffffff" />
 
         <Button
@@ -93,7 +92,7 @@
             android:id="@+id/borrarPistaMedia"
             android:layout_weight="1"
             android:gravity="center"
-            android:background="@drawable/btn_deshacer"
+            android:background="@drawable/btn_jugadas_accion"
             android:textColor="#ffffff" />
     </LinearLayout>
 
@@ -104,6 +103,6 @@
         android:layout_alignParentTop="true"
         android:layout_toEndOf="@+id/linearLayout2"
         android:layout_toStartOf="@+id/linearLayout3"
-        android:background="@drawable/jugadas_medio_campo" />
+        android:background="@drawable/pista_media" />
 
 </RelativeLayout>

@@ -16,12 +16,16 @@
     <color name="btnAcierto">#b400a300</color>
     <color name="btnAciertoSelect">#b45ac85a</color>
     <color name="marcoBtnAcierto">#005000</color>
+
     <color name="btnFallo">#b4a30000</color>
     <color name="btnFalloSelect">#b4c85a5a</color>
     <color name="marcoBtnFallo">#510000</color>
+
     <color name="btnDeshacer">#b4000000</color>
     <color name="marcoBtnDeshacer">#000000</color>
+    <color name="marcoBtnJugadas">#848484</color>
     <color name="colorLetraBtn">#ffffff</color>
+
     <color name="btnEquipos">#50ffffff</color>
     <color name="btnEquiposSelect">#50ffffff</color>
     <color name="marcoBtnEquipos">#b4000000</color>

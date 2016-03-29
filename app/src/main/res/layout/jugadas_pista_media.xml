@@ -15,54 +15,48 @@
 
         <Button
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="0dp"
             android:text="@string/jugada1"
-            android:id="@+id/jugada1Media"
+            android:id="@+id/button"
             android:layout_weight="1"
-            android:gravity="center"
             android:background="@drawable/btn_jugadas_accion"
             android:textColor="#ffffff" />
 
         <Button
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="0dp"
             android:text="@string/jugada2"
-            android:id="@+id/jugada2Media"
+            android:id="@+id/button2"
             android:layout_weight="1"
-            android:gravity="center"
             android:background="@drawable/btn_jugadas_accion"
             android:textColor="#ffffff" />
 
         <Button
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="0dp"
             android:text="@string/jugada3"
-            android:id="@+id/jugada3Media"
+            android:id="@+id/button3"
             android:layout_weight="1"
-            android:gravity="center"
             android:background="@drawable/btn_jugadas_accion"
             android:textColor="#ffffff" />
 
         <Button
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="0dp"
             android:text="@string/jugada4"
-            android:id="@+id/jugada4Media"
+            android:id="@+id/button4"
             android:layout_weight="1"
-            android:gravity="center"
             android:background="@drawable/btn_jugadas_accion"
             android:textColor="#ffffff" />
 
         <Button
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="0dp"
             android:text="@string/jugada5"
-            android:id="@+id/jugada5Media"
+            android:id="@+id/button5"
             android:layout_weight="1"
-            android:gravity="center"
             android:background="@drawable/btn_jugadas_accion"
             android:textColor="#ffffff" />
-
     </LinearLayout>
 
     <LinearLayout
@@ -104,5 +98,47 @@
         android:layout_toEndOf="@+id/linearLayout2"
         android:layout_toStartOf="@+id/linearLayout3"
         android:background="@drawable/pista_media" />
+
+    <ImageView
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:id="@+id/imageView"
+        android:background="@drawable/numero_1"
+        android:layout_alignParentTop="true"
+        android:layout_toEndOf="@+id/linearLayout2" />
+
+    <ImageView
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:id="@+id/imageView2"
+        android:background="@drawable/numero_2"
+        android:layout_alignParentTop="true"
+        android:layout_toStartOf="@+id/imageView3"
+        android:layout_marginEnd="69dp" />
+
+    <ImageView
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:id="@+id/imageView3"
+        android:background="@drawable/numero_3"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
+
+    <ImageView
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:id="@+id/imageView4"
+        android:background="@drawable/numero_4"
+        android:layout_alignParentTop="true"
+        android:layout_toStartOf="@+id/imageView5"
+        android:layout_marginEnd="60dp" />
+
+    <ImageView
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:id="@+id/imageView5"
+        android:background="@drawable/numero_5"
+        android:layout_alignParentTop="true"
+        android:layout_alignEnd="@+id/view" />
 
 </RelativeLayout>

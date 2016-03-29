@@ -1,7 +1,7 @@
 package com.example.ivanb.personalscore;
 
-import android.graphics.Color;
-import android.graphics.PorterDuff;
+
+import android.graphics.drawable.Drawable;
 import android.view.View;
 import android.content.Context;
 import android.util.AttributeSet;
@@ -10,10 +10,10 @@ import android.graphics.Canvas;
 import android.graphics.Paint;
 import android.graphics.Path;
 import android.view.MotionEvent;
-import android.widget.Button;
 
 
 public class Pintar extends View {
+    Drawable num1, num2, num3, num4, num5;
     private Path drawPath;
     private Paint drawPaint, canvasPaint;
     private int paintColor = 0xffff0000; // color para el trazo
@@ -21,8 +21,11 @@ public class Pintar extends View {
     private Bitmap canvasBitmap;
 
 
-    public Pintar(Context context, AttributeSet attrs) {
-        super(context, attrs);
+
+
+
+    public Pintar(Context ctx, AttributeSet attrs) {
+        super(ctx, attrs);
         setupDrawing();
     }
 

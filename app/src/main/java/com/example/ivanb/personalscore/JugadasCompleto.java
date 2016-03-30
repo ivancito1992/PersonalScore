@@ -15,8 +15,8 @@ public class JugadasCompleto extends AppCompatActivity implements View.OnClickLi
 
     Button borrar, vista;
     ImageView num1, num2, num3, num4, num5;
-    int modificarX = 50;
-    int modificarY = 50;
+    int modificarX = 80;
+    int modificarY = 80;
 
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -27,15 +27,15 @@ public class JugadasCompleto extends AppCompatActivity implements View.OnClickLi
         borrar.setOnClickListener(this);
         vista = (Button) findViewById(R.id.cvAmedia);
         vista.setOnClickListener(this);
-        num1 = (ImageView) findViewById(R.id.num1media);
+        num1 = (ImageView) findViewById(R.id.num1completa);
         num1.setOnTouchListener(handlerMover);
-        num2 = (ImageView) findViewById(R.id.num2media);
+        num2 = (ImageView) findViewById(R.id.num2completa);
         num2.setOnTouchListener(handlerMover);
-        num3 = (ImageView) findViewById(R.id.num3media);
+        num3 = (ImageView) findViewById(R.id.num3completa);
         num3.setOnTouchListener(handlerMover);
-        num4 = (ImageView) findViewById(R.id.num4media);
+        num4 = (ImageView) findViewById(R.id.num4completa);
         num4.setOnTouchListener(handlerMover);
-        num5 = (ImageView) findViewById(R.id.num5media);
+        num5 = (ImageView) findViewById(R.id.num5completa);
         num5.setOnTouchListener(handlerMover);
     }
 

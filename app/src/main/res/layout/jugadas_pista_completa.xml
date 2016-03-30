@@ -112,8 +112,7 @@
                 android:id="@+id/num2completa"
                 android:background="@drawable/numero_2"
                 android:layout_alignParentBottom="true"
-                android:layout_toEndOf="@+id/num1media"
-                android:layout_marginStart="65dp" />
+                android:layout_toEndOf="@+id/num1completa" />
 
             <ImageView
                 android:layout_width="25dp"
@@ -121,7 +120,7 @@
                 android:id="@+id/num3completa"
                 android:background="@drawable/numero_3"
                 android:layout_alignParentBottom="true"
-                android:layout_centerHorizontal="true" />
+                android:layout_toEndOf="@+id/num2completa" />
 
             <ImageView
                 android:layout_width="25dp"
@@ -129,8 +128,7 @@
                 android:id="@+id/num4completa"
                 android:background="@drawable/numero_4"
                 android:layout_alignParentBottom="true"
-                android:layout_toStartOf="@+id/num5media"
-                android:layout_marginEnd="52dp" />
+                android:layout_toEndOf="@+id/num3completa" />
 
             <ImageView
                 android:layout_width="25dp"
@@ -138,7 +136,7 @@
                 android:id="@+id/num5completa"
                 android:background="@drawable/numero_5"
                 android:layout_alignParentBottom="true"
-                android:layout_alignParentEnd="true" />
+                android:layout_toEndOf="@+id/num4completa" />
         </RelativeLayout>
     </LinearLayout>
 

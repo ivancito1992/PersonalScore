@@ -1,6 +1,5 @@
 package com.example.ivanb.personalscore;
 
-
 import android.view.View;
 import android.content.Context;
 import android.util.AttributeSet;
@@ -17,9 +16,6 @@ public class Pintar extends View {
     private int paintColor = 0xffff0000; // color para el trazo
     private Canvas drawCanvas;
     private Bitmap canvasBitmap;
-
-
-
 
 
     public Pintar(Context ctx, AttributeSet attrs) {

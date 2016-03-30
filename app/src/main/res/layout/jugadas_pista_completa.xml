@@ -49,8 +49,9 @@
                 android:id="@+id/trazoPasarCompleta"
                 android:layout_weight="1"
                 android:background="@drawable/btn_jugadas_accion"
-                android:textColor="#0066cc"
-                android:textSize="12sp" />
+                android:textColor="#00ffff"
+                android:textSize="12sp"
+                android:textStyle="bold" />
 
             <Button
                 android:layout_width="wrap_content"
@@ -60,7 +61,8 @@
                 android:layout_weight="1"
                 android:background="@drawable/btn_jugadas_accion"
                 android:textColor="#ff0000"
-                android:textSize="12sp" />
+                android:textSize="12sp"
+                android:textStyle="bold" />
 
             <Button
                 android:layout_width="wrap_content"
@@ -69,8 +71,9 @@
                 android:id="@+id/trazoBloquearCompleta"
                 android:layout_weight="1"
                 android:background="@drawable/btn_jugadas_accion"
-                android:textColor="#990000"
-                android:textSize="12sp" />
+                android:textColor="#ff8000"
+                android:textSize="12sp"
+                android:textStyle="bold" />
 
             <Button
                 android:layout_width="wrap_content"
@@ -80,7 +83,8 @@
                 android:layout_weight="1"
                 android:background="@drawable/btn_jugadas_accion"
                 android:textColor="#00ff00"
-                android:textSize="12sp" />
+                android:textSize="12sp"
+                android:textStyle="bold" />
 
         </LinearLayout>
 

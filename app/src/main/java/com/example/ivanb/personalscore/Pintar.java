@@ -83,12 +83,12 @@ public class Pintar extends View {
         drawPath = new Path();
         drawPaint = new Paint();
         float radius = 50.0f;
-        float[] i = new float[]{20.0f, 20.0f};
+        float[] i = new float[]{40.0f, 40.0f};
         float phase = 0;
 
-        drawPaint.setColor(0xff0066cc);
+        drawPaint.setColor(0xff00ffff);
 
-        drawPaint.setStrokeWidth(4);
+        drawPaint.setStrokeWidth(5);
         drawPaint.setAntiAlias(true);
         drawPaint.setStyle(Paint.Style.STROKE);
         drawPaint.setStrokeJoin(Paint.Join.ROUND);
@@ -107,7 +107,7 @@ public class Pintar extends View {
         drawPaint.setColor(0xffff0000);
 
         drawPaint.setAntiAlias(true);
-        drawPaint.setStrokeWidth(4);
+        drawPaint.setStrokeWidth(5);
         drawPaint.setStyle(Paint.Style.STROKE);
         drawPaint.setStrokeJoin(Paint.Join.ROUND);
         drawPaint.setStrokeCap(Paint.Cap.ROUND);
@@ -118,10 +118,10 @@ public class Pintar extends View {
         drawPath = new Path();
         drawPaint = new Paint();
 
-        drawPaint.setColor(0xff990000);
+        drawPaint.setColor(0xffff8000);
 
         drawPaint.setAntiAlias(true);
-        drawPaint.setStrokeWidth(6);
+        drawPaint.setStrokeWidth(7);
         drawPaint.setStyle(Paint.Style.STROKE);
         drawPaint.setStrokeJoin(Paint.Join.ROUND);
         drawPaint.setStrokeCap(Paint.Cap.ROUND);
@@ -132,12 +132,12 @@ public class Pintar extends View {
         drawPath = new Path();
         drawPaint = new Paint();
         float radius = 50.0f;
-        float[] i = new float[]{5.0f, 5.0f};
+        float[] i = new float[]{15.0f, 35.0f};
         float phase = 0;
 
         drawPaint.setColor(0xff00ff00);
 
-        drawPaint.setStrokeWidth(4);
+        drawPaint.setStrokeWidth(5);
         drawPaint.setAntiAlias(true);
         drawPaint.setStyle(Paint.Style.STROKE);
         drawPaint.setStrokeJoin(Paint.Join.ROUND);

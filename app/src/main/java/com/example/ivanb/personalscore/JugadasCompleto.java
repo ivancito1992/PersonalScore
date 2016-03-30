@@ -13,7 +13,7 @@ import android.widget.ImageView;
 
 public class JugadasCompleto extends AppCompatActivity implements View.OnClickListener{
 
-    Button borrar, vista;
+    Button borrar, vista, lineaPase, lineaMovimiento, lineaBloqueo, lineaTiro;
     ImageView num1, num2, num3, num4, num5;
     int modificarX = 80;
     int modificarY = 80;
@@ -27,6 +27,7 @@ public class JugadasCompleto extends AppCompatActivity implements View.OnClickLi
         borrar.setOnClickListener(this);
         vista = (Button) findViewById(R.id.cvAmedia);
         vista.setOnClickListener(this);
+
         num1 = (ImageView) findViewById(R.id.num1completa);
         num1.setOnTouchListener(handlerMover);
         num2 = (ImageView) findViewById(R.id.num2completa);
@@ -37,6 +38,15 @@ public class JugadasCompleto extends AppCompatActivity implements View.OnClickLi
         num4.setOnTouchListener(handlerMover);
         num5 = (ImageView) findViewById(R.id.num5completa);
         num5.setOnTouchListener(handlerMover);
+
+        lineaPase = (Button)findViewById(R.id.trazoPasarCompleta);
+        lineaPase.setOnClickListener(this);
+        lineaMovimiento = (Button)findViewById(R.id.trazoMoverCompleta);
+        lineaMovimiento.setOnClickListener(this);
+        lineaBloqueo = (Button)findViewById(R.id.trazoBloquearCompleta);
+        lineaBloqueo.setOnClickListener(this);
+        lineaTiro = (Button)findViewById(R.id.trazoTiroCompleta);
+        lineaTiro.setOnClickListener(this);
     }
 
     View.OnTouchListener handlerMover = new View.OnTouchListener(){
@@ -75,6 +85,18 @@ public class JugadasCompleto extends AppCompatActivity implements View.OnClickLi
         if(v.getId()==R.id.cvAmedia){
             startActivity(new Intent(JugadasCompleto.this, JugadasMediaPista.class));
             finish();
+        }
+        if(v.getId()==R.id.trazoPasarCompleta){
+            Pintar.trazoPase();
+        }
+        if(v.getId()==R.id.trazoMoverCompleta){
+            Pintar.trazoMove();
+        }
+        if(v.getId()==R.id.trazoBloquearCompleta){
+            Pintar.trazoBloqueo();
+        }
+        if(v.getId()==R.id.trazoTiroCompleta){
+            Pintar.trazoTiro();
         }
     }
 }

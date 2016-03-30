@@ -40,10 +40,10 @@
     <string name="pista">cancha</string>
     <string name="borrar">Reiniciar</string>
     <string name="vista">Cambiar vista</string>
-    <string name="jugada1">1</string>
-    <string name="jugada2">2</string>
-    <string name="jugada3">3</string>
-    <string name="jugada4">4</string>
+    <string name="trazoPase">Linea de pase</string>
+    <string name="trazoMovimiento">Linea normal</string>
+    <string name="trazoBloqueo">Linea Bloqueo</string>
+    <string name="trazoTiro">Linea de tiro</string>
     <string name="jugada5">5</string>
 
 </resources>

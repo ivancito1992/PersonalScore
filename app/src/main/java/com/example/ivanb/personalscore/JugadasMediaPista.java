@@ -15,10 +15,11 @@ import android.widget.ImageView;
 
 public class JugadasMediaPista extends AppCompatActivity implements View.OnClickListener{
 
-    Button borrar, vista;
+    Button borrar, vista, lineaPase, lineaMovimiento, lineaBloqueo, lineaTiro;
     ImageView num1, num2, num3, num4, num5;
     int modificarX = 50;
     int modificarY = 50;
+    boolean trazo = false;
 
 
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,6 +31,7 @@ public class JugadasMediaPista extends AppCompatActivity implements View.OnClick
         borrar.setOnClickListener(this);
         vista = (Button) findViewById(R.id.cvAcompleto);
         vista.setOnClickListener(this);
+
         num1 = (ImageView) findViewById(R.id.num1media);
         num1.setOnTouchListener(handlerMover);
         num2 = (ImageView) findViewById(R.id.num2media);
@@ -40,6 +42,15 @@ public class JugadasMediaPista extends AppCompatActivity implements View.OnClick
         num4.setOnTouchListener(handlerMover);
         num5 = (ImageView) findViewById(R.id.num5media);
         num5.setOnTouchListener(handlerMover);
+
+        lineaPase = (Button)findViewById(R.id.trazoPasarMedia);
+        lineaPase.setOnClickListener(this);
+        lineaMovimiento = (Button)findViewById(R.id.trazoMoverMedia);
+        lineaMovimiento.setOnClickListener(this);
+        lineaBloqueo = (Button)findViewById(R.id.trazoBloquearMedia);
+        lineaBloqueo.setOnClickListener(this);
+        lineaTiro = (Button)findViewById(R.id.trazoTiroMedia);
+        lineaTiro.setOnClickListener(this);
 
    }
     View.OnTouchListener handlerMover = new View.OnTouchListener(){
@@ -68,6 +79,7 @@ public class JugadasMediaPista extends AppCompatActivity implements View.OnClick
             return true;
         }
     };
+
     @Override
     public void onClick(View v) {
         if(v.getId()==R.id.borrarPistaMedia){
@@ -77,6 +89,18 @@ public class JugadasMediaPista extends AppCompatActivity implements View.OnClick
         if(v.getId()==R.id.cvAcompleto){
             startActivity(new Intent(JugadasMediaPista.this, JugadasCompleto.class));
             finish();
+        }
+        if(v.getId()==R.id.trazoPasarMedia){
+            Pintar.trazoPase();
+        }
+        if(v.getId()==R.id.trazoMoverMedia){
+            Pintar.trazoMove();
+        }
+        if(v.getId()==R.id.trazoBloquearMedia){
+            Pintar.trazoBloqueo();
+        }
+        if(v.getId()==R.id.trazoTiroMedia){
+            Pintar.trazoTiro();
         }
     }
 }

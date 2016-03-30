@@ -1,5 +1,8 @@
 package com.example.ivanb.personalscore;
 
+import android.graphics.ComposePathEffect;
+import android.graphics.CornerPathEffect;
+import android.graphics.DashPathEffect;
 import android.view.View;
 import android.content.Context;
 import android.util.AttributeSet;
@@ -11,8 +14,9 @@ import android.view.MotionEvent;
 
 
 public class Pintar extends View {
-    private Path drawPath;
-    private Paint drawPaint, canvasPaint;
+    private static Path drawPath;
+    private static Paint drawPaint;
+    private static Paint canvasPaint;
     private int paintColor = 0xffff0000; // color para el trazo
     private Canvas drawCanvas;
     private Bitmap canvasBitmap;
@@ -72,6 +76,76 @@ public class Pintar extends View {
         drawPaint.setStyle(Paint.Style.STROKE);
         drawPaint.setStrokeJoin(Paint.Join.ROUND);
         drawPaint.setStrokeCap(Paint.Cap.ROUND);
+        canvasPaint = new Paint(Paint.DITHER_FLAG);
+    }
+
+    public static void trazoPase(){
+        drawPath = new Path();
+        drawPaint = new Paint();
+        float radius = 50.0f;
+        float[] i = new float[]{20.0f, 20.0f};
+        float phase = 0;
+
+        drawPaint.setColor(0xff0066cc);
+
+        drawPaint.setStrokeWidth(4);
+        drawPaint.setAntiAlias(true);
+        drawPaint.setStyle(Paint.Style.STROKE);
+        drawPaint.setStrokeJoin(Paint.Join.ROUND);
+        drawPaint.setStrokeCap(Paint.Cap.ROUND);
+        CornerPathEffect corner = new CornerPathEffect(radius);
+        DashPathEffect dash = new DashPathEffect(i,phase);
+        ComposePathEffect compose = new ComposePathEffect(corner, dash);
+        drawPaint.setPathEffect(compose);
+        canvasPaint = new Paint(Paint.DITHER_FLAG);
+    }
+
+    public static void trazoMove() {
+        drawPath = new Path();
+        drawPaint = new Paint();
+
+        drawPaint.setColor(0xffff0000);
+
+        drawPaint.setAntiAlias(true);
+        drawPaint.setStrokeWidth(4);
+        drawPaint.setStyle(Paint.Style.STROKE);
+        drawPaint.setStrokeJoin(Paint.Join.ROUND);
+        drawPaint.setStrokeCap(Paint.Cap.ROUND);
+        canvasPaint = new Paint(Paint.DITHER_FLAG);
+    }
+
+    public static void trazoBloqueo() {
+        drawPath = new Path();
+        drawPaint = new Paint();
+
+        drawPaint.setColor(0xff990000);
+
+        drawPaint.setAntiAlias(true);
+        drawPaint.setStrokeWidth(6);
+        drawPaint.setStyle(Paint.Style.STROKE);
+        drawPaint.setStrokeJoin(Paint.Join.ROUND);
+        drawPaint.setStrokeCap(Paint.Cap.ROUND);
+        canvasPaint = new Paint(Paint.DITHER_FLAG);
+    }
+
+    public static void trazoTiro(){
+        drawPath = new Path();
+        drawPaint = new Paint();
+        float radius = 50.0f;
+        float[] i = new float[]{5.0f, 5.0f};
+        float phase = 0;
+
+        drawPaint.setColor(0xff00ff00);
+
+        drawPaint.setStrokeWidth(4);
+        drawPaint.setAntiAlias(true);
+        drawPaint.setStyle(Paint.Style.STROKE);
+        drawPaint.setStrokeJoin(Paint.Join.ROUND);
+        drawPaint.setStrokeCap(Paint.Cap.ROUND);
+        CornerPathEffect corner = new CornerPathEffect(radius);
+        DashPathEffect dash = new DashPathEffect(i,phase);
+        ComposePathEffect compose = new ComposePathEffect(corner, dash);
+        drawPaint.setPathEffect(compose);
         canvasPaint = new Paint(Paint.DITHER_FLAG);
     }
 }

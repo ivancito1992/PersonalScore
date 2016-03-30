@@ -88,11 +88,58 @@
                 android:background="@drawable/btn_jugadas_accion" />
         </LinearLayout>
 
-        <com.example.ivanb.personalscore.Pintar
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:id="@+id/paraPintarPistaCompleta"
-            android:background="@drawable/pista_completa" />
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <com.example.ivanb.personalscore.Pintar
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:id="@+id/paraPintarPistaCompleta"
+                android:background="@drawable/pista_completa" />
+
+            <ImageView
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:id="@+id/num1completa"
+                android:background="@drawable/numero_1"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentStart="true" />
+
+            <ImageView
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:id="@+id/num2completa"
+                android:background="@drawable/numero_2"
+                android:layout_alignParentBottom="true"
+                android:layout_toEndOf="@+id/num1media"
+                android:layout_marginStart="65dp" />
+
+            <ImageView
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:id="@+id/num3completa"
+                android:background="@drawable/numero_3"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true" />
+
+            <ImageView
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:id="@+id/num4completa"
+                android:background="@drawable/numero_4"
+                android:layout_alignParentBottom="true"
+                android:layout_toStartOf="@+id/num5media"
+                android:layout_marginEnd="52dp" />
+
+            <ImageView
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:id="@+id/num5completa"
+                android:background="@drawable/numero_5"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentEnd="true" />
+        </RelativeLayout>
     </LinearLayout>
 
 </LinearLayout>

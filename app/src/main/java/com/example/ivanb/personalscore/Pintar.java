@@ -1,7 +1,6 @@
 package com.example.ivanb.personalscore;
 
 
-import android.graphics.drawable.Drawable;
 import android.view.View;
 import android.content.Context;
 import android.util.AttributeSet;
@@ -13,7 +12,6 @@ import android.view.MotionEvent;
 
 
 public class Pintar extends View {
-    Drawable num1, num2, num3, num4, num5;
     private Path drawPath;
     private Paint drawPaint, canvasPaint;
     private int paintColor = 0xffff0000; // color para el trazo
@@ -33,7 +31,6 @@ public class Pintar extends View {
     @Override
     protected void onSizeChanged(int w, int h, int oldw, int oldh) {
         super.onSizeChanged(w, h, oldw, oldh);
-
         canvasBitmap = Bitmap.createBitmap(w, h, Bitmap.Config.ARGB_8888);
         drawCanvas = new Canvas(canvasBitmap);
     }

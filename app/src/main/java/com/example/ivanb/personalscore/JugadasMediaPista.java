@@ -29,15 +29,15 @@ public class JugadasMediaPista extends AppCompatActivity implements View.OnClick
         borrar.setOnClickListener(this);
         vista = (Button) findViewById(R.id.cvAcompleto);
         vista.setOnClickListener(this);
-        num1 = (ImageView) findViewById(R.id.imageView);
+        num1 = (ImageView) findViewById(R.id.num1media);
         num1.setOnTouchListener(handlerMover);
-        num2 = (ImageView) findViewById(R.id.imageView2);
+        num2 = (ImageView) findViewById(R.id.num2media);
         num2.setOnTouchListener(handlerMover);
-        num3 = (ImageView) findViewById(R.id.imageView3);
+        num3 = (ImageView) findViewById(R.id.num3media);
         num3.setOnTouchListener(handlerMover);
-        num4 = (ImageView) findViewById(R.id.imageView4);
+        num4 = (ImageView) findViewById(R.id.num4media);
         num4.setOnTouchListener(handlerMover);
-        num5 = (ImageView) findViewById(R.id.imageView5);
+        num5 = (ImageView) findViewById(R.id.num5media);
         num5.setOnTouchListener(handlerMover);
 
    }

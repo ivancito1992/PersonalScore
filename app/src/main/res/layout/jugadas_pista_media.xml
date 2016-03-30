@@ -26,7 +26,8 @@
             android:id="@+id/num1media"
             android:background="@drawable/numero_1"
             android:layout_alignParentBottom="true"
-            android:layout_alignParentStart="true" />
+            android:layout_alignParentStart="true"
+            android:layout_marginRight="10dp" />
 
         <ImageView
             android:layout_width="30dp"
@@ -34,7 +35,8 @@
             android:id="@+id/num2media"
             android:background="@drawable/numero_2"
             android:layout_alignParentBottom="true"
-            android:layout_toEndOf="@+id/num1media" />
+            android:layout_toEndOf="@+id/num1media"
+            android:layout_marginRight="10dp" />
 
         <ImageView
             android:layout_width="30dp"
@@ -42,7 +44,8 @@
             android:id="@+id/num3media"
             android:background="@drawable/numero_3"
             android:layout_alignParentBottom="true"
-            android:layout_toEndOf="@+id/num2media" />
+            android:layout_toEndOf="@+id/num2media"
+            android:layout_marginRight="10dp" />
 
         <ImageView
             android:layout_width="30dp"
@@ -50,7 +53,8 @@
             android:id="@+id/num4media"
             android:background="@drawable/numero_4"
             android:layout_alignParentBottom="true"
-            android:layout_toEndOf="@+id/num3media" />
+            android:layout_toEndOf="@+id/num3media"
+            android:layout_marginRight="10dp" />
 
         <ImageView
             android:layout_width="30dp"

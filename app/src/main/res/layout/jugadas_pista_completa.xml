@@ -104,7 +104,8 @@
                 android:id="@+id/num1completa"
                 android:background="@drawable/numero_1"
                 android:layout_alignParentBottom="true"
-                android:layout_alignParentStart="true" />
+                android:layout_alignParentStart="true"
+                android:layout_marginRight="10dp" />
 
             <ImageView
                 android:layout_width="25dp"
@@ -112,7 +113,8 @@
                 android:id="@+id/num2completa"
                 android:background="@drawable/numero_2"
                 android:layout_alignParentBottom="true"
-                android:layout_toEndOf="@+id/num1completa" />
+                android:layout_toEndOf="@+id/num1completa"
+                android:layout_marginRight="10dp" />
 
             <ImageView
                 android:layout_width="25dp"
@@ -120,7 +122,8 @@
                 android:id="@+id/num3completa"
                 android:background="@drawable/numero_3"
                 android:layout_alignParentBottom="true"
-                android:layout_toEndOf="@+id/num2completa" />
+                android:layout_toEndOf="@+id/num2completa"
+                android:layout_marginRight="10dp" />
 
             <ImageView
                 android:layout_width="25dp"
@@ -128,7 +131,8 @@
                 android:id="@+id/num4completa"
                 android:background="@drawable/numero_4"
                 android:layout_alignParentBottom="true"
-                android:layout_toEndOf="@+id/num3completa" />
+                android:layout_toEndOf="@+id/num3completa"
+                android:layout_marginRight="10dp" />
 
             <ImageView
                 android:layout_width="25dp"

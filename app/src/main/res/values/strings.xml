@@ -1,6 +1,15 @@
 <resources>
     <string name="app_name">Personal Score</string>
 
+    <!-- TEXTO PARA MENU INICIAL-->
+    <string name="modoEstadisticas">Score View</string>
+    <string name="modoJugadas">Coach Board</string>
+
+    <!-- TEXTO PARA MODO AYUDA-->
+    <string name="tutestadistico">Tutorial estadisticas</string>
+    <string name="tutjugadas">Tutorial Jugadas</string>
+    <string name="volver">Volver al menu</string>
+
     <!-- TEXTO PARA MODO ESTADISTICO-->
     <string name="local">HOME</string>
     <string name="marcador_inicial">0</string>
@@ -31,8 +40,6 @@
     <string name="comenzar">Comenzar</string>
 
     <!-- TEXTO PARA LOS TUTORIALES -->
-    <string name="estadistico">Tutorial estadisticas</string>
-    <string name="jugadas">Tutorial Jugadas</string>
     <string name="descripcionEstadistico">Modo estadisticas</string>
     <string name="descripcionJugadas">Modo Jugadas</string>
 

@@ -613,7 +613,7 @@
                     android:layout_height="wrap_content"
                     android:text="@string/robos"
                     android:id="@+id/esRoboJ1"
-                    android:checked="true"
+                    android:checked="false"
                     android:layout_weight="5"
                     android:textColor="@color/colorLetraBtn"
                     android:textSize="16sp"

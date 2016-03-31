@@ -17,8 +17,8 @@
         android:layout_height="wrap_content">
 
         <ImageButton
-            android:layout_width="40dp"
-            android:layout_height="45dp"
+            android:layout_width="45dp"
+            android:layout_height="50dp"
             android:id="@+id/btnAyuda"
             android:background="@drawable/icono_ayuda" />
     </LinearLayout>
@@ -43,7 +43,7 @@
                 android:background="#00ffffff"
                 android:text="@string/modoEstadisticas"
                 android:textColor="#ffffff"
-                android:textSize="38sp"
+                android:textSize="48sp"
                 style="@style/Menu" />
 
         </LinearLayout>
@@ -63,7 +63,7 @@
                 android:background="#00ffffff"
                 android:text="@string/modoJugadas"
                 android:textColor="#ffffff"
-                android:textSize="38sp"
+                android:textSize="48sp"
                 style="@style/Menu" />
 
         </LinearLayout>

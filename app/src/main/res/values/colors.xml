@@ -13,6 +13,8 @@
     <color name="colorVisitante">#569aff</color>
 
     <!-- COLOR DE LOS BOTONES -->
+    <color name="colorLetraBtn">#ffffff</color>
+
     <color name="btnAcierto">#b400a300</color>
     <color name="btnAciertoSelect">#b45ac85a</color>
     <color name="marcoBtnAcierto">#005000</color>
@@ -23,11 +25,18 @@
 
     <color name="btnDeshacer">#b4000000</color>
     <color name="marcoBtnDeshacer">#000000</color>
-    <color name="marcoBtnJugadas">#848484</color>
-    <color name="colorLetraBtn">#ffffff</color>
+
+    <color name="btnJugadas">#99000000</color>
+    <color name="marcoBtnJugadas">#000000</color>
 
     <color name="btnEquipos">#50ffffff</color>
     <color name="btnEquiposSelect">#50ffffff</color>
     <color name="marcoBtnEquipos">#b4000000</color>
+
+    <color name="colorTrazoNormal">#ffff00</color>
+    <color name="colorTrazoBloqueo">#777700</color>
+    <color name="colorTrazoPase">#00ffff</color>
+    <color name="colorTrazoTiro">#009900</color>
+    <color name="fondoJugadas">#712600</color>
 
 </resources>

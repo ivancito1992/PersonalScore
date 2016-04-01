@@ -98,7 +98,7 @@ public class Pintar extends View {
         drawPath = new Path();
         drawPaint = new Paint();
 
-        drawPaint.setColor(0xffff0000);
+        drawPaint.setColor(0xffffff00);
 
         drawPaint.setAntiAlias(true);
         drawPaint.setStrokeWidth(5);
@@ -112,7 +112,7 @@ public class Pintar extends View {
         drawPath = new Path();
         drawPaint = new Paint();
 
-        drawPaint.setColor(0xffff8000);
+        drawPaint.setColor(0xff777700);
 
         drawPaint.setAntiAlias(true);
         drawPaint.setStrokeWidth(7);
@@ -129,7 +129,7 @@ public class Pintar extends View {
         float[] i = new float[]{15.0f, 35.0f};
         float phase = 0;
 
-        drawPaint.setColor(0xff00ff00);
+        drawPaint.setColor(0xff009900);
 
         drawPaint.setStrokeWidth(5);
         drawPaint.setAntiAlias(true);

@@ -4,13 +4,13 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".JugadasMediaPista">
+    tools:context=".JugadasMediaPista"
+    android:background="@color/fondoJugadas">
 
     <LinearLayout
         android:orientation="horizontal"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@color/btnDeshacer">
+        android:layout_height="wrap_content">
 
         <Button
             android:layout_width="wrap_content"
@@ -48,9 +48,8 @@
 
         <LinearLayout
             android:orientation="vertical"
-            android:layout_width="80dp"
-            android:layout_height="match_parent"
-            android:background="@color/btnDeshacer">
+            android:layout_width="90dp"
+            android:layout_height="match_parent">
 
             <Button
                 android:layout_width="wrap_content"
@@ -59,7 +58,7 @@
                 android:id="@+id/trazoPasarCompleta"
                 android:layout_weight="1"
                 android:background="@drawable/btn_jugadas_accion"
-                android:textColor="#00ffff"
+                android:textColor="@color/colorTrazoPase"
                 android:textSize="12sp"
                 android:textStyle="bold" />
 
@@ -70,7 +69,7 @@
                 android:id="@+id/trazoMoverCompleta"
                 android:layout_weight="1"
                 android:background="@drawable/btn_jugadas_accion"
-                android:textColor="#ff0000"
+                android:textColor="@color/colorTrazoNormal"
                 android:textSize="12sp"
                 android:textStyle="bold" />
 
@@ -81,7 +80,7 @@
                 android:id="@+id/trazoBloquearCompleta"
                 android:layout_weight="1"
                 android:background="@drawable/btn_jugadas_accion"
-                android:textColor="#ff8000"
+                android:textColor="@color/colorTrazoBloqueo"
                 android:textSize="12sp"
                 android:textStyle="bold" />
 
@@ -92,7 +91,7 @@
                 android:id="@+id/trazoTiroCompleta"
                 android:layout_weight="1"
                 android:background="@drawable/btn_jugadas_accion"
-                android:textColor="#00ff00"
+                android:textColor="@color/colorTrazoTiro"
                 android:textSize="12sp"
                 android:textStyle="bold" />
 
@@ -106,7 +105,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:id="@+id/paraPintarPistaCompleta"
-                android:background="@drawable/pista_completa" />
+                android:background="@drawable/pizarra" />
 
             <ImageView
                 android:layout_width="25dp"

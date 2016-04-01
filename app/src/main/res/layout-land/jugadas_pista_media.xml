@@ -3,7 +3,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="horizontal"
-    android:rowCount="7">
+    android:rowCount="7"
+    android:background="@color/fondoJugadas">
 
     <RelativeLayout
         android:layout_width="wrap_content"
@@ -16,7 +17,7 @@
             android:layout_height="wrap_content"
             android:id="@+id/pistaMedia"
             android:layout_alignParentTop="true"
-            android:background="@drawable/pista_media"
+            android:background="@drawable/pizarramediapista"
             android:layout_alignParentEnd="true"
             android:layout_alignParentStart="true" />
 
@@ -70,7 +71,6 @@
         android:layout_width="80dp"
         android:layout_height="match_parent"
         android:id="@+id/linearLayout2"
-        android:background="@color/btnDeshacer"
         android:gravity="center">
 
         <Button
@@ -80,7 +80,7 @@
             android:id="@+id/trazoPasarMedia"
             android:layout_weight="1"
             android:background="@drawable/btn_jugadas_accion"
-            android:textColor="#00ffff"
+            android:textColor="@color/colorTrazoPase"
             android:textSize="12sp"
             android:textStyle="bold" />
 
@@ -91,7 +91,7 @@
             android:id="@+id/trazoMoverMedia"
             android:layout_weight="1"
             android:background="@drawable/btn_jugadas_accion"
-            android:textColor="#ff0000"
+            android:textColor="@color/colorTrazoNormal"
             android:textSize="12sp"
             android:textStyle="bold" />
 
@@ -102,7 +102,7 @@
             android:id="@+id/trazoBloquearMedia"
             android:layout_weight="1"
             android:background="@drawable/btn_jugadas_accion"
-            android:textColor="#ff8000"
+            android:textColor="@color/colorTrazoBloqueo"
             android:textSize="12sp"
             android:textStyle="bold" />
 
@@ -113,7 +113,7 @@
             android:id="@+id/trazoTiroMedia"
             android:layout_weight="1"
             android:background="@drawable/btn_jugadas_accion"
-            android:textColor="#00ff00"
+            android:textColor="@color/colorTrazoTiro"
             android:textSize="12sp"
             android:textStyle="bold" />
 
@@ -126,11 +126,10 @@
         android:id="@+id/linearLayout3"
         android:layout_alignParentBottom="true"
         android:layout_alignParentEnd="true"
-        android:background="@color/btnDeshacer"
         android:gravity="center">
 
         <Button
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/vista"
             android:id="@+id/cvAcompleto"
@@ -140,7 +139,7 @@
             android:textColor="#ffffff" />
 
         <Button
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/borrar"
             android:id="@+id/borrarPistaMedia"
@@ -150,7 +149,7 @@
             android:textColor="#ffffff" />
 
         <Button
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/bloquear"
             android:id="@+id/bloqueoIconMedia"

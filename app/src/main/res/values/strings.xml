@@ -54,4 +54,8 @@
     <string name="trazoTiro">Linea de tiro</string>
     <string name="jugada5">5</string>
 
+    <!-- TEXTO PARA CLASES JAVA -->
+    <string name="iconosFijados">Iconos Fijos</string>
+    <string name="iconosParaMover">Mover Iconos</string>
+
 </resources>

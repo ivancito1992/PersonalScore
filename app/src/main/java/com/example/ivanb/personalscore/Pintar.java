@@ -17,7 +17,6 @@ public class Pintar extends View {
     private static Path drawPath;
     private static Paint drawPaint;
     private static Paint canvasPaint;
-    private int paintColor = 0xffff0000; // color para el trazo
     private Canvas drawCanvas;
     private Bitmap canvasBitmap;
 

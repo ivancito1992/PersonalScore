@@ -115,7 +115,7 @@ public class JugadasMediaPista extends AppCompatActivity implements View.OnClick
         if(v.getId()==R.id.bloqueoIconMedia){
             estanBlock = !estanBlock;
             if (estanBlock) {
-                bloquear.setText("Iconos Fijos");
+                bloquear.setText(R.string.iconosFijados);
                 Toast mensaje2 =
                         Toast.makeText(getApplicationContext(),
                                 "Los iconos estan fijados, selecciona tipo de trazo para empezar la jugada",
@@ -123,7 +123,7 @@ public class JugadasMediaPista extends AppCompatActivity implements View.OnClick
                 mensaje2.show();
             }
             else{
-                bloquear.setText("Mover Iconos");
+                bloquear.setText(R.string.iconosParaMover);
                 Pintar.trazoInvisible();
                 Toast mensaje1 =
                         Toast.makeText(getApplicationContext(), "Coloca los iconos en posicion",

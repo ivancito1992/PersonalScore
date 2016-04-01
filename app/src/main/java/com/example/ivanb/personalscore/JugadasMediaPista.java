@@ -11,15 +11,18 @@ import android.view.View;
 import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.Toast;
 
 
 public class JugadasMediaPista extends AppCompatActivity implements View.OnClickListener{
 
-    Button borrar, vista, lineaPase, lineaMovimiento, lineaBloqueo, lineaTiro;
+    Button borrar, vista, bloquear, lineaPase, lineaMovimiento, lineaBloqueo, lineaTiro;
+
     ImageView num1, num2, num3, num4, num5;
     int modificarX = 20;
     int modificarY = 20;
-    boolean trazo = false;
+
+    boolean estanBlock = false;
 
 
     protected void onCreate(Bundle savedInstanceState) {
@@ -27,10 +30,13 @@ public class JugadasMediaPista extends AppCompatActivity implements View.OnClick
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
                 WindowManager.LayoutParams.FLAG_FULLSCREEN);
         setContentView(R.layout.jugadas_pista_media);
+
         borrar = (Button) findViewById(R.id.borrarPistaMedia);
         borrar.setOnClickListener(this);
         vista = (Button) findViewById(R.id.cvAcompleto);
         vista.setOnClickListener(this);
+        bloquear = (Button) findViewById(R.id.bloqueoIconMedia);
+        bloquear.setOnClickListener(this);
 
         num1 = (ImageView) findViewById(R.id.num1media);
         num1.setOnTouchListener(handlerMover);
@@ -59,25 +65,28 @@ public class JugadasMediaPista extends AppCompatActivity implements View.OnClick
         public boolean onTouch(View v, MotionEvent event) {
             PointF DownPT = new PointF();
             PointF StartPT;
-            switch (event.getAction()) {
-                case MotionEvent.ACTION_DOWN:
-                    DownPT.x = event.getX();
-                    DownPT.y = event.getY();
-                    break;
-                case MotionEvent.ACTION_MOVE:
-                    StartPT = new PointF(v.getX(), v.getY());
-                    PointF mv = new PointF(event.getX() - DownPT.x, event.getY() - DownPT.y);
+            if (!estanBlock) {
+                switch (event.getAction()) {
+                    case MotionEvent.ACTION_DOWN:
+                        DownPT.x = event.getX();
+                        DownPT.y = event.getY();
+                        break;
+                    case MotionEvent.ACTION_MOVE:
+                        StartPT = new PointF(v.getX(), v.getY());
+                        PointF mv = new PointF(event.getX() - DownPT.x, event.getY() - DownPT.y);
 
-                    v.setX((StartPT.x + mv.x) - modificarX);
-                    v.setY((StartPT.y+mv.y) - modificarY);
-                    break;
-                case MotionEvent.ACTION_UP:
-                    break;
-                default:
-                    break;
+                        v.setX((StartPT.x + mv.x) - modificarX);
+                        v.setY((StartPT.y + mv.y) - modificarY);
+                        break;
+                    case MotionEvent.ACTION_UP:
+                        break;
+                    default:
+                        break;
+                }
             }
             return true;
         }
+
     };
 
     @Override
@@ -101,6 +110,26 @@ public class JugadasMediaPista extends AppCompatActivity implements View.OnClick
         }
         if(v.getId()==R.id.trazoTiroMedia){
             Pintar.trazoTiro();
+        }
+
+        if(v.getId()==R.id.bloqueoIconMedia){
+            estanBlock = !estanBlock;
+            if (estanBlock) {
+                bloquear.setText("Iconos Fijos");
+                Toast mensaje2 =
+                        Toast.makeText(getApplicationContext(),
+                                "Los iconos estan fijados, selecciona tipo de trazo para empezar la jugada",
+                                Toast.LENGTH_SHORT);
+                mensaje2.show();
+            }
+            else{
+                bloquear.setText("Mover Iconos");
+                Pintar.trazoInvisible();
+                Toast mensaje1 =
+                        Toast.makeText(getApplicationContext(), "Coloca los iconos en posicion",
+                                Toast.LENGTH_SHORT);
+                mensaje1.show();
+            }
         }
     }
 }

@@ -46,6 +46,7 @@
     <!-- TEXTO PARA MODO JUGADAS-->
     <string name="pista">cancha</string>
     <string name="borrar">Reiniciar</string>
+    <string name="bloquear">Fijar Iconos</string>
     <string name="vista">Cambiar vista</string>
     <string name="trazoPase">Linea de pase</string>
     <string name="trazoMovimiento">Linea normal</string>

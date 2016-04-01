@@ -25,10 +25,7 @@ public class Pintar extends View {
     public Pintar(Context ctx, AttributeSet attrs) {
         super(ctx, attrs);
         canvasPaint = new Paint(Paint.DITHER_FLAG);
-        drawPath = new Path();
-        drawPaint = new Paint();
-        drawPaint.setAntiAlias(true);
-        drawPaint.setColor(0x00000000);
+        trazoInvisible();
     }
 
 
@@ -67,6 +64,14 @@ public class Pintar extends View {
         }
         invalidate();
         return true;
+    }
+
+    public static void trazoInvisible(){
+        drawPath = new Path();
+        drawPaint = new Paint();
+        drawPaint.setAntiAlias(true);
+        drawPaint.setColor(0x00000000);
+        canvasPaint = new Paint(Paint.DITHER_FLAG);
     }
 
     public static void trazoPase(){

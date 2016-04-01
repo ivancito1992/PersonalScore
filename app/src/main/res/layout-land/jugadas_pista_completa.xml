@@ -29,6 +29,16 @@
             android:layout_weight="1"
             android:textColor="#ffffff"
             android:background="@drawable/btn_jugadas_accion" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/bloquear"
+            android:id="@+id/bloqueoIconCompleta"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:background="@drawable/btn_jugadas_accion"
+            android:textColor="#ffffff" />
     </LinearLayout>
 
     <LinearLayout

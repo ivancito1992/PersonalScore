@@ -17,8 +17,8 @@ public class JugadasMediaPista extends AppCompatActivity implements View.OnClick
 
     Button borrar, vista, lineaPase, lineaMovimiento, lineaBloqueo, lineaTiro;
     ImageView num1, num2, num3, num4, num5;
-    int modificarX = 50;
-    int modificarY = 50;
+    int modificarX = 20;
+    int modificarY = 20;
     boolean trazo = false;
 
 

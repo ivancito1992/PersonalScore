@@ -15,8 +15,8 @@ public class JugadasCompleto extends AppCompatActivity implements View.OnClickLi
 
     Button borrar, vista, lineaPase, lineaMovimiento, lineaBloqueo, lineaTiro;
     ImageView num1, num2, num3, num4, num5;
-    int modificarX = 80;
-    int modificarY = 80;
+    int modificarX = 100;
+    int modificarY = 100;
 
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

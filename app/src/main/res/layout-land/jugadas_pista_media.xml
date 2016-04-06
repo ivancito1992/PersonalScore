@@ -157,6 +157,16 @@
             android:gravity="center"
             android:background="@drawable/btn_jugadas_accion"
             android:textColor="#ffffff" />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/guardar"
+            android:id="@+id/guardarJugMedia"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:background="@drawable/btn_jugadas_accion"
+            android:textColor="#ffffff" />
     </LinearLayout>
 
 </RelativeLayout>

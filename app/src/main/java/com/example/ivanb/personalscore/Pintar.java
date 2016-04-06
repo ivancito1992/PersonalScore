@@ -28,6 +28,7 @@ public class Pintar extends View {
     }
 
 
+
     @Override
     protected void onSizeChanged(int w, int h, int oldw, int oldh) {
         super.onSizeChanged(w, h, oldw, oldh);

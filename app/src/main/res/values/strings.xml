@@ -54,6 +54,7 @@
     <string name="trazoBloqueo">Linea Bloqueo</string>
     <string name="trazoTiro">Linea de tiro</string>
     <string name="jugada5">5</string>
+    <string name="guardar">Guardar Jugada</string>
 
     <!-- TEXTO PARA CLASES JAVA -->
     <string name="iconosFijados">Iconos Fijos</string>

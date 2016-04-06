@@ -2,9 +2,12 @@ package com.example.ivanb.personalscore;
 
 
 
+import android.app.AlertDialog;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.graphics.PointF;
 import android.os.Bundle;
+import android.provider.MediaStore;
 import android.support.v7.app.AppCompatActivity;
 import android.view.MotionEvent;
 import android.view.View;
@@ -13,16 +16,18 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.Toast;
 
+import java.util.UUID;
+
 
 public class JugadasMediaPista extends AppCompatActivity implements View.OnClickListener{
 
-    Button borrar, vista, bloquear, lineaPase, lineaMovimiento, lineaBloqueo, lineaTiro;
+    Button borrar, vista, bloquear, guardar, lineaPase, lineaMovimiento, lineaBloqueo, lineaTiro;
 
     ImageView num1, num2, num3, num4, num5;
     int modificarX = 20;
     int modificarY = 20;
-
     boolean estanBlock = false;
+    Pintar pintar;
 
 
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,13 +35,15 @@ public class JugadasMediaPista extends AppCompatActivity implements View.OnClick
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
                 WindowManager.LayoutParams.FLAG_FULLSCREEN);
         setContentView(R.layout.jugadas_pista_media);
-
+        pintar = (Pintar) findViewById(R.id.pistaMedia);
         borrar = (Button) findViewById(R.id.borrarPistaMedia);
         borrar.setOnClickListener(this);
         vista = (Button) findViewById(R.id.cvAcompleto);
         vista.setOnClickListener(this);
         bloquear = (Button) findViewById(R.id.bloqueoIconMedia);
         bloquear.setOnClickListener(this);
+        guardar = (Button) findViewById(R.id.guardarJugMedia);
+        guardar.setOnClickListener(this);
 
         num1 = (ImageView) findViewById(R.id.num1media);
         num1.setOnTouchListener(handlerMover);
@@ -111,7 +118,6 @@ public class JugadasMediaPista extends AppCompatActivity implements View.OnClick
         if(v.getId()==R.id.trazoTiroMedia){
             Pintar.trazoTiro();
         }
-
         if(v.getId()==R.id.bloqueoIconMedia){
             estanBlock = !estanBlock;
             if (estanBlock) {
@@ -130,6 +136,37 @@ public class JugadasMediaPista extends AppCompatActivity implements View.OnClick
                                 Toast.LENGTH_SHORT);
                 mensaje1.show();
             }
+        }
+        if(v.getId()==R.id.guardarJugMedia){
+            AlertDialog.Builder saveDialog = new AlertDialog.Builder(this);
+            saveDialog.setTitle("Save drawing");
+            saveDialog.setMessage("Save drawing to device Gallery?");
+            saveDialog.setPositiveButton("Yes", new DialogInterface.OnClickListener(){
+                public void onClick(DialogInterface dialog, int which){
+                    //save drawing
+                    pintar.setDrawingCacheEnabled(true);
+                    String imgSaved = MediaStore.Images.Media.insertImage(
+                            getContentResolver(), pintar.getDrawingCache(),
+                            "prueba.png", "drawing");
+                    if(imgSaved!=null){
+                        Toast savedToast = Toast.makeText(getApplicationContext(),
+                                "Drawing saved to Gallery!", Toast.LENGTH_SHORT);
+                        savedToast.show();
+                    }
+                    else{
+                        Toast unsavedToast = Toast.makeText(getApplicationContext(),
+                                "Oops! Image could not be saved.", Toast.LENGTH_SHORT);
+                        unsavedToast.show();
+                    }
+                    pintar.destroyDrawingCache();
+                }
+            });
+            saveDialog.setNegativeButton("Cancel", new DialogInterface.OnClickListener(){
+                public void onClick(DialogInterface dialog, int which){
+                    dialog.cancel();
+                }
+            });
+            saveDialog.show();
         }
     }
 }

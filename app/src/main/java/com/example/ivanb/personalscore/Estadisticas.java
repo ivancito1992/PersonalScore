@@ -92,6 +92,7 @@ public class Estadisticas extends AppCompatActivity implements View.OnClickListe
         Typeface tfTexto = Typeface.createFromAsset(getAssets(),font_path_texto);
         tvEquipoLocal.setTypeface(tfTexto);
         tvEquipoVisitante.setTypeface(tfTexto);
+        tvJugador1.setTypeface(tfTexto);
         esLocal.setTypeface(tfTexto);
         esVisitante.setTypeface(tfTexto);
         tvTextoj1tl.setTypeface(tfTexto);

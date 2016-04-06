@@ -260,7 +260,7 @@
                             android:textAppearance="?android:attr/textAppearanceLarge"
                             android:id="@+id/nombreJugador"
                             android:textSize="26sp"
-                            android:gravity="center"
+                            android:gravity="left|center_vertical"
                             android:textColor="@color/colorLetraBtn" />
 
                     </LinearLayout>
@@ -316,7 +316,7 @@
                     android:gravity="center"
                     android:layout_weight="1"
                     style="@style/Jugador"
-                    android:textSize="32sp" />
+                    android:textSize="40sp" />
             </LinearLayout>
 
             <LinearLayout

@@ -25,7 +25,7 @@
             android:layout_width="30dp"
             android:layout_height="30dp"
             android:id="@+id/num1media"
-            android:background="@drawable/numero_1"
+            android:background="@drawable/numeroazul1"
             android:layout_marginRight="10dp"
             android:layout_alignParentBottom="true"
             android:layout_toStartOf="@+id/num2media" />
@@ -34,7 +34,7 @@
             android:layout_width="30dp"
             android:layout_height="30dp"
             android:id="@+id/num2media"
-            android:background="@drawable/numero_2"
+            android:background="@drawable/numeroazul2"
             android:layout_marginRight="10dp"
             android:layout_alignParentBottom="true"
             android:layout_toStartOf="@+id/num3media" />
@@ -43,7 +43,7 @@
             android:layout_width="30dp"
             android:layout_height="30dp"
             android:id="@+id/num3media"
-            android:background="@drawable/numero_3"
+            android:background="@drawable/numeroazul3"
             android:layout_marginRight="10dp"
             android:layout_alignParentBottom="true"
             android:layout_centerHorizontal="true" />
@@ -52,7 +52,7 @@
             android:layout_width="30dp"
             android:layout_height="30dp"
             android:id="@+id/num4media"
-            android:background="@drawable/numero_4"
+            android:background="@drawable/numeroazul4"
             android:layout_alignParentBottom="true"
             android:layout_toEndOf="@+id/num3media"
             android:layout_marginRight="10dp" />
@@ -61,7 +61,7 @@
             android:layout_width="30dp"
             android:layout_height="30dp"
             android:id="@+id/num5media"
-            android:background="@drawable/numero_5"
+            android:background="@drawable/numeroazul5"
             android:layout_alignParentBottom="true"
             android:layout_toEndOf="@+id/num4media" />
     </RelativeLayout>

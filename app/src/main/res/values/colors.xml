@@ -9,8 +9,8 @@
     <color name="sombraLetrasMarcador">#be0019</color>
     <color name="fondoLetrasMarcador">#262626</color>
     <color name="letrasBtnEquipos">#000000</color>
-    <color name="colorLocal">#ff9f56</color>
-    <color name="colorVisitante">#569aff</color>
+    <color name="colorLocal">#2996ef</color>
+    <color name="colorVisitante">#ff8956</color>
 
     <!-- COLOR DE LOS BOTONES -->
     <color name="colorLetraBtn">#ffffff</color>

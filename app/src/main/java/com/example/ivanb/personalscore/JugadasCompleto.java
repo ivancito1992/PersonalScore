@@ -16,7 +16,7 @@ public class JugadasCompleto extends AppCompatActivity implements View.OnClickLi
 
     Button borrar, vista, bloquear, lineaPase, lineaMovimiento, lineaBloqueo, lineaTiro;
 
-    ImageView num1, num2, num3, num4, num5;
+    ImageView num1L, num2L, num3L, num4L, num5L, num1V, num2V, num3V, num4V, num5V;
 
     int modificarX = 100;
     int modificarY = 100;
@@ -35,16 +35,27 @@ public class JugadasCompleto extends AppCompatActivity implements View.OnClickLi
         bloquear = (Button) findViewById(R.id.bloqueoIconCompleta);
         bloquear.setOnClickListener(this);
 
-        num1 = (ImageView) findViewById(R.id.num1completa);
-        num1.setOnTouchListener(handlerMover);
-        num2 = (ImageView) findViewById(R.id.num2completa);
-        num2.setOnTouchListener(handlerMover);
-        num3 = (ImageView) findViewById(R.id.num3completa);
-        num3.setOnTouchListener(handlerMover);
-        num4 = (ImageView) findViewById(R.id.num4completa);
-        num4.setOnTouchListener(handlerMover);
-        num5 = (ImageView) findViewById(R.id.num5completa);
-        num5.setOnTouchListener(handlerMover);
+        num1L = (ImageView) findViewById(R.id.num1Lcompleta);
+        num1L.setOnTouchListener(handlerMover);
+        num2L = (ImageView) findViewById(R.id.num2Lcompleta);
+        num2L.setOnTouchListener(handlerMover);
+        num3L = (ImageView) findViewById(R.id.num3Lcompleta);
+        num3L.setOnTouchListener(handlerMover);
+        num4L = (ImageView) findViewById(R.id.num4Lcompleta);
+        num4L.setOnTouchListener(handlerMover);
+        num5L = (ImageView) findViewById(R.id.num5Lcompleta);
+        num5L.setOnTouchListener(handlerMover);
+
+        num1V = (ImageView) findViewById(R.id.num1Vcompleta);
+        num1V.setOnTouchListener(handlerMover);
+        num2V = (ImageView) findViewById(R.id.num2Vcompleta);
+        num2V.setOnTouchListener(handlerMover);
+        num3V = (ImageView) findViewById(R.id.num3Vcompleta);
+        num3V.setOnTouchListener(handlerMover);
+        num4V = (ImageView) findViewById(R.id.num4Vcompleta);
+        num4V.setOnTouchListener(handlerMover);
+        num5V = (ImageView) findViewById(R.id.num5Vcompleta);
+        num5V.setOnTouchListener(handlerMover);
 
         lineaPase = (Button)findViewById(R.id.trazoPasarCompleta);
         lineaPase.setOnClickListener(this);

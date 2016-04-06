@@ -110,26 +110,26 @@
             <ImageView
                 android:layout_width="25dp"
                 android:layout_height="25dp"
-                android:id="@+id/num1completa"
-                android:background="@drawable/numero_1"
+                android:id="@+id/num1Lcompleta"
+                android:background="@drawable/numeroazul1"
                 android:layout_marginRight="10dp"
                 android:layout_alignParentBottom="true"
-                android:layout_toStartOf="@+id/num2completa" />
+                android:layout_toStartOf="@+id/num2Lcompleta" />
 
             <ImageView
                 android:layout_width="25dp"
                 android:layout_height="25dp"
-                android:id="@+id/num2completa"
-                android:background="@drawable/numero_2"
+                android:id="@+id/num2Lcompleta"
+                android:background="@drawable/numeroazul2"
                 android:layout_marginRight="10dp"
                 android:layout_alignParentBottom="true"
-                android:layout_toStartOf="@+id/num3completa" />
+                android:layout_toStartOf="@+id/num3Lcompleta" />
 
             <ImageView
                 android:layout_width="25dp"
                 android:layout_height="25dp"
-                android:id="@+id/num3completa"
-                android:background="@drawable/numero_3"
+                android:id="@+id/num3Lcompleta"
+                android:background="@drawable/numeroazul3"
                 android:layout_marginRight="10dp"
                 android:layout_alignParentBottom="true"
                 android:layout_centerHorizontal="true" />
@@ -137,19 +137,63 @@
             <ImageView
                 android:layout_width="25dp"
                 android:layout_height="25dp"
-                android:id="@+id/num4completa"
-                android:background="@drawable/numero_4"
+                android:id="@+id/num4Lcompleta"
+                android:background="@drawable/numeroazul4"
                 android:layout_alignParentBottom="true"
-                android:layout_toEndOf="@+id/num3completa"
+                android:layout_toEndOf="@+id/num3Lcompleta"
                 android:layout_marginRight="10dp" />
 
             <ImageView
                 android:layout_width="25dp"
                 android:layout_height="25dp"
-                android:id="@+id/num5completa"
-                android:background="@drawable/numero_5"
+                android:id="@+id/num5Lcompleta"
+                android:background="@drawable/numeroazul5"
                 android:layout_alignParentBottom="true"
-                android:layout_toEndOf="@+id/num4completa" />
+                android:layout_toEndOf="@+id/num4Lcompleta" />
+
+            <ImageView
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:id="@+id/num1Vcompleta"
+                android:background="@drawable/numeronaranja1"
+                android:layout_marginRight="10dp"
+                android:layout_alignParentTop="true"
+                android:layout_alignStart="@+id/num1Lcompleta" />
+
+            <ImageView
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:id="@+id/num2Vcompleta"
+                android:background="@drawable/numeronaranja2"
+                android:layout_marginRight="10dp"
+                android:layout_alignParentTop="true"
+                android:layout_toStartOf="@+id/num3Vcompleta" />
+
+            <ImageView
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:id="@+id/num3Vcompleta"
+                android:background="@drawable/numeronaranja3"
+                android:layout_marginRight="10dp"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true" />
+
+            <ImageView
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:id="@+id/num4Vcompleta"
+                android:background="@drawable/numeronaranja4"
+                android:layout_marginRight="10dp"
+                android:layout_alignParentTop="true"
+                android:layout_alignStart="@+id/num4Lcompleta" />
+
+            <ImageView
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:id="@+id/num5Vcompleta"
+                android:background="@drawable/numeronaranja5"
+                android:layout_alignParentTop="true"
+                android:layout_alignStart="@+id/num5Lcompleta" />
         </RelativeLayout>
     </LinearLayout>
 

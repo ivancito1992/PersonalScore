@@ -14,6 +14,7 @@ import android.view.View;
 import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.RelativeLayout;
 import android.widget.Toast;
 
 import java.util.UUID;
@@ -27,7 +28,7 @@ public class JugadasMediaPista extends AppCompatActivity implements View.OnClick
     int modificarX = 20;
     int modificarY = 20;
     boolean estanBlock = false;
-    Pintar pintar;
+    RelativeLayout jugada;
 
 
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,7 +36,7 @@ public class JugadasMediaPista extends AppCompatActivity implements View.OnClick
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
                 WindowManager.LayoutParams.FLAG_FULLSCREEN);
         setContentView(R.layout.jugadas_pista_media);
-        pintar = (Pintar) findViewById(R.id.pistaMedia);
+        jugada = (RelativeLayout) findViewById(R.id.todoMedia);
         borrar = (Button) findViewById(R.id.borrarPistaMedia);
         borrar.setOnClickListener(this);
         vista = (Button) findViewById(R.id.cvAcompleto);
@@ -139,29 +140,29 @@ public class JugadasMediaPista extends AppCompatActivity implements View.OnClick
         }
         if(v.getId()==R.id.guardarJugMedia){
             AlertDialog.Builder saveDialog = new AlertDialog.Builder(this);
-            saveDialog.setTitle("Save drawing");
-            saveDialog.setMessage("Save drawing to device Gallery?");
-            saveDialog.setPositiveButton("Yes", new DialogInterface.OnClickListener(){
+            saveDialog.setTitle("Guardar Imagen");
+            saveDialog.setMessage("¿Quieres guardar la jugada en la galeria?");
+            saveDialog.setPositiveButton("Si", new DialogInterface.OnClickListener(){
                 public void onClick(DialogInterface dialog, int which){
                     //save drawing
-                    pintar.setDrawingCacheEnabled(true);
+                    jugada.setDrawingCacheEnabled(true);
                     String imgSaved = MediaStore.Images.Media.insertImage(
-                            getContentResolver(), pintar.getDrawingCache(),
-                            "prueba.png", "drawing");
+                            getContentResolver(), jugada.getDrawingCache(),
+                            "JugadaMediaPista.png", "drawing");
                     if(imgSaved!=null){
                         Toast savedToast = Toast.makeText(getApplicationContext(),
-                                "Drawing saved to Gallery!", Toast.LENGTH_SHORT);
+                                "La jugada ha sido guardada en la galeria", Toast.LENGTH_SHORT);
                         savedToast.show();
                     }
                     else{
                         Toast unsavedToast = Toast.makeText(getApplicationContext(),
-                                "Oops! Image could not be saved.", Toast.LENGTH_SHORT);
+                                "Oops! No se ha podido guardar la jugada", Toast.LENGTH_SHORT);
                         unsavedToast.show();
                     }
-                    pintar.destroyDrawingCache();
+                    jugada.destroyDrawingCache();
                 }
             });
-            saveDialog.setNegativeButton("Cancel", new DialogInterface.OnClickListener(){
+            saveDialog.setNegativeButton("Cancelar", new DialogInterface.OnClickListener(){
                 public void onClick(DialogInterface dialog, int which){
                     dialog.cancel();
                 }

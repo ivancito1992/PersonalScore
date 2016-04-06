@@ -1,20 +1,24 @@
 package com.example.ivanb.personalscore;
 
+import android.app.AlertDialog;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.graphics.PointF;
 import android.os.Bundle;
+import android.provider.MediaStore;
 import android.support.v7.app.AppCompatActivity;
 import android.view.MotionEvent;
 import android.view.View;
 import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.RelativeLayout;
 import android.widget.Toast;
 
 
 public class JugadasCompleto extends AppCompatActivity implements View.OnClickListener{
 
-    Button borrar, vista, bloquear, lineaPase, lineaMovimiento, lineaBloqueo, lineaTiro;
+    Button borrar, vista, bloquear, guardar, lineaPase, lineaMovimiento, lineaBloqueo, lineaTiro;
 
     ImageView num1L, num2L, num3L, num4L, num5L, num1V, num2V, num3V, num4V, num5V;
 
@@ -22,6 +26,8 @@ public class JugadasCompleto extends AppCompatActivity implements View.OnClickLi
     int modificarY = 100;
 
     boolean estanBlock = false;
+
+    RelativeLayout jugada;
 
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -34,6 +40,9 @@ public class JugadasCompleto extends AppCompatActivity implements View.OnClickLi
         vista.setOnClickListener(this);
         bloquear = (Button) findViewById(R.id.bloqueoIconCompleta);
         bloquear.setOnClickListener(this);
+        guardar = (Button) findViewById(R.id.guardarJCompleta);
+        guardar.setOnClickListener(this);
+        jugada = (RelativeLayout) findViewById(R.id.todoCompleta);
 
         num1L = (ImageView) findViewById(R.id.num1Lcompleta);
         num1L.setOnTouchListener(handlerMover);
@@ -136,6 +145,37 @@ public class JugadasCompleto extends AppCompatActivity implements View.OnClickLi
                                 Toast.LENGTH_SHORT);
                 mensaje1.show();
             }
+        }
+        if(v.getId()==R.id.guardarJCompleta){
+            AlertDialog.Builder saveDialog = new AlertDialog.Builder(this);
+            saveDialog.setTitle("Guardar Imagen");
+            saveDialog.setMessage("¿Quieres guardar la jugada en la galeria?");
+            saveDialog.setPositiveButton("Si", new DialogInterface.OnClickListener(){
+                public void onClick(DialogInterface dialog, int which){
+                    //save drawing
+                    jugada.setDrawingCacheEnabled(true);
+                    String imgSaved = MediaStore.Images.Media.insertImage(
+                            getContentResolver(), jugada.getDrawingCache(),
+                            "JugadaVistaCompleta.png", "drawing");
+                    if(imgSaved!=null){
+                        Toast savedToast = Toast.makeText(getApplicationContext(),
+                                "La jugada ha sido guardada en la galeria", Toast.LENGTH_SHORT);
+                        savedToast.show();
+                    }
+                    else{
+                        Toast unsavedToast = Toast.makeText(getApplicationContext(),
+                                "Oops! No se ha podido guardar la jugada", Toast.LENGTH_SHORT);
+                        unsavedToast.show();
+                    }
+                    jugada.destroyDrawingCache();
+                }
+            });
+            saveDialog.setNegativeButton("Cancelar", new DialogInterface.OnClickListener(){
+                public void onClick(DialogInterface dialog, int which){
+                    dialog.cancel();
+                }
+            });
+            saveDialog.show();
         }
     }
 }

@@ -13,7 +13,7 @@
         android:layout_height="50dp">
 
         <Button
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="match_parent"
             android:text="@string/vista"
             android:id="@+id/cvAmedia"
@@ -22,7 +22,7 @@
             android:background="@drawable/btn_jugadas_accion" />
 
         <Button
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="match_parent"
             android:text="@string/borrar"
             android:id="@+id/borrarPistaCompleta"
@@ -31,10 +31,20 @@
             android:background="@drawable/btn_jugadas_accion" />
 
         <Button
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="match_parent"
             android:text="@string/bloquear"
             android:id="@+id/bloqueoIconCompleta"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:background="@drawable/btn_jugadas_accion"
+            android:textColor="#ffffff" />
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:text="@string/guardar"
+            android:id="@+id/guardarJCompleta"
             android:layout_weight="1"
             android:gravity="center"
             android:background="@drawable/btn_jugadas_accion"
@@ -99,7 +109,8 @@
 
         <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="match_parent"
+            android:id="@+id/todoCompleta">
 
             <com.example.ivanb.personalscore.Pintar
                 android:layout_width="wrap_content"

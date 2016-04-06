@@ -37,6 +37,7 @@
     <!-- TEXTO PARA MODO SELECCION DE NOMBRES -->
     <string name="nombreLocal">Nombre Equipo Local</string>
     <string name="nombreVisitante">Nombre Equipo Visitante</string>
+    <string name="nombreJugador">Nombre del Jugador</string>
     <string name="comenzar">Comenzar</string>
 
     <!-- TEXTO PARA LOS TUTORIALES -->

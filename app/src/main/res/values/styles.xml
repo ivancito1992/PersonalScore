@@ -17,6 +17,13 @@
         <item name="android:shadowDx">3</item>
         <item name="android:shadowDy">3</item>
     </style>
+    <style name="Jugador">
+        <item name="android:textColor">@color/sombraLetrasMarcador</item>sombraLetrasMarcador
+        <item name="android:shadowColor">@color/colorLetrasMarcador</item>
+        <item name="android:shadowRadius">3</item>
+        <item name="android:shadowDx">3</item>
+        <item name="android:shadowDy">3</item>
+    </style>
     <style name="Menu">
         <item name="android:textColor">@color/colorLetraBtn</item>sombraLetrasMarcador
         <item name="android:shadowColor">@color/colorLetrasMarcador</item>

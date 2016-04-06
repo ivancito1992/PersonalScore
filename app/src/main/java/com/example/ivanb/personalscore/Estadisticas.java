@@ -12,7 +12,7 @@ import android.widget.TextView;
 
 public class Estadisticas extends AppCompatActivity implements View.OnClickListener {
 
-    TextView tvLocal, tvVisitante, tvPuntosj1, tvEquipoLocal, tvEquipoVisitante;
+    TextView tvLocal, tvVisitante, tvJugador1, tvPuntosj1, tvEquipoLocal, tvEquipoVisitante;
     TextView tvTextoj1tl, tvMetidasj1tl, tvBarraj1tl, tvTotalj1tl;
     TextView tvTextoj1t2, tvMetidasj1t2, tvBarraj1t2, tvTotalj1t2;
     TextView tvTextoj1t3, tvMetidasj1t3, tvBarraj1t3, tvTotalj1t3;
@@ -68,6 +68,8 @@ public class Estadisticas extends AppCompatActivity implements View.OnClickListe
         tvEquipoLocal.setText(bundle.getString("nel"));
         tvEquipoVisitante = (TextView) findViewById(R.id.equipoVisitante);
         tvEquipoVisitante.setText(bundle.getString("nev"));
+        tvJugador1 = (TextView) findViewById(R.id.nombreJugador);
+        tvJugador1.setText(bundle.getString("nej"));
 
         esLocal = (RadioButton) findViewById(R.id.esLocalJ1);
         esLocal.setOnClickListener(this);

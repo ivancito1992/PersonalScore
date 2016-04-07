@@ -1,5 +1,8 @@
 package com.example.ivanb.personalscore;
 
+import android.app.Activity;
+import android.app.AlertDialog;
+import android.content.DialogInterface;
 import android.graphics.Typeface;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
@@ -8,6 +11,16 @@ import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.RadioButton;
 import android.widget.TextView;
+import android.widget.Toast;
+
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.OutputStream;
+import java.io.OutputStreamWriter;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 
 
 public class Estadisticas extends AppCompatActivity implements View.OnClickListener {
@@ -23,7 +36,7 @@ public class Estadisticas extends AppCompatActivity implements View.OnClickListe
     Button aciertoLTL, aciertoLT2, aciertoLT3;
     Button aciertoVTL, aciertoVT2, aciertoVT3;
     Button aciertoJ1TL, aciertoJ1T2, aciertoJ1T3, falloJ1TL, falloJ1T2, falloJ1T3;
-    Button aumentarRebJ1, aumentarAsisJ1, aumentarExtraJ1, deshacerUltimo;
+    Button aumentarRebJ1, aumentarAsisJ1, aumentarExtraJ1, deshacerUltimo, finalizar;
 
     RadioButton esLocal, esVisitante, esRobo, esTapon;
 
@@ -31,6 +44,9 @@ public class Estadisticas extends AppCompatActivity implements View.OnClickListe
             contadorAsistenciasJ1, contadorRobosJ1, contadorTaponesJ1, marcadorLocal, marcadorVisitante, puntosJ1 = 0;
 
     boolean siLTL, siLT2, siLT3, siVTL, siVT2, siVT3, siJ1TL, siJ1T2, siJ1T3, noJ1TL, noJ1T2, noJ1T3, reboteBJ1, asistenciaBJ1, roboBJ1, taponBJ1, esLocalj1, esVisitantej1;
+
+    String puntosLocal, puntosVisitante, puntosJugador, stats1, stats2, stats3, statsAsistencias, statsRebotes, statsRobos, statsTapones, fecha, nombreFichero, textoEquipos, textoJugador;
+
 
 
     protected void onCreate(Bundle savedInstanceState) {
@@ -148,6 +164,8 @@ public class Estadisticas extends AppCompatActivity implements View.OnClickListe
         aumentarExtraJ1.setOnClickListener(this);
         deshacerUltimo = (Button) findViewById(R.id.deshacer);
         deshacerUltimo.setOnClickListener(this);
+        finalizar = (Button) findViewById(R.id.finPartido);
+        finalizar.setOnClickListener(this);
 
 
         esVisitantej1 = false;
@@ -485,6 +503,82 @@ public class Estadisticas extends AppCompatActivity implements View.OnClickListe
                     taponBJ1 = false;
                     break;
                 }
+                break;
+            /* BOTON FIN PARTIDO */
+            case R.id.finPartido:
+                AlertDialog.Builder saveDialog = new AlertDialog.Builder(this);
+                saveDialog.setTitle("Finalizar Partido");
+                saveDialog.setMessage("¿Quieres finalizar el partido, y guardar los datos?");
+                saveDialog.setPositiveButton("Si", new DialogInterface.OnClickListener() {
+                    public void onClick(DialogInterface dialog, int which) {
+                        generarTXT();
+                        try {
+                            moverTXT();
+                        } catch (IOException e) {
+                            e.printStackTrace();
+                        }
+                        Toast t = Toast.makeText(getApplicationContext(), "El resultado se ha guardado", Toast.LENGTH_SHORT);
+                        t.show();
+                        finish();
+
+                    }
+                });
+                saveDialog.setNegativeButton("Cancelar", new DialogInterface.OnClickListener() {
+                    public void onClick(DialogInterface dialog, int which) {
+                        dialog.cancel();
+                    }
+                });
+                saveDialog.show();
         }
+    }
+    public void generarTXT(){
+        nombreFichero = "Partido.txt";
+        puntosLocal = "La puntuacion del equipo "+esLocal.getText().toString()+" ha sido: "+Integer.toString(marcadorLocal);
+        puntosVisitante = "La puntuacion del equipo "+esVisitante.getText().toString()+" ha sido: "+Integer.toString(marcadorVisitante);
+        puntosJugador =  "La puntuacion de "+tvJugador1.getText().toString()+" es de: "+Integer.toString(puntosJ1);
+        stats1 = "Desde la lina de tiros libres sus estadisticas han sido: "+Integer.toString(contadorAciertosJ1TL)+" / "+Integer.toString(contadorTiradosJ1TL);
+        stats2 = "En canastas de dos puntos, sus estadisticas han sido: "+Integer.toString(contadorAciertosJ1T2)+" / "+Integer.toString(contadorTiradosJ1T2);
+        stats3 = "Desde la lina de tres puntos sus estadisticas han sido: "+Integer.toString(contadorAciertosJ1T3)+" / "+Integer.toString(contadorTiradosJ1T3);
+        statsAsistencias = "Ha repartido un total de: "+Integer.toString(contadorAsistenciasJ1)+" asistencia/s";
+        statsRebotes = "Ha cogido un total de: "+Integer.toString(contadorRebotesJ1)+" rebote/s";
+        statsRobos = "Ha conseguido: "+Integer.toString(contadorRobosJ1)+" robo/s";
+        statsTapones = "Y ha puesto un total de: "+Integer.toString(contadorTaponesJ1)+" tapon/es";
+
+        textoEquipos = puntosLocal+"\r\n"+puntosVisitante+"\r\n"+"--------------------------------------"+"\r\n";
+        textoJugador = puntosJugador+"\r\n"+stats1+"\r\n"+stats2+"\r\n"+stats3+"\r\n"+statsAsistencias+"\r\n"+statsRebotes+"\r\n"+statsRobos+"\r\n"+statsTapones;
+        try {
+            OutputStreamWriter file = new OutputStreamWriter(openFileOutput(nombreFichero, Activity.MODE_PRIVATE));
+            file.write(textoEquipos);
+            file.write(textoJugador);
+            file.flush();
+            file.close();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+    public void moverTXT() throws IOException{
+        fecha = new SimpleDateFormat("ddMMyyyy_HHmmss").format(new Date());
+        final String antiguoDir = "/data/data/com.example.ivanb.personalscore/files/Partido.txt";
+        File ubicFicheroInnaccesible = new File(antiguoDir);
+        FileInputStream fis = null;
+
+        fis = new FileInputStream(ubicFicheroInnaccesible);
+
+        String nuevoDir = "/storage/sdcard0/PartidosMakingWinners";
+        File ubicFicheroAccesible = new File(nuevoDir);
+        if(!ubicFicheroAccesible.exists()){
+            ubicFicheroAccesible.mkdir();
+        }
+        String aux = nuevoDir+"/Partido_"+fecha+".txt";
+        OutputStream ficheroAccesible = new FileOutputStream(aux);
+
+        byte[] buffer = new byte[1024];
+        int length;
+        while((length = fis.read(buffer))> 0){
+            ficheroAccesible.write(buffer,0,length);
+        }
+        ficheroAccesible.flush();
+        ficheroAccesible.close();
+        fis.close();
     }
 }

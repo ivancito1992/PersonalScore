@@ -33,6 +33,7 @@
     <string name="esLocal">HOME</string>
     <string name="esVisitante">AWAY</string>
     <string name="back">Deshacer ultima accion</string>
+    <string name="finPartido">Finalizar Partido</string>
 
     <!-- TEXTO PARA MODO SELECCION DE NOMBRES -->
     <string name="nombreLocal">Nombre Equipo Local</string>

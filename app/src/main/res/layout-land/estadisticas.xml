@@ -250,25 +250,6 @@
                         android:orientation="horizontal"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:id="@+id/linearLayout"
-                        android:gravity="center_vertical"
-                        android:layout_weight="1">
-
-                        <TextView
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:textAppearance="?android:attr/textAppearanceLarge"
-                            android:id="@+id/nombreJugador"
-                            android:textSize="26sp"
-                            android:gravity="left|center_vertical"
-                            android:textColor="@color/colorLetraBtn" />
-
-                    </LinearLayout>
-
-                    <LinearLayout
-                        android:orientation="horizontal"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
                         android:id="@+id/datosJugador1"
                         android:gravity="center_vertical"
                         android:layout_weight="1">
@@ -305,6 +286,27 @@
 
                     </LinearLayout>
 
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/linearLayout"
+                        android:gravity="center_vertical"
+                        android:layout_weight="1">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:textAppearance="?android:attr/textAppearanceLarge"
+                            android:id="@+id/nombreJugador"
+                            android:textSize="26sp"
+                            android:gravity="left|center_vertical"
+                            android:textColor="@color/colorLetraBtn"
+                            android:paddingTop="1dp"
+                            android:paddingBottom="1dp" />
+
+                    </LinearLayout>
+
                 </LinearLayout>
 
                 <TextView
@@ -323,7 +325,8 @@
                 android:orientation="horizontal"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_weight="15">
+                android:layout_weight="15"
+                android:baselineAligned="false">
 
                 <LinearLayout
                     android:orientation="vertical"
@@ -784,19 +787,37 @@
                 </LinearLayout>
             </LinearLayout>
 
-            <Button
+            <LinearLayout
+                android:orientation="horizontal"
                 android:layout_width="match_parent"
-                android:layout_height="34dp"
-                android:text="@string/back"
-                android:id="@+id/deshacer"
-                android:textSize="13sp"
-                android:gravity="center"
-                android:background="@drawable/btn_equipos_accion"
+                android:layout_height="wrap_content"
                 android:layout_marginTop="3dp"
-                android:layout_marginBottom="3dp"
-                android:textColor="@color/colorLetraBtn"
-                android:layout_marginRight="3dp"
-                android:layout_weight="1" />
+                android:layout_weight="3">
+
+                <Button
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="@string/back"
+                    android:id="@+id/deshacer"
+                    android:textSize="10sp"
+                    android:gravity="center"
+                    android:background="@drawable/btn_equipos_accion"
+                    android:textColor="@color/colorLetraBtn"
+                    android:layout_weight="1"
+                    android:layout_marginRight="2dp" />
+
+                <Button
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="@string/finPartido"
+                    android:id="@+id/finPartido"
+                    android:textSize="10sp"
+                    android:gravity="center"
+                    android:background="@drawable/btn_equipos_accion"
+                    android:textColor="@color/colorLetraBtn"
+                    android:layout_weight="1"
+                    android:layout_marginLeft="2dp" />
+            </LinearLayout>
 
         </LinearLayout>
 

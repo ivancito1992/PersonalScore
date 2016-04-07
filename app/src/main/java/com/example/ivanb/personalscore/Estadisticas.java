@@ -535,7 +535,16 @@ public class Estadisticas extends AppCompatActivity implements View.OnClickListe
         nombreFichero = "Partido.txt";
         puntosLocal = "La puntuacion del equipo "+esLocal.getText().toString()+" ha sido: "+Integer.toString(marcadorLocal);
         puntosVisitante = "La puntuacion del equipo "+esVisitante.getText().toString()+" ha sido: "+Integer.toString(marcadorVisitante);
-        puntosJugador =  "La puntuacion de "+tvJugador1.getText().toString()+" es de: "+Integer.toString(puntosJ1);
+        if(esLocalj1){
+            puntosJugador =  "La puntuacion de "+tvJugador1.getText().toString()+"que juega en el equipo"+esLocal.getText().toString()+" es de: "+Integer.toString(puntosJ1);
+        }
+        else if(esVisitantej1){
+            puntosJugador =  "La puntuacion de "+tvJugador1.getText().toString()+"que juega en el equipo"+esVisitante.getText().toString()+" es de: "+Integer.toString(puntosJ1);
+        }
+        else{
+            puntosJugador =  "La puntuacion de "+tvJugador1.getText().toString()+" es de: "+Integer.toString(puntosJ1);
+        }
+
         stats1 = "Desde la lina de tiros libres sus estadisticas han sido: "+Integer.toString(contadorAciertosJ1TL)+" / "+Integer.toString(contadorTiradosJ1TL);
         stats2 = "En canastas de dos puntos, sus estadisticas han sido: "+Integer.toString(contadorAciertosJ1T2)+" / "+Integer.toString(contadorTiradosJ1T2);
         stats3 = "Desde la lina de tres puntos sus estadisticas han sido: "+Integer.toString(contadorAciertosJ1T3)+" / "+Integer.toString(contadorTiradosJ1T3);

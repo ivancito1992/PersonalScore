@@ -52,8 +52,23 @@ public class Pintar extends View {
         switch (event.getAction()) {
             case MotionEvent.ACTION_DOWN:
                 drawPath.moveTo(touchX, touchY);
-                if(!esBlock || !esTiro){
-                   ciruloInicio(drawCanvas,touchX,touchY);
+                if(esPase){
+                    drawPaint.setColor(0xff00ffff);
+                    drawPaint.setAntiAlias(true);
+                    drawPaint.setStrokeWidth(6);
+                    drawPaint.setStyle(Paint.Style.STROKE);
+                    drawPaint.setStrokeJoin(Paint.Join.ROUND);
+                    drawPaint.setStrokeCap(Paint.Cap.ROUND);
+                    drawCanvas.drawCircle(touchX, touchY, 9.0f, drawPaint);
+                }
+                if(esMove){
+                    drawPaint.setColor(0xffff0000);
+                    drawPaint.setAntiAlias(true);
+                    drawPaint.setStrokeWidth(6);
+                    drawPaint.setStyle(Paint.Style.STROKE);
+                    drawPaint.setStrokeJoin(Paint.Join.ROUND);
+                    drawPaint.setStrokeCap(Paint.Cap.ROUND);
+                    drawCanvas.drawCircle(touchX, touchY, 9.0f, drawPaint);
                 }
                 break;
             case MotionEvent.ACTION_MOVE:
@@ -70,26 +85,6 @@ public class Pintar extends View {
         invalidate();
         return true;
     }
-    public static void ciruloInicio(Canvas c, float x, float y){
-        if(esPase){
-            drawPaint.setColor(0xff00ffff);
-            drawPaint.setAntiAlias(true);
-            drawPaint.setStrokeWidth(6);
-            drawPaint.setStyle(Paint.Style.STROKE);
-            drawPaint.setStrokeJoin(Paint.Join.ROUND);
-            drawPaint.setStrokeCap(Paint.Cap.ROUND);
-            c.drawCircle(x, y, 9.0f, drawPaint);
-        }
-        if(esMove){
-            drawPaint.setColor(0xffff0000);
-            drawPaint.setAntiAlias(true);
-            drawPaint.setStrokeWidth(6);
-            drawPaint.setStyle(Paint.Style.STROKE);
-            drawPaint.setStrokeJoin(Paint.Join.ROUND);
-            drawPaint.setStrokeCap(Paint.Cap.ROUND);
-            c.drawCircle(x, y, 9.0f, drawPaint);
-        }
-    }
     public static void trazoInvisible(){
         drawPath = new Path();
         drawPaint = new Paint();
@@ -99,11 +94,11 @@ public class Pintar extends View {
     }
 
     public static void trazoPase(){
-        esBlock = false; esTiro = false; esMove = false; esPase = true;
+        esMove = false; esPase = true;
         drawPath = new Path();
         drawPaint = new Paint();
         float radius = 50.0f;
-        float[] i = new float[]{40.0f, 5.0f};
+        float[] i = new float[]{40.0f, 10.0f};
         float phase = 0;
 
         drawPaint.setColor(0xff00ffff);
@@ -121,7 +116,7 @@ public class Pintar extends View {
     }
 
     public static void trazoMove() {
-        esBlock = false; esTiro = false; esMove = true; esPase = false;
+        esMove = true; esPase = false;
         drawPath = new Path();
         drawPaint = new Paint();
         esBlock = false;
@@ -136,7 +131,7 @@ public class Pintar extends View {
     }
 
     public static void trazoBloqueo() {
-        esBlock = true;
+        esMove = false; esPase = false;
         drawPath = new Path();
         drawPaint = new Paint();
         drawPaint.setColor(0xff770000);
@@ -150,7 +145,7 @@ public class Pintar extends View {
     }
 
     public static void trazoTiro(){
-        esTiro = true;
+        esMove = false; esPase = false;
         drawPath = new Path();
         drawPaint = new Paint();
         float radius = 50.0f;

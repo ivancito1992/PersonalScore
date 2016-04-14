@@ -31,9 +31,9 @@ public class SeleccionTutorial extends AppCompatActivity implements View.OnClick
         if(v.getId()==R.id.tutEstadisticas){
             startActivity(new Intent(SeleccionTutorial.this, TutorialEstadisticas.class));
         }
-        /*if(v.getId()==R.id.tutJugadas){
-
-        }*/
+        if(v.getId()==R.id.tutJugadas){
+            startActivity(new Intent(SeleccionTutorial.this, TutorialJugadas.class));
+        }
         if(v.getId()==R.id.volver){
             startActivity(new Intent(SeleccionTutorial.this, MenuInicial.class));
             finish();

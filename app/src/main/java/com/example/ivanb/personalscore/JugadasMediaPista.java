@@ -64,7 +64,7 @@ public class JugadasMediaPista extends AppCompatActivity implements View.OnClick
         lineaTiro = (Button)findViewById(R.id.trazoTiroMedia);
         lineaTiro.setOnClickListener(this);
 
-        Pintar.trazoInvisible();
+        Pintar.negar();
 
    }
     View.OnTouchListener handlerMover = new View.OnTouchListener(){

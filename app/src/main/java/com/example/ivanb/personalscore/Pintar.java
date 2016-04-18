@@ -93,6 +93,11 @@ public class Pintar extends View {
         canvasPaint = new Paint(Paint.DITHER_FLAG);
     }
 
+    public static void negar(){
+        esPase = false;
+        esMove = false;
+    }
+
     public static void trazoPase(){
         esMove = false; esPase = true;
         drawPath = new Path();
@@ -130,7 +135,7 @@ public class Pintar extends View {
     }
 
     public static void trazoBloqueo() {
-        esMove = false; esPase = false;
+        negar();
         drawPath = new Path();
         drawPaint = new Paint();
         drawPaint.setColor(0xff770000);
@@ -144,7 +149,7 @@ public class Pintar extends View {
     }
 
     public static void trazoTiro(){
-        esMove = false; esPase = false;
+        negar();
         drawPath = new Path();
         drawPaint = new Paint();
         float radius = 50.0f;

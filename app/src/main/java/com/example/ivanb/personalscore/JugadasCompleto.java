@@ -75,7 +75,7 @@ public class JugadasCompleto extends AppCompatActivity implements View.OnClickLi
         lineaTiro = (Button)findViewById(R.id.trazoTiroCompleta);
         lineaTiro.setOnClickListener(this);
 
-        Pintar.trazoInvisible();
+        Pintar.negar();
     }
 
     View.OnTouchListener handlerMover = new View.OnTouchListener(){

@@ -19,7 +19,7 @@ public class Pintar extends View {
     private static Paint canvasPaint;
     private Canvas drawCanvas;
     private Bitmap canvasBitmap;
-    static boolean esBlock, esMove, esTiro, esPase;
+    static boolean esMove, esPase;
 
 
     public Pintar(Context ctx, AttributeSet attrs) {
@@ -119,7 +119,6 @@ public class Pintar extends View {
         esMove = true; esPase = false;
         drawPath = new Path();
         drawPaint = new Paint();
-        esBlock = false;
         drawPaint.setColor(0xffff0000);
 
         drawPaint.setAntiAlias(true);

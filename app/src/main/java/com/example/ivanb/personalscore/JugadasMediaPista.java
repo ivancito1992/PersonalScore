@@ -17,8 +17,6 @@ import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.Toast;
 
-import java.util.UUID;
-
 
 public class JugadasMediaPista extends AppCompatActivity implements View.OnClickListener{
 
@@ -65,6 +63,8 @@ public class JugadasMediaPista extends AppCompatActivity implements View.OnClick
         lineaBloqueo.setOnClickListener(this);
         lineaTiro = (Button)findViewById(R.id.trazoTiroMedia);
         lineaTiro.setOnClickListener(this);
+
+        Pintar.trazoInvisible();
 
    }
     View.OnTouchListener handlerMover = new View.OnTouchListener(){

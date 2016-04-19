@@ -53,7 +53,7 @@
                         android:textAppearance="?android:attr/textAppearanceLarge"
                         android:text="@string/marcador_inicial"
                         android:id="@+id/marcadorLocal"
-                        android:textSize="140sp"
+                        android:textSize="130sp"
                         style="@style/Marcador"
                         android:gravity="center"
                         android:layout_weight="3" />
@@ -145,7 +145,7 @@
                         android:textAppearance="?android:attr/textAppearanceLarge"
                         android:text="@string/marcador_inicial"
                         android:id="@+id/marcadorVisitante"
-                        android:textSize="140sp"
+                        android:textSize="130sp"
                         style="@style/Marcador"
                         android:gravity="center"
                         android:layout_weight="3" />

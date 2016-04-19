@@ -1,0 +1,824 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:background="@drawable/fondo_stats_full"
+    android:baselineAligned="false">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:id="@+id/estadisticasEquipos"
+            android:layout_weight="1"
+            android:layout_marginRight="10dp">
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/estadisticasLocal"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:padding="5dp">
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:id="@+id/textosLocal"
+                    android:gravity="center_vertical">
+
+                    <TextView
+                        android:layout_width="fill_parent"
+                        android:layout_height="0dp"
+                        android:textAppearance="?android:attr/textAppearanceLarge"
+                        android:text="@string/local"
+                        android:id="@+id/equipoLocal"
+                        android:gravity="center"
+                        android:layout_weight="1"
+                        android:background="#b4000000"
+                        android:textColor="@color/colorLocal"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:layout_width="125dp"
+                        android:layout_height="0dp"
+                        android:textAppearance="?android:attr/textAppearanceLarge"
+                        android:text="@string/marcador_inicial"
+                        android:id="@+id/marcadorLocal"
+                        android:textSize="70sp"
+                        style="@style/Marcador"
+                        android:gravity="center"
+                        android:layout_weight="3" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/botonesLocal"
+                    android:gravity="right">
+
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/botonesLocalTiro">
+
+                        <Button
+                            style="?android:attr/buttonStyleSmall"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/valor1"
+                            android:id="@+id/siLTL"
+                            android:layout_weight="2"
+                            android:layout_marginTop="3dp"
+                            android:layout_marginBottom="3dp"
+                            android:background="@drawable/btn_acierto_accion"
+                            android:layout_marginRight="3dp"
+                            android:textColor="@color/colorLetraBtn"
+                            android:layout_marginLeft="5dp" />
+
+                        <Button
+                            style="?android:attr/buttonStyleSmall"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/valor2"
+                            android:id="@+id/siLT2"
+                            android:layout_weight="2"
+                            android:layout_marginTop="3dp"
+                            android:layout_marginBottom="3dp"
+                            android:background="@drawable/btn_acierto_accion"
+                            android:layout_marginRight="3dp"
+                            android:textColor="@color/colorLetraBtn"
+                            android:layout_marginLeft="5dp" />
+
+                        <Button
+                            style="?android:attr/buttonStyleSmall"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/valor3"
+                            android:id="@+id/siLT3"
+                            android:layout_weight="2"
+                            android:layout_marginTop="3dp"
+                            android:layout_marginBottom="3dp"
+                            android:background="@drawable/btn_acierto_accion"
+                            android:layout_marginRight="3dp"
+                            android:textColor="@color/colorLetraBtn"
+                            android:layout_marginLeft="5dp" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:id="@+id/estadisticasVisitante"
+                android:layout_weight="1"
+                android:padding="5dp">
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:id="@+id/textosVisitante"
+                    android:gravity="center_vertical">
+
+                    <TextView
+                        android:layout_width="fill_parent"
+                        android:layout_height="0dp"
+                        android:textAppearance="?android:attr/textAppearanceLarge"
+                        android:text="@string/visitante"
+                        android:id="@+id/equipoVisitante"
+                        android:gravity="center"
+                        android:layout_weight="1"
+                        android:background="#b4000000"
+                        android:textColor="@color/colorVisitante"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:layout_width="125dp"
+                        android:layout_height="0dp"
+                        android:textAppearance="?android:attr/textAppearanceLarge"
+                        android:text="@string/marcador_inicial"
+                        android:id="@+id/marcadorVisitante"
+                        android:textSize="70sp"
+                        style="@style/Marcador"
+                        android:gravity="center"
+                        android:layout_weight="3" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:id="@+id/botonesVisitante"
+                    android:gravity="center_vertical">
+
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/botonesVisitanteTiro">
+
+                        <Button
+                            style="?android:attr/buttonStyleSmall"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/valor1"
+                            android:id="@+id/siVTL"
+                            android:layout_weight="2"
+                            android:layout_marginTop="3dp"
+                            android:layout_marginBottom="3dp"
+                            android:background="@drawable/btn_acierto_accion"
+                            android:layout_marginRight="3dp"
+                            android:textColor="@color/colorLetraBtn"
+                            android:layout_marginLeft="5dp" />
+
+                        <Button
+                            style="?android:attr/buttonStyleSmall"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/valor2"
+                            android:id="@+id/siVT2"
+                            android:layout_weight="2"
+                            android:layout_marginTop="3dp"
+                            android:layout_marginBottom="3dp"
+                            android:background="@drawable/btn_acierto_accion"
+                            android:layout_marginRight="3dp"
+                            android:textColor="@color/colorLetraBtn"
+                            android:layout_marginLeft="5dp" />
+
+                        <Button
+                            style="?android:attr/buttonStyleSmall"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/valor3"
+                            android:id="@+id/siVT3"
+                            android:layout_weight="2"
+                            android:layout_marginTop="3dp"
+                            android:layout_marginBottom="3dp"
+                            android:background="@drawable/btn_acierto_accion"
+                            android:layout_marginRight="3dp"
+                            android:textColor="@color/colorLetraBtn"
+                            android:layout_marginLeft="5dp" />
+
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:id="@+id/estadisticasJugadores"
+            android:layout_weight="2"
+            android:background="#64000000"
+            android:paddingBottom="5dp"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:paddingTop="5dp">
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/btnDeshacer">
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:layout_marginRight="10dp">
+
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/datosJugador1"
+                        android:gravity="center_vertical"
+                        android:layout_weight="1">
+
+                        <RadioGroup
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:orientation="horizontal"
+                            android:gravity="left|center_vertical"
+                            android:layout_weight="2">
+
+                            <RadioButton
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/esLocal"
+                                android:id="@+id/esLocalJ1"
+                                android:checked="false"
+                                android:textColor="@color/colorLocal"
+                                android:layout_weight="1"
+                                android:textSize="16sp"
+                                android:buttonTint="@color/colorLocal" />
+
+                            <RadioButton
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/esVisitante"
+                                android:id="@+id/esVisitanteJ1"
+                                android:checked="false"
+                                android:textColor="@color/colorVisitante"
+                                android:layout_weight="1"
+                                android:textSize="16sp"
+                                android:buttonTint="@color/colorVisitante" />
+                        </RadioGroup>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/linearLayout"
+                        android:gravity="center_vertical"
+                        android:layout_weight="1">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:textAppearance="?android:attr/textAppearanceLarge"
+                            android:id="@+id/nombreJugador"
+                            android:textSize="26sp"
+                            android:gravity="left|center_vertical"
+                            android:textColor="@color/colorLetraBtn"
+                            android:paddingTop="1dp"
+                            android:paddingBottom="1dp" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:text="@string/puntos_jugador"
+                    android:id="@+id/puntosJ1"
+                    android:gravity="center"
+                    android:layout_weight="1"
+                    style="@style/Jugador"
+                    android:textSize="40sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="15"
+                android:baselineAligned="false">
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1">
+
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:id="@+id/datosJugador1TL"
+                        android:gravity="center_vertical"
+                        android:layout_weight="1">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:textAppearance="?android:attr/textAppearanceLarge"
+                            android:text="@string/tL"
+                            android:id="@+id/textoJ1TL"
+                            android:gravity="center_vertical"
+                            android:layout_weight="6"
+                            android:textColor="@color/colorLetraBtn"
+                            android:textSize="16sp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textAppearance="?android:attr/textAppearanceLarge"
+                            android:text="@string/estadisticas_iniciales_acierto"
+                            android:id="@+id/metidasJ1TL"
+                            android:textColor="@color/colorLetraBtn"
+                            android:layout_weight="1"
+                            android:gravity="right"
+                            android:textSize="18sp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textAppearance="?android:attr/textAppearanceLarge"
+                            android:text="@string/estadisticas_iniciales_barra"
+                            android:id="@+id/barraJ1TL"
+                            android:textColor="@color/colorLetraBtn"
+                            android:layout_marginLeft="3dp"
+                            android:layout_marginRight="3dp"
+                            android:textSize="18sp" />
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:textAppearance="?android:attr/textAppearanceLarge"
+                            android:text="@string/estadisticas_iniciales_total"
+                            android:id="@+id/totalJ1TL"
+                            android:layout_weight="5"
+                            android:textColor="@color/colorLetraBtn"
+                            android:textSize="18sp" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:id="@+id/datosJugador1T2"
+                        android:gravity="center_vertical"
+                        android:layout_weight="1">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:textAppearance="?android:attr/textAppearanceLarge"
+                            android:text="@string/t2"
+                            android:id="@+id/textoJ1T2"
+                            android:gravity="center_vertical"
+                            android:layout_weight="6"
+                            android:textSize="16sp"
+                            android:textColor="@color/colorLetraBtn" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textAppearance="?android:attr/textAppearanceLarge"
+                            android:text="@string/estadisticas_iniciales_acierto"
+                            android:id="@+id/metidasJ1T2"
+                            android:textColor="@color/colorLetraBtn"
+                            android:layout_weight="1"
+                            android:gravity="right"
+                            android:textSize="18sp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textAppearance="?android:attr/textAppearanceLarge"
+                            android:text="@string/estadisticas_iniciales_barra"
+                            android:id="@+id/barraJ1T2"
+                            android:textColor="@color/colorLetraBtn"
+                            android:layout_marginLeft="3dp"
+                            android:layout_marginRight="3dp"
+                            android:textSize="18sp" />
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:textAppearance="?android:attr/textAppearanceLarge"
+                            android:text="@string/estadisticas_iniciales_total"
+                            android:id="@+id/totalJ1T2"
+                            android:layout_weight="5"
+                            android:textColor="@color/colorLetraBtn"
+                            android:textSize="18sp" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:id="@+id/datosJugador1T3"
+                        android:gravity="center_vertical"
+                        android:layout_weight="1">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:textAppearance="?android:attr/textAppearanceLarge"
+                            android:text="@string/t3"
+                            android:id="@+id/textoJ1T3"
+                            android:gravity="center_vertical"
+                            android:layout_weight="6"
+                            android:textSize="16sp"
+                            android:textColor="@color/colorLetraBtn" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textAppearance="?android:attr/textAppearanceLarge"
+                            android:text="@string/estadisticas_iniciales_acierto"
+                            android:id="@+id/metidasJ1T3"
+                            android:textColor="@color/colorLetraBtn"
+                            android:layout_weight="1"
+                            android:gravity="right"
+                            android:textSize="18sp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textAppearance="?android:attr/textAppearanceLarge"
+                            android:text="@string/estadisticas_iniciales_barra"
+                            android:id="@+id/barraJ1T3"
+                            android:textColor="@color/colorLetraBtn"
+                            android:layout_marginLeft="3dp"
+                            android:layout_marginRight="3dp"
+                            android:textSize="18sp" />
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:textAppearance="?android:attr/textAppearanceLarge"
+                            android:text="@string/estadisticas_iniciales_total"
+                            android:id="@+id/totalJ1T3"
+                            android:layout_weight="5"
+                            android:textColor="@color/colorLetraBtn"
+                            android:textSize="18sp" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:id="@+id/datosJ1Rebotes"
+                        android:gravity="center_vertical"
+                        android:layout_weight="1">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:textAppearance="?android:attr/textAppearanceLarge"
+                            android:text="@string/rebotes"
+                            android:id="@+id/textoRebotesJ1"
+                            android:gravity="center_vertical"
+                            android:layout_weight="6"
+                            android:textSize="16sp"
+                            android:textColor="@color/colorLetraBtn" />
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:textAppearance="?android:attr/textAppearanceLarge"
+                            android:text="@string/estadisticas_iniciales_total"
+                            android:id="@+id/numRebotesJ1"
+                            android:layout_weight="5"
+                            android:textColor="@color/colorLetraBtn"
+                            android:textSize="18sp" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:id="@+id/datosJ1Asistencias"
+                        android:gravity="center_vertical"
+                        android:layout_weight="1">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:textAppearance="?android:attr/textAppearanceLarge"
+                            android:text="@string/asistencias"
+                            android:id="@+id/textoAsistenciasJ1"
+                            android:gravity="center_vertical"
+                            android:layout_weight="6"
+                            android:textSize="16sp"
+                            android:textColor="@color/colorLetraBtn" />
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:textAppearance="?android:attr/textAppearanceLarge"
+                            android:text="@string/estadisticas_iniciales_total"
+                            android:id="@+id/numAsistenciasJ1"
+                            android:layout_weight="5"
+                            android:textColor="@color/colorLetraBtn"
+                            android:textSize="18sp" />
+
+                    </LinearLayout>
+
+                    <RadioGroup
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:id="@+id/datosExtraJ1"
+                        android:gravity="center_vertical"
+                        android:layout_weight="1">
+
+                        <RadioButton
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:text="@string/robos"
+                            android:id="@+id/esRoboJ1"
+                            android:checked="false"
+                            android:layout_weight="4"
+                            android:textColor="@color/colorLetraBtn"
+                            android:textSize="14sp"
+                            android:buttonTint="#ffffff" />
+
+                        <RadioButton
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:text="@string/tapones"
+                            android:id="@+id/esTaponJ1"
+                            android:checked="false"
+                            android:layout_weight="4"
+                            android:textColor="@color/colorLetraBtn"
+                            android:textSize="14sp"
+                            android:buttonTint="#ffffff" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textAppearance="?android:attr/textAppearanceLarge"
+                            android:text="@string/estadisticas_iniciales_acierto"
+                            android:id="@+id/numRobosJ1"
+                            android:textColor="@color/colorLetraBtn"
+                            android:layout_weight="1"
+                            android:gravity="right"
+                            android:textSize="18sp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textAppearance="?android:attr/textAppearanceLarge"
+                            android:text="@string/estadisticas_iniciales_barra"
+                            android:id="@+id/barraExtraJ1"
+                            android:textColor="@color/colorLetraBtn"
+                            android:layout_marginLeft="3dp"
+                            android:layout_marginRight="3dp"
+                            android:textSize="18sp" />
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:textAppearance="?android:attr/textAppearanceLarge"
+                            android:text="@string/estadisticas_iniciales_total"
+                            android:id="@+id/numTaponesJ1"
+                            android:layout_weight="2"
+                            android:textColor="@color/colorLetraBtn"
+                            android:textSize="18sp" />
+
+                    </RadioGroup>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="3">
+
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:layout_marginTop="2dp"
+                        android:layout_marginBottom="2dp">
+
+                        <Button
+                            style="?android:attr/buttonStyleSmall"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:text="@string/valor1"
+                            android:id="@+id/aciertoJ1TL"
+                            android:layout_weight="2"
+                            android:background="@drawable/btn_acierto_accion"
+                            android:layout_marginRight="3dp"
+                            android:textColor="@color/colorLetraBtn"
+                            android:textSize="12sp" />
+
+                        <Button
+                            style="?android:attr/buttonStyleSmall"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:text="@string/valor1"
+                            android:id="@+id/falloJ1TL"
+                            android:layout_weight="2"
+                            android:background="@drawable/btn_fallo_accion"
+                            android:textColor="@color/colorLetraBtn"
+                            android:textSize="12sp"
+                            android:layout_marginLeft="3dp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:layout_marginTop="2dp"
+                        android:layout_marginBottom="2dp">
+
+                        <Button
+                            style="?android:attr/buttonStyleSmall"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:text="@string/valor2"
+                            android:id="@+id/aciertoJ1T2"
+                            android:layout_weight="2"
+                            android:background="@drawable/btn_acierto_accion"
+                            android:layout_marginRight="3dp"
+                            android:textColor="@color/colorLetraBtn"
+                            android:textSize="12sp" />
+
+                        <Button
+                            style="?android:attr/buttonStyleSmall"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:text="@string/valor2"
+                            android:id="@+id/falloJ1T2"
+                            android:layout_weight="2"
+                            android:background="@drawable/btn_fallo_accion"
+                            android:textColor="@color/colorLetraBtn"
+                            android:textSize="12sp"
+                            android:layout_marginLeft="3dp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:layout_marginTop="2dp"
+                        android:layout_marginBottom="2dp">
+
+                        <Button
+                            style="?android:attr/buttonStyleSmall"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:text="@string/valor3"
+                            android:id="@+id/aciertoJ1T3"
+                            android:layout_weight="2"
+                            android:background="@drawable/btn_acierto_accion"
+                            android:layout_marginRight="3dp"
+                            android:textColor="@color/colorLetraBtn"
+                            android:textSize="12sp" />
+
+                        <Button
+                            style="?android:attr/buttonStyleSmall"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:text="@string/valor3"
+                            android:id="@+id/falloJ1T3"
+                            android:layout_weight="2"
+                            android:background="@drawable/btn_fallo_accion"
+                            android:textColor="@color/colorLetraBtn"
+                            android:textSize="12sp"
+                            android:layout_marginLeft="3dp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:layout_marginTop="2dp"
+                        android:layout_marginBottom="2dp">
+
+                        <Button
+                            style="?android:attr/buttonStyleSmall"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:text="@string/añadir"
+                            android:layout_weight="2"
+                            android:background="@drawable/btn_acierto_accion"
+                            android:textColor="@color/colorLetraBtn"
+                            android:id="@+id/btnRebotesJ1"
+                            android:textSize="12sp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:layout_marginTop="2dp"
+                        android:layout_marginBottom="2dp">
+
+                        <Button
+                            style="?android:attr/buttonStyleSmall"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:text="@string/añadir"
+                            android:id="@+id/btnAsistenciasJ1"
+                            android:layout_weight="2"
+                            android:background="@drawable/btn_acierto_accion"
+                            android:textColor="@color/colorLetraBtn"
+                            android:textSize="12sp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:layout_marginTop="2dp"
+                        android:layout_marginBottom="2dp">
+
+                        <Button
+                            style="?android:attr/buttonStyleSmall"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:text="@string/añadir"
+                            android:id="@+id/btnExtraJ1"
+                            android:layout_weight="3"
+                            android:background="@drawable/btn_acierto_accion"
+                            android:textColor="@color/colorLetraBtn"
+                            android:textSize="12sp" />
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="3dp"
+                android:layout_weight="3">
+
+                <Button
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="@string/back"
+                    android:id="@+id/deshacer"
+                    android:textSize="10sp"
+                    android:gravity="center"
+                    android:background="@drawable/btn_equipos_accion"
+                    android:textColor="@color/colorLetraBtn"
+                    android:layout_weight="1"
+                    android:layout_marginRight="2dp" />
+
+                <Button
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="@string/finPartido"
+                    android:id="@+id/finPartido"
+                    android:textSize="10sp"
+                    android:gravity="center"
+                    android:background="@drawable/btn_equipos_accion"
+                    android:textColor="@color/colorLetraBtn"
+                    android:layout_weight="1"
+                    android:layout_marginLeft="2dp" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+</LinearLayout>

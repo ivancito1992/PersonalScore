@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal"
+    android:rowCount="7"
+    android:background="@color/fondoJugadas">
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toEndOf="@+id/linearLayout2"
+        android:layout_toStartOf="@+id/linearLayout3"
+        android:id="@+id/todoMedia">
+
+        <com.example.ivanb.personalscore.Pintar
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/pistaMedia"
+            android:layout_alignParentTop="true"
+            android:background="@drawable/pista_media"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentStart="true" />
+
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:id="@+id/num1media"
+            android:background="@drawable/numeroazul1"
+            android:layout_marginRight="10dp"
+            android:layout_alignParentBottom="true"
+            android:layout_toStartOf="@+id/num2media" />
+
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:id="@+id/num2media"
+            android:background="@drawable/numeroazul2"
+            android:layout_marginRight="10dp"
+            android:layout_alignParentBottom="true"
+            android:layout_toStartOf="@+id/num3media" />
+
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:id="@+id/num3media"
+            android:background="@drawable/numeroazul3"
+            android:layout_marginRight="10dp"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true" />
+
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:id="@+id/num4media"
+            android:background="@drawable/numeroazul4"
+            android:layout_alignParentBottom="true"
+            android:layout_toEndOf="@+id/num3media"
+            android:layout_marginRight="10dp" />
+
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:id="@+id/num5media"
+            android:background="@drawable/numeroazul5"
+            android:layout_alignParentBottom="true"
+            android:layout_toEndOf="@+id/num4media" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="90dp"
+        android:layout_height="match_parent"
+        android:id="@+id/linearLayout2"
+        android:gravity="center">
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:text="@string/trazoPase"
+            android:id="@+id/trazoPasarMedia"
+            android:layout_weight="1"
+            android:background="@drawable/btn_jugadas_accion"
+            android:textColor="@color/colorTrazoPase"
+            android:textSize="12sp"
+            android:textStyle="bold" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:text="@string/trazoMovimiento"
+            android:id="@+id/trazoMoverMedia"
+            android:layout_weight="1"
+            android:background="@drawable/btn_jugadas_accion"
+            android:textColor="@color/colorTrazoNormal"
+            android:textSize="12sp"
+            android:textStyle="bold" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:text="@string/trazoBloqueo"
+            android:id="@+id/trazoBloquearMedia"
+            android:layout_weight="1"
+            android:background="@drawable/btn_jugadas_accion"
+            android:textColor="@color/colorTrazoBloqueo"
+            android:textSize="12sp"
+            android:textStyle="bold" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:text="@string/trazoTiro"
+            android:id="@+id/trazoTiroMedia"
+            android:layout_weight="1"
+            android:background="@drawable/btn_jugadas_accion"
+            android:textColor="@color/colorTrazoTiro"
+            android:textSize="12sp"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="90dp"
+        android:layout_height="match_parent"
+        android:id="@+id/linearLayout3"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:gravity="center">
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/vista"
+            android:id="@+id/cvAcompleto"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:background="@drawable/btn_jugadas_accion"
+            android:textColor="#ffffff" />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/borrar"
+            android:id="@+id/borrarPistaMedia"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:background="@drawable/btn_jugadas_accion"
+            android:textColor="#ffffff" />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/bloquear"
+            android:id="@+id/bloqueoIconMedia"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:background="@drawable/btn_jugadas_accion"
+            android:textColor="#ffffff" />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/guardar"
+            android:id="@+id/guardarJugMedia"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:background="@drawable/btn_jugadas_accion"
+            android:textColor="#ffffff" />
+    </LinearLayout>
+
+</RelativeLayout>

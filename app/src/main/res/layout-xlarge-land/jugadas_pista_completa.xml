@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".JugadasMediaPista"
+    android:background="@color/fondoJugadas">
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="50dp">
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:text="@string/vista"
+            android:id="@+id/cvAmedia"
+            android:layout_weight="1"
+            android:textColor="#ffffff"
+            android:background="@drawable/btn_jugadas_accion" />
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:text="@string/borrar"
+            android:id="@+id/borrarPistaCompleta"
+            android:layout_weight="1"
+            android:textColor="#ffffff"
+            android:background="@drawable/btn_jugadas_accion" />
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:text="@string/bloquear"
+            android:id="@+id/bloqueoIconCompleta"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:background="@drawable/btn_jugadas_accion"
+            android:textColor="#ffffff" />
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:text="@string/guardar"
+            android:id="@+id/guardarJCompleta"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:background="@drawable/btn_jugadas_accion"
+            android:textColor="#ffffff" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="90dp"
+            android:layout_height="match_parent">
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:text="@string/trazoPase"
+                android:id="@+id/trazoPasarCompleta"
+                android:layout_weight="1"
+                android:background="@drawable/btn_jugadas_accion"
+                android:textColor="@color/colorTrazoPase"
+                android:textSize="12sp"
+                android:textStyle="bold" />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:text="@string/trazoMovimiento"
+                android:id="@+id/trazoMoverCompleta"
+                android:layout_weight="1"
+                android:background="@drawable/btn_jugadas_accion"
+                android:textColor="@color/colorTrazoNormal"
+                android:textSize="12sp"
+                android:textStyle="bold" />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:text="@string/trazoBloqueo"
+                android:id="@+id/trazoBloquearCompleta"
+                android:layout_weight="1"
+                android:background="@drawable/btn_jugadas_accion"
+                android:textColor="@color/colorTrazoBloqueo"
+                android:textSize="12sp"
+                android:textStyle="bold" />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:text="@string/trazoTiro"
+                android:id="@+id/trazoTiroCompleta"
+                android:layout_weight="1"
+                android:background="@drawable/btn_jugadas_accion"
+                android:textColor="@color/colorTrazoTiro"
+                android:textSize="12sp"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/todoCompleta">
+
+            <com.example.ivanb.personalscore.Pintar
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:id="@+id/paraPintarPistaCompleta"
+                android:background="@drawable/pista_completa" />
+
+            <ImageView
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:id="@+id/num1Lcompleta"
+                android:background="@drawable/numeroazul1"
+                android:layout_marginRight="10dp"
+                android:layout_alignParentBottom="true"
+                android:layout_toStartOf="@+id/num2Lcompleta" />
+
+            <ImageView
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:id="@+id/num2Lcompleta"
+                android:background="@drawable/numeroazul2"
+                android:layout_marginRight="10dp"
+                android:layout_alignParentBottom="true"
+                android:layout_toStartOf="@+id/num3Lcompleta" />
+
+            <ImageView
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:id="@+id/num3Lcompleta"
+                android:background="@drawable/numeroazul3"
+                android:layout_marginRight="10dp"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true" />
+
+            <ImageView
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:id="@+id/num4Lcompleta"
+                android:background="@drawable/numeroazul4"
+                android:layout_alignParentBottom="true"
+                android:layout_toEndOf="@+id/num3Lcompleta"
+                android:layout_marginRight="10dp" />
+
+            <ImageView
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:id="@+id/num5Lcompleta"
+                android:background="@drawable/numeroazul5"
+                android:layout_alignParentBottom="true"
+                android:layout_toEndOf="@+id/num4Lcompleta" />
+
+            <ImageView
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:id="@+id/num1Vcompleta"
+                android:background="@drawable/numeronaranja1"
+                android:layout_marginRight="10dp"
+                android:layout_alignParentTop="true"
+                android:layout_alignStart="@+id/num1Lcompleta" />
+
+            <ImageView
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:id="@+id/num2Vcompleta"
+                android:background="@drawable/numeronaranja2"
+                android:layout_marginRight="10dp"
+                android:layout_alignParentTop="true"
+                android:layout_toStartOf="@+id/num3Vcompleta" />
+
+            <ImageView
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:id="@+id/num3Vcompleta"
+                android:background="@drawable/numeronaranja3"
+                android:layout_marginRight="10dp"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true" />
+
+            <ImageView
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:id="@+id/num4Vcompleta"
+                android:background="@drawable/numeronaranja4"
+                android:layout_marginRight="10dp"
+                android:layout_alignParentTop="true"
+                android:layout_alignStart="@+id/num4Lcompleta" />
+
+            <ImageView
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:id="@+id/num5Vcompleta"
+                android:background="@drawable/numeronaranja5"
+                android:layout_alignParentTop="true"
+                android:layout_alignStart="@+id/num5Lcompleta" />
+        </RelativeLayout>
+    </LinearLayout>
+
+</LinearLayout>

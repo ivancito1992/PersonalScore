@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/fondo_stats_full">
+
+    <Space
+        android:layout_width="wrap_content"
+        android:layout_height="10dp" />
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="20"
+        android:layout_gravity="center"
+        android:background="@drawable/btn_deshacer">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="@string/nombreLocal"
+            android:id="@+id/nombreLocal"
+            android:layout_gravity="center_horizontal"
+            android:textColor="@color/colorLocal"
+            android:gravity="center"
+            android:layout_weight="1"
+            android:textSize="25sp"
+            android:paddingEnd="25dp"
+            android:paddingStart="25dp" />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:inputType="textPersonName"
+            android:ems="10"
+            android:id="@+id/escribirLocal"
+            android:layout_gravity="center_horizontal"
+            android:textColor="@color/colorLetraBtn"
+            android:gravity="center"
+            android:layout_weight="1"
+            android:textSize="20sp"
+            android:paddingEnd="10dp"
+            android:paddingStart="10dp"
+            android:maxLength="15" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="@string/nombreVisitante"
+            android:id="@+id/nombreVisitante"
+            android:layout_gravity="center_horizontal"
+            android:textColor="@color/colorVisitante"
+            android:gravity="center"
+            android:layout_weight="1"
+            android:textSize="25sp"
+            android:paddingEnd="25dp"
+            android:paddingStart="25dp" />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:inputType="textPersonName"
+            android:ems="10"
+            android:id="@+id/escribirVisitante"
+            android:layout_gravity="center_horizontal"
+            android:textColor="@color/colorLetraBtn"
+            android:gravity="center"
+            android:layout_weight="1"
+            android:textSize="20sp"
+            android:paddingEnd="10dp"
+            android:paddingStart="10dp"
+            android:maxLength="15" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="@string/nombreJugador"
+            android:id="@+id/nombreJugador"
+            android:layout_gravity="center_horizontal"
+            android:textColor="@color/colorLetraBtn"
+            android:gravity="center"
+            android:layout_weight="1"
+            android:textSize="25sp"
+            android:paddingEnd="25dp"
+            android:paddingStart="25dp" />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:inputType="textPersonName"
+            android:ems="10"
+            android:id="@+id/escribirJugador"
+            android:layout_gravity="center_horizontal"
+            android:textColor="@color/colorLetraBtn"
+            android:gravity="center"
+            android:layout_weight="1"
+            android:textSize="20sp"
+            android:paddingEnd="10dp"
+            android:paddingStart="10dp"
+            android:maxLength="15"
+            android:singleLine="false" />
+    </LinearLayout>
+
+    <Space
+        android:layout_width="wrap_content"
+        android:layout_height="10dp" />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/comenzar"
+        android:id="@+id/comenzar"
+        android:layout_gravity="center_horizontal"
+        android:layout_weight="1"
+        android:textColor="@color/colorLetraBtn"
+        android:textSize="25sp"
+        android:background="@drawable/btn_deshacer" />
+
+</LinearLayout>

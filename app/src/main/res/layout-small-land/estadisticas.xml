@@ -11,30 +11,30 @@
 
         <LinearLayout
             android:orientation="vertical"
-            android:layout_width="0dp"
+            android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:id="@+id/estadisticasEquipos"
-            android:layout_weight="1"
-            android:layout_marginRight="10dp">
+            android:id="@+id/estadisticasEquipos">
 
             <LinearLayout
                 android:orientation="horizontal"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="0dp"
                 android:id="@+id/estadisticasLocal"
                 android:layout_weight="1"
                 android:gravity="center"
-                android:padding="5dp">
+                android:padding="5dp"
+                android:baselineAligned="false">
 
                 <LinearLayout
                     android:orientation="vertical"
-                    android:layout_width="wrap_content"
+                    android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:id="@+id/textosLocal"
-                    android:gravity="center_vertical">
+                    android:gravity="center_vertical"
+                    android:layout_weight="5">
 
                     <TextView
-                        android:layout_width="fill_parent"
+                        android:layout_width="match_parent"
                         android:layout_height="0dp"
                         android:textAppearance="?android:attr/textAppearanceLarge"
                         android:text="@string/local"
@@ -43,15 +43,15 @@
                         android:layout_weight="1"
                         android:background="#b4000000"
                         android:textColor="@color/colorLocal"
-                        android:textSize="18sp" />
+                        android:textSize="12sp" />
 
                     <TextView
-                        android:layout_width="125dp"
+                        android:layout_width="match_parent"
                         android:layout_height="0dp"
                         android:textAppearance="?android:attr/textAppearanceLarge"
                         android:text="@string/marcador_inicial"
                         android:id="@+id/marcadorLocal"
-                        android:textSize="70sp"
+                        android:textSize="30sp"
                         style="@style/Marcador"
                         android:gravity="center"
                         android:layout_weight="3" />
@@ -59,61 +59,51 @@
                 </LinearLayout>
 
                 <LinearLayout
-                    android:orientation="horizontal"
-                    android:layout_width="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:id="@+id/botonesLocal"
-                    android:gravity="right">
+                    android:id="@+id/botonesLocalTiro"
+                    android:layout_weight="4">
 
-                    <LinearLayout
-                        android:orientation="vertical"
-                        android:layout_width="wrap_content"
+                    <Button
+                        style="?android:attr/buttonStyleSmall"
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:id="@+id/botonesLocalTiro">
+                        android:text="@string/valor1"
+                        android:id="@+id/siLTL"
+                        android:layout_weight="2"
+                        android:layout_marginBottom="1dp"
+                        android:background="@drawable/btn_acierto_accion"
+                        android:layout_marginRight="1dp"
+                        android:textColor="@color/colorLetraBtn"
+                        android:layout_marginLeft="3dp" />
 
-                        <Button
-                            style="?android:attr/buttonStyleSmall"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:text="@string/valor1"
-                            android:id="@+id/siLTL"
-                            android:layout_weight="2"
-                            android:layout_marginTop="3dp"
-                            android:layout_marginBottom="3dp"
-                            android:background="@drawable/btn_acierto_accion"
-                            android:layout_marginRight="3dp"
-                            android:textColor="@color/colorLetraBtn"
-                            android:layout_marginLeft="5dp" />
+                    <Button
+                        style="?android:attr/buttonStyleSmall"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/valor2"
+                        android:id="@+id/siLT2"
+                        android:layout_weight="2"
+                        android:layout_marginTop="1dp"
+                        android:layout_marginBottom="1dp"
+                        android:background="@drawable/btn_acierto_accion"
+                        android:layout_marginRight="1dp"
+                        android:textColor="@color/colorLetraBtn"
+                        android:layout_marginLeft="3dp" />
 
-                        <Button
-                            style="?android:attr/buttonStyleSmall"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:text="@string/valor2"
-                            android:id="@+id/siLT2"
-                            android:layout_weight="2"
-                            android:layout_marginTop="3dp"
-                            android:layout_marginBottom="3dp"
-                            android:background="@drawable/btn_acierto_accion"
-                            android:layout_marginRight="3dp"
-                            android:textColor="@color/colorLetraBtn"
-                            android:layout_marginLeft="5dp" />
-
-                        <Button
-                            style="?android:attr/buttonStyleSmall"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:text="@string/valor3"
-                            android:id="@+id/siLT3"
-                            android:layout_weight="2"
-                            android:layout_marginTop="3dp"
-                            android:layout_marginBottom="3dp"
-                            android:background="@drawable/btn_acierto_accion"
-                            android:layout_marginRight="3dp"
-                            android:textColor="@color/colorLetraBtn"
-                            android:layout_marginLeft="5dp" />
-
-                    </LinearLayout>
+                    <Button
+                        style="?android:attr/buttonStyleSmall"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/valor3"
+                        android:id="@+id/siLT3"
+                        android:layout_weight="2"
+                        android:layout_marginTop="1dp"
+                        android:background="@drawable/btn_acierto_accion"
+                        android:layout_marginRight="1dp"
+                        android:textColor="@color/colorLetraBtn"
+                        android:layout_marginLeft="3dp" />
 
                 </LinearLayout>
 
@@ -122,21 +112,23 @@
             <LinearLayout
                 android:orientation="horizontal"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="0dp"
                 android:gravity="center"
                 android:id="@+id/estadisticasVisitante"
                 android:layout_weight="1"
-                android:padding="5dp">
+                android:padding="5dp"
+                android:baselineAligned="false">
 
                 <LinearLayout
                     android:orientation="vertical"
-                    android:layout_width="wrap_content"
+                    android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:id="@+id/textosVisitante"
-                    android:gravity="center_vertical">
+                    android:gravity="center_vertical"
+                    android:layout_weight="5">
 
                     <TextView
-                        android:layout_width="fill_parent"
+                        android:layout_width="match_parent"
                         android:layout_height="0dp"
                         android:textAppearance="?android:attr/textAppearanceLarge"
                         android:text="@string/visitante"
@@ -145,15 +137,15 @@
                         android:layout_weight="1"
                         android:background="#b4000000"
                         android:textColor="@color/colorVisitante"
-                        android:textSize="18sp" />
+                        android:textSize="12sp" />
 
                     <TextView
-                        android:layout_width="125dp"
+                        android:layout_width="match_parent"
                         android:layout_height="0dp"
                         android:textAppearance="?android:attr/textAppearanceLarge"
                         android:text="@string/marcador_inicial"
                         android:id="@+id/marcadorVisitante"
-                        android:textSize="70sp"
+                        android:textSize="30sp"
                         style="@style/Marcador"
                         android:gravity="center"
                         android:layout_weight="3" />
@@ -161,62 +153,54 @@
                 </LinearLayout>
 
                 <LinearLayout
-                    android:orientation="horizontal"
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:id="@+id/botonesVisitante"
-                    android:gravity="center_vertical">
+                    android:orientation="vertical"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/botonesVisitanteTiro"
+                    android:layout_weight="4">
 
-                    <LinearLayout
-                        android:orientation="vertical"
-                        android:layout_width="wrap_content"
+                    <Button
+                        style="?android:attr/buttonStyleSmall"
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:id="@+id/botonesVisitanteTiro">
+                        android:text="@string/valor1"
+                        android:id="@+id/siVTL"
+                        android:layout_weight="2"
+                        android:layout_marginBottom="1dp"
+                        android:background="@drawable/btn_acierto_accion"
+                        android:layout_marginRight="1dp"
+                        android:textColor="@color/colorLetraBtn"
+                        android:layout_marginLeft="3dp" />
 
-                        <Button
-                            style="?android:attr/buttonStyleSmall"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:text="@string/valor1"
-                            android:id="@+id/siVTL"
-                            android:layout_weight="2"
-                            android:layout_marginTop="3dp"
-                            android:layout_marginBottom="3dp"
-                            android:background="@drawable/btn_acierto_accion"
-                            android:layout_marginRight="3dp"
-                            android:textColor="@color/colorLetraBtn"
-                            android:layout_marginLeft="5dp" />
+                    <Button
+                        style="?android:attr/buttonStyleSmall"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/valor2"
+                        android:id="@+id/siVT2"
+                        android:layout_weight="2"
+                        android:layout_marginTop="1dp"
+                        android:layout_marginBottom="1dp"
+                        android:background="@drawable/btn_acierto_accion"
+                        android:layout_marginRight="1dp"
+                        android:textColor="@color/colorLetraBtn"
+                        android:layout_marginLeft="3dp" />
 
-                        <Button
-                            style="?android:attr/buttonStyleSmall"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:text="@string/valor2"
-                            android:id="@+id/siVT2"
-                            android:layout_weight="2"
-                            android:layout_marginTop="3dp"
-                            android:layout_marginBottom="3dp"
-                            android:background="@drawable/btn_acierto_accion"
-                            android:layout_marginRight="3dp"
-                            android:textColor="@color/colorLetraBtn"
-                            android:layout_marginLeft="5dp" />
+                    <Button
+                        style="?android:attr/buttonStyleSmall"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/valor3"
+                        android:id="@+id/siVT3"
+                        android:layout_weight="2"
+                        android:layout_marginTop="1dp"
+                        android:background="@drawable/btn_acierto_accion"
+                        android:layout_marginRight="1dp"
+                        android:textColor="@color/colorLetraBtn"
+                        android:layout_marginLeft="3dp" />
 
-                        <Button
-                            style="?android:attr/buttonStyleSmall"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:text="@string/valor3"
-                            android:id="@+id/siVT3"
-                            android:layout_weight="2"
-                            android:layout_marginTop="3dp"
-                            android:layout_marginBottom="3dp"
-                            android:background="@drawable/btn_acierto_accion"
-                            android:layout_marginRight="3dp"
-                            android:textColor="@color/colorLetraBtn"
-                            android:layout_marginLeft="5dp" />
-
-                    </LinearLayout>
                 </LinearLayout>
+
             </LinearLayout>
 
         </LinearLayout>
@@ -226,7 +210,7 @@
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:id="@+id/estadisticasJugadores"
-            android:layout_weight="2"
+            android:layout_weight="0"
             android:background="#64000000"
             android:paddingBottom="5dp"
             android:paddingLeft="5dp"

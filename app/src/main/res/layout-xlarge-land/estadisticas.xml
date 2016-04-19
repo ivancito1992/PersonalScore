@@ -14,27 +14,29 @@
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:id="@+id/estadisticasEquipos"
-            android:layout_weight="1"
+            android:layout_weight="4"
             android:layout_marginRight="10dp">
 
             <LinearLayout
                 android:orientation="horizontal"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="0dp"
                 android:id="@+id/estadisticasLocal"
                 android:layout_weight="1"
                 android:gravity="center"
-                android:padding="5dp">
+                android:padding="5dp"
+                android:baselineAligned="false">
 
                 <LinearLayout
                     android:orientation="vertical"
-                    android:layout_width="wrap_content"
+                    android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:id="@+id/textosLocal"
-                    android:gravity="center_vertical">
+                    android:gravity="center_vertical"
+                    android:layout_weight="5">
 
                     <TextView
-                        android:layout_width="fill_parent"
+                        android:layout_width="match_parent"
                         android:layout_height="0dp"
                         android:textAppearance="?android:attr/textAppearanceLarge"
                         android:text="@string/local"
@@ -43,15 +45,15 @@
                         android:layout_weight="1"
                         android:background="#b4000000"
                         android:textColor="@color/colorLocal"
-                        android:textSize="18sp" />
+                        android:textSize="32sp" />
 
                     <TextView
-                        android:layout_width="125dp"
+                        android:layout_width="match_parent"
                         android:layout_height="0dp"
                         android:textAppearance="?android:attr/textAppearanceLarge"
                         android:text="@string/marcador_inicial"
                         android:id="@+id/marcadorLocal"
-                        android:textSize="70sp"
+                        android:textSize="140sp"
                         style="@style/Marcador"
                         android:gravity="center"
                         android:layout_weight="3" />
@@ -59,61 +61,56 @@
                 </LinearLayout>
 
                 <LinearLayout
-                    android:orientation="horizontal"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/botonesLocal"
-                    android:gravity="right">
+                    android:orientation="vertical"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:id="@+id/botonesLocalTiro"
+                    android:layout_weight="2">
 
-                    <LinearLayout
-                        android:orientation="vertical"
-                        android:layout_width="wrap_content"
+                    <Button
+                        style="?android:attr/buttonStyleSmall"
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:id="@+id/botonesLocalTiro">
+                        android:text="@string/valor1"
+                        android:id="@+id/siLTL"
+                        android:layout_weight="2"
+                        android:layout_marginTop="3dp"
+                        android:layout_marginBottom="3dp"
+                        android:background="@drawable/btn_acierto_accion"
+                        android:layout_marginRight="3dp"
+                        android:textColor="@color/colorLetraBtn"
+                        android:layout_marginLeft="5dp"
+                        android:textSize="22sp" />
 
-                        <Button
-                            style="?android:attr/buttonStyleSmall"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:text="@string/valor1"
-                            android:id="@+id/siLTL"
-                            android:layout_weight="2"
-                            android:layout_marginTop="3dp"
-                            android:layout_marginBottom="3dp"
-                            android:background="@drawable/btn_acierto_accion"
-                            android:layout_marginRight="3dp"
-                            android:textColor="@color/colorLetraBtn"
-                            android:layout_marginLeft="5dp" />
+                    <Button
+                        style="?android:attr/buttonStyleSmall"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/valor2"
+                        android:id="@+id/siLT2"
+                        android:layout_weight="2"
+                        android:layout_marginTop="3dp"
+                        android:layout_marginBottom="3dp"
+                        android:background="@drawable/btn_acierto_accion"
+                        android:layout_marginRight="3dp"
+                        android:textColor="@color/colorLetraBtn"
+                        android:layout_marginLeft="5dp"
+                        android:textSize="22sp" />
 
-                        <Button
-                            style="?android:attr/buttonStyleSmall"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:text="@string/valor2"
-                            android:id="@+id/siLT2"
-                            android:layout_weight="2"
-                            android:layout_marginTop="3dp"
-                            android:layout_marginBottom="3dp"
-                            android:background="@drawable/btn_acierto_accion"
-                            android:layout_marginRight="3dp"
-                            android:textColor="@color/colorLetraBtn"
-                            android:layout_marginLeft="5dp" />
-
-                        <Button
-                            style="?android:attr/buttonStyleSmall"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:text="@string/valor3"
-                            android:id="@+id/siLT3"
-                            android:layout_weight="2"
-                            android:layout_marginTop="3dp"
-                            android:layout_marginBottom="3dp"
-                            android:background="@drawable/btn_acierto_accion"
-                            android:layout_marginRight="3dp"
-                            android:textColor="@color/colorLetraBtn"
-                            android:layout_marginLeft="5dp" />
-
-                    </LinearLayout>
+                    <Button
+                        style="?android:attr/buttonStyleSmall"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/valor3"
+                        android:id="@+id/siLT3"
+                        android:layout_weight="2"
+                        android:layout_marginTop="3dp"
+                        android:layout_marginBottom="3dp"
+                        android:background="@drawable/btn_acierto_accion"
+                        android:layout_marginRight="3dp"
+                        android:textColor="@color/colorLetraBtn"
+                        android:layout_marginLeft="5dp"
+                        android:textSize="22sp" />
 
                 </LinearLayout>
 
@@ -122,21 +119,23 @@
             <LinearLayout
                 android:orientation="horizontal"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="0dp"
                 android:gravity="center"
                 android:id="@+id/estadisticasVisitante"
                 android:layout_weight="1"
-                android:padding="5dp">
+                android:padding="5dp"
+                android:baselineAligned="false">
 
                 <LinearLayout
                     android:orientation="vertical"
-                    android:layout_width="wrap_content"
+                    android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:id="@+id/textosVisitante"
-                    android:gravity="center_vertical">
+                    android:gravity="center_vertical"
+                    android:layout_weight="5">
 
                     <TextView
-                        android:layout_width="fill_parent"
+                        android:layout_width="match_parent"
                         android:layout_height="0dp"
                         android:textAppearance="?android:attr/textAppearanceLarge"
                         android:text="@string/visitante"
@@ -145,15 +144,15 @@
                         android:layout_weight="1"
                         android:background="#b4000000"
                         android:textColor="@color/colorVisitante"
-                        android:textSize="18sp" />
+                        android:textSize="32sp" />
 
                     <TextView
-                        android:layout_width="125dp"
+                        android:layout_width="match_parent"
                         android:layout_height="0dp"
                         android:textAppearance="?android:attr/textAppearanceLarge"
                         android:text="@string/marcador_inicial"
                         android:id="@+id/marcadorVisitante"
-                        android:textSize="70sp"
+                        android:textSize="140sp"
                         style="@style/Marcador"
                         android:gravity="center"
                         android:layout_weight="3" />
@@ -161,62 +160,59 @@
                 </LinearLayout>
 
                 <LinearLayout
-                    android:orientation="horizontal"
-                    android:layout_width="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_width="0dp"
                     android:layout_height="match_parent"
-                    android:id="@+id/botonesVisitante"
-                    android:gravity="center_vertical">
+                    android:id="@+id/botonesVisitanteTiro"
+                    android:layout_weight="2">
 
-                    <LinearLayout
-                        android:orientation="vertical"
-                        android:layout_width="wrap_content"
+                    <Button
+                        style="?android:attr/buttonStyleSmall"
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:id="@+id/botonesVisitanteTiro">
+                        android:text="@string/valor1"
+                        android:id="@+id/siVTL"
+                        android:layout_weight="2"
+                        android:layout_marginTop="3dp"
+                        android:layout_marginBottom="3dp"
+                        android:background="@drawable/btn_acierto_accion"
+                        android:layout_marginRight="3dp"
+                        android:textColor="@color/colorLetraBtn"
+                        android:layout_marginLeft="5dp"
+                        android:textSize="22sp" />
 
-                        <Button
-                            style="?android:attr/buttonStyleSmall"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:text="@string/valor1"
-                            android:id="@+id/siVTL"
-                            android:layout_weight="2"
-                            android:layout_marginTop="3dp"
-                            android:layout_marginBottom="3dp"
-                            android:background="@drawable/btn_acierto_accion"
-                            android:layout_marginRight="3dp"
-                            android:textColor="@color/colorLetraBtn"
-                            android:layout_marginLeft="5dp" />
+                    <Button
+                        style="?android:attr/buttonStyleSmall"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/valor2"
+                        android:id="@+id/siVT2"
+                        android:layout_weight="2"
+                        android:layout_marginTop="3dp"
+                        android:layout_marginBottom="3dp"
+                        android:background="@drawable/btn_acierto_accion"
+                        android:layout_marginRight="3dp"
+                        android:textColor="@color/colorLetraBtn"
+                        android:layout_marginLeft="5dp"
+                        android:textSize="22sp" />
 
-                        <Button
-                            style="?android:attr/buttonStyleSmall"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:text="@string/valor2"
-                            android:id="@+id/siVT2"
-                            android:layout_weight="2"
-                            android:layout_marginTop="3dp"
-                            android:layout_marginBottom="3dp"
-                            android:background="@drawable/btn_acierto_accion"
-                            android:layout_marginRight="3dp"
-                            android:textColor="@color/colorLetraBtn"
-                            android:layout_marginLeft="5dp" />
+                    <Button
+                        style="?android:attr/buttonStyleSmall"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/valor3"
+                        android:id="@+id/siVT3"
+                        android:layout_weight="2"
+                        android:layout_marginTop="3dp"
+                        android:layout_marginBottom="3dp"
+                        android:background="@drawable/btn_acierto_accion"
+                        android:layout_marginRight="3dp"
+                        android:textColor="@color/colorLetraBtn"
+                        android:layout_marginLeft="5dp"
+                        android:textSize="22sp" />
 
-                        <Button
-                            style="?android:attr/buttonStyleSmall"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:text="@string/valor3"
-                            android:id="@+id/siVT3"
-                            android:layout_weight="2"
-                            android:layout_marginTop="3dp"
-                            android:layout_marginBottom="3dp"
-                            android:background="@drawable/btn_acierto_accion"
-                            android:layout_marginRight="3dp"
-                            android:textColor="@color/colorLetraBtn"
-                            android:layout_marginLeft="5dp" />
-
-                    </LinearLayout>
                 </LinearLayout>
+
             </LinearLayout>
 
         </LinearLayout>
@@ -226,7 +222,7 @@
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:id="@+id/estadisticasJugadores"
-            android:layout_weight="2"
+            android:layout_weight="7"
             android:background="#64000000"
             android:paddingBottom="5dp"
             android:paddingLeft="5dp"
@@ -236,15 +232,15 @@
             <LinearLayout
                 android:orientation="horizontal"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:background="@color/btnDeshacer">
+                android:layout_height="0dp"
+                android:background="@color/btnDeshacer"
+                android:layout_weight="4">
 
                 <LinearLayout
                     android:orientation="vertical"
-                    android:layout_width="wrap_content"
+                    android:layout_width="0dp"
                     android:layout_height="match_parent"
-                    android:layout_weight="1"
-                    android:layout_marginRight="10dp">
+                    android:layout_weight="3">
 
                     <LinearLayout
                         android:orientation="horizontal"
@@ -269,7 +265,7 @@
                                 android:checked="false"
                                 android:textColor="@color/colorLocal"
                                 android:layout_weight="1"
-                                android:textSize="16sp"
+                                android:textSize="28sp"
                                 android:buttonTint="@color/colorLocal" />
 
                             <RadioButton
@@ -280,7 +276,7 @@
                                 android:checked="false"
                                 android:textColor="@color/colorVisitante"
                                 android:layout_weight="1"
-                                android:textSize="16sp"
+                                android:textSize="28sp"
                                 android:buttonTint="@color/colorVisitante" />
                         </RadioGroup>
 
@@ -299,7 +295,7 @@
                             android:layout_height="match_parent"
                             android:textAppearance="?android:attr/textAppearanceLarge"
                             android:id="@+id/nombreJugador"
-                            android:textSize="26sp"
+                            android:textSize="36sp"
                             android:gravity="left|center_vertical"
                             android:textColor="@color/colorLetraBtn"
                             android:paddingTop="1dp"
@@ -318,21 +314,21 @@
                     android:gravity="center"
                     android:layout_weight="1"
                     style="@style/Jugador"
-                    android:textSize="40sp" />
+                    android:textSize="75sp" />
             </LinearLayout>
 
             <LinearLayout
                 android:orientation="horizontal"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_weight="15"
+                android:layout_height="0dp"
+                android:layout_weight="14"
                 android:baselineAligned="false">
 
                 <LinearLayout
                     android:orientation="vertical"
-                    android:layout_width="match_parent"
+                    android:layout_width="0dp"
                     android:layout_height="match_parent"
-                    android:layout_weight="1">
+                    android:layout_weight="3">
 
                     <LinearLayout
                         android:orientation="horizontal"
@@ -351,7 +347,7 @@
                             android:gravity="center_vertical"
                             android:layout_weight="6"
                             android:textColor="@color/colorLetraBtn"
-                            android:textSize="16sp" />
+                            android:textSize="26sp" />
 
                         <TextView
                             android:layout_width="wrap_content"
@@ -362,7 +358,7 @@
                             android:textColor="@color/colorLetraBtn"
                             android:layout_weight="1"
                             android:gravity="right"
-                            android:textSize="18sp" />
+                            android:textSize="26sp" />
 
                         <TextView
                             android:layout_width="wrap_content"
@@ -373,7 +369,7 @@
                             android:textColor="@color/colorLetraBtn"
                             android:layout_marginLeft="3dp"
                             android:layout_marginRight="3dp"
-                            android:textSize="18sp" />
+                            android:textSize="26sp" />
 
                         <TextView
                             android:layout_width="0dp"
@@ -383,7 +379,7 @@
                             android:id="@+id/totalJ1TL"
                             android:layout_weight="5"
                             android:textColor="@color/colorLetraBtn"
-                            android:textSize="18sp" />
+                            android:textSize="26sp" />
 
                     </LinearLayout>
 
@@ -403,7 +399,7 @@
                             android:id="@+id/textoJ1T2"
                             android:gravity="center_vertical"
                             android:layout_weight="6"
-                            android:textSize="16sp"
+                            android:textSize="26sp"
                             android:textColor="@color/colorLetraBtn" />
 
                         <TextView
@@ -415,7 +411,7 @@
                             android:textColor="@color/colorLetraBtn"
                             android:layout_weight="1"
                             android:gravity="right"
-                            android:textSize="18sp" />
+                            android:textSize="26sp" />
 
                         <TextView
                             android:layout_width="wrap_content"
@@ -426,7 +422,7 @@
                             android:textColor="@color/colorLetraBtn"
                             android:layout_marginLeft="3dp"
                             android:layout_marginRight="3dp"
-                            android:textSize="18sp" />
+                            android:textSize="26sp" />
 
                         <TextView
                             android:layout_width="0dp"
@@ -436,7 +432,7 @@
                             android:id="@+id/totalJ1T2"
                             android:layout_weight="5"
                             android:textColor="@color/colorLetraBtn"
-                            android:textSize="18sp" />
+                            android:textSize="26sp" />
 
                     </LinearLayout>
 
@@ -456,7 +452,7 @@
                             android:id="@+id/textoJ1T3"
                             android:gravity="center_vertical"
                             android:layout_weight="6"
-                            android:textSize="16sp"
+                            android:textSize="26sp"
                             android:textColor="@color/colorLetraBtn" />
 
                         <TextView
@@ -468,7 +464,7 @@
                             android:textColor="@color/colorLetraBtn"
                             android:layout_weight="1"
                             android:gravity="right"
-                            android:textSize="18sp" />
+                            android:textSize="26sp" />
 
                         <TextView
                             android:layout_width="wrap_content"
@@ -479,7 +475,7 @@
                             android:textColor="@color/colorLetraBtn"
                             android:layout_marginLeft="3dp"
                             android:layout_marginRight="3dp"
-                            android:textSize="18sp" />
+                            android:textSize="26sp" />
 
                         <TextView
                             android:layout_width="0dp"
@@ -489,7 +485,7 @@
                             android:id="@+id/totalJ1T3"
                             android:layout_weight="5"
                             android:textColor="@color/colorLetraBtn"
-                            android:textSize="18sp" />
+                            android:textSize="26sp" />
 
                     </LinearLayout>
 
@@ -509,7 +505,7 @@
                             android:id="@+id/textoRebotesJ1"
                             android:gravity="center_vertical"
                             android:layout_weight="6"
-                            android:textSize="16sp"
+                            android:textSize="26sp"
                             android:textColor="@color/colorLetraBtn" />
 
                         <TextView
@@ -520,7 +516,7 @@
                             android:id="@+id/numRebotesJ1"
                             android:layout_weight="5"
                             android:textColor="@color/colorLetraBtn"
-                            android:textSize="18sp" />
+                            android:textSize="26sp" />
 
                     </LinearLayout>
 
@@ -540,7 +536,7 @@
                             android:id="@+id/textoAsistenciasJ1"
                             android:gravity="center_vertical"
                             android:layout_weight="6"
-                            android:textSize="16sp"
+                            android:textSize="26sp"
                             android:textColor="@color/colorLetraBtn" />
 
                         <TextView
@@ -551,7 +547,7 @@
                             android:id="@+id/numAsistenciasJ1"
                             android:layout_weight="5"
                             android:textColor="@color/colorLetraBtn"
-                            android:textSize="18sp" />
+                            android:textSize="26sp" />
 
                     </LinearLayout>
 
@@ -571,7 +567,7 @@
                             android:checked="false"
                             android:layout_weight="4"
                             android:textColor="@color/colorLetraBtn"
-                            android:textSize="14sp"
+                            android:textSize="26sp"
                             android:buttonTint="#ffffff" />
 
                         <RadioButton
@@ -582,7 +578,7 @@
                             android:checked="false"
                             android:layout_weight="4"
                             android:textColor="@color/colorLetraBtn"
-                            android:textSize="14sp"
+                            android:textSize="26sp"
                             android:buttonTint="#ffffff" />
 
                         <TextView
@@ -594,7 +590,7 @@
                             android:textColor="@color/colorLetraBtn"
                             android:layout_weight="1"
                             android:gravity="right"
-                            android:textSize="18sp" />
+                            android:textSize="26sp" />
 
                         <TextView
                             android:layout_width="wrap_content"
@@ -605,7 +601,7 @@
                             android:textColor="@color/colorLetraBtn"
                             android:layout_marginLeft="3dp"
                             android:layout_marginRight="3dp"
-                            android:textSize="18sp" />
+                            android:textSize="26sp" />
 
                         <TextView
                             android:layout_width="0dp"
@@ -615,174 +611,180 @@
                             android:id="@+id/numTaponesJ1"
                             android:layout_weight="2"
                             android:textColor="@color/colorLetraBtn"
-                            android:textSize="18sp" />
+                            android:textSize="26sp" />
 
                     </RadioGroup>
                 </LinearLayout>
 
                 <LinearLayout
                     android:orientation="vertical"
-                    android:layout_width="match_parent"
+                    android:layout_width="0dp"
                     android:layout_height="match_parent"
-                    android:layout_weight="3">
+                    android:layout_weight="1">
 
                     <LinearLayout
                         android:orientation="horizontal"
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
+                        android:layout_height="0dp"
                         android:layout_weight="1"
-                        android:layout_marginTop="2dp"
-                        android:layout_marginBottom="2dp">
+                        android:layout_marginTop="4dp"
+                        android:layout_marginBottom="4dp"
+                        android:gravity="center_vertical">
 
                         <Button
                             style="?android:attr/buttonStyleSmall"
                             android:layout_width="0dp"
-                            android:layout_height="wrap_content"
+                            android:layout_height="match_parent"
                             android:text="@string/valor1"
                             android:id="@+id/aciertoJ1TL"
                             android:layout_weight="2"
                             android:background="@drawable/btn_acierto_accion"
                             android:layout_marginRight="3dp"
                             android:textColor="@color/colorLetraBtn"
-                            android:textSize="12sp" />
+                            android:textSize="22sp" />
 
                         <Button
                             style="?android:attr/buttonStyleSmall"
                             android:layout_width="0dp"
-                            android:layout_height="wrap_content"
+                            android:layout_height="match_parent"
                             android:text="@string/valor1"
                             android:id="@+id/falloJ1TL"
                             android:layout_weight="2"
                             android:background="@drawable/btn_fallo_accion"
                             android:textColor="@color/colorLetraBtn"
-                            android:textSize="12sp"
+                            android:textSize="22sp"
                             android:layout_marginLeft="3dp" />
                     </LinearLayout>
 
                     <LinearLayout
                         android:orientation="horizontal"
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
+                        android:layout_height="0dp"
                         android:layout_weight="1"
-                        android:layout_marginTop="2dp"
-                        android:layout_marginBottom="2dp">
+                        android:layout_marginTop="4dp"
+                        android:layout_marginBottom="4dp"
+                        android:gravity="center_vertical">
 
                         <Button
                             style="?android:attr/buttonStyleSmall"
                             android:layout_width="0dp"
-                            android:layout_height="wrap_content"
+                            android:layout_height="match_parent"
                             android:text="@string/valor2"
                             android:id="@+id/aciertoJ1T2"
                             android:layout_weight="2"
                             android:background="@drawable/btn_acierto_accion"
                             android:layout_marginRight="3dp"
                             android:textColor="@color/colorLetraBtn"
-                            android:textSize="12sp" />
+                            android:textSize="22sp" />
 
                         <Button
                             style="?android:attr/buttonStyleSmall"
                             android:layout_width="0dp"
-                            android:layout_height="wrap_content"
+                            android:layout_height="match_parent"
                             android:text="@string/valor2"
                             android:id="@+id/falloJ1T2"
                             android:layout_weight="2"
                             android:background="@drawable/btn_fallo_accion"
                             android:textColor="@color/colorLetraBtn"
-                            android:textSize="12sp"
+                            android:textSize="22sp"
                             android:layout_marginLeft="3dp" />
                     </LinearLayout>
 
                     <LinearLayout
                         android:orientation="horizontal"
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
+                        android:layout_height="0dp"
                         android:layout_weight="1"
-                        android:layout_marginTop="2dp"
-                        android:layout_marginBottom="2dp">
+                        android:layout_marginTop="4dp"
+                        android:layout_marginBottom="4dp"
+                        android:gravity="center_vertical">
 
                         <Button
                             style="?android:attr/buttonStyleSmall"
                             android:layout_width="0dp"
-                            android:layout_height="wrap_content"
+                            android:layout_height="match_parent"
                             android:text="@string/valor3"
                             android:id="@+id/aciertoJ1T3"
                             android:layout_weight="2"
                             android:background="@drawable/btn_acierto_accion"
                             android:layout_marginRight="3dp"
                             android:textColor="@color/colorLetraBtn"
-                            android:textSize="12sp" />
+                            android:textSize="22sp" />
 
                         <Button
                             style="?android:attr/buttonStyleSmall"
                             android:layout_width="0dp"
-                            android:layout_height="wrap_content"
+                            android:layout_height="match_parent"
                             android:text="@string/valor3"
                             android:id="@+id/falloJ1T3"
                             android:layout_weight="2"
                             android:background="@drawable/btn_fallo_accion"
                             android:textColor="@color/colorLetraBtn"
-                            android:textSize="12sp"
+                            android:textSize="22sp"
                             android:layout_marginLeft="3dp" />
                     </LinearLayout>
 
                     <LinearLayout
                         android:orientation="horizontal"
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
+                        android:layout_height="0dp"
                         android:layout_weight="1"
-                        android:layout_marginTop="2dp"
-                        android:layout_marginBottom="2dp">
+                        android:layout_marginTop="4dp"
+                        android:layout_marginBottom="4dp"
+                        android:gravity="center_vertical">
 
                         <Button
                             style="?android:attr/buttonStyleSmall"
                             android:layout_width="0dp"
-                            android:layout_height="wrap_content"
+                            android:layout_height="match_parent"
                             android:text="@string/añadir"
                             android:layout_weight="2"
                             android:background="@drawable/btn_acierto_accion"
                             android:textColor="@color/colorLetraBtn"
                             android:id="@+id/btnRebotesJ1"
-                            android:textSize="12sp" />
+                            android:textSize="22sp" />
                     </LinearLayout>
 
                     <LinearLayout
                         android:orientation="horizontal"
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
+                        android:layout_height="0dp"
                         android:layout_weight="1"
-                        android:layout_marginTop="2dp"
-                        android:layout_marginBottom="2dp">
+                        android:layout_marginTop="4dp"
+                        android:layout_marginBottom="4dp"
+                        android:gravity="center_vertical">
 
                         <Button
                             style="?android:attr/buttonStyleSmall"
                             android:layout_width="0dp"
-                            android:layout_height="wrap_content"
+                            android:layout_height="match_parent"
                             android:text="@string/añadir"
                             android:id="@+id/btnAsistenciasJ1"
                             android:layout_weight="2"
                             android:background="@drawable/btn_acierto_accion"
                             android:textColor="@color/colorLetraBtn"
-                            android:textSize="12sp" />
+                            android:textSize="22sp" />
                     </LinearLayout>
 
                     <LinearLayout
                         android:orientation="horizontal"
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
+                        android:layout_height="0dp"
                         android:layout_weight="1"
-                        android:layout_marginTop="2dp"
-                        android:layout_marginBottom="2dp">
+                        android:layout_marginTop="4dp"
+                        android:layout_marginBottom="4dp"
+                        android:gravity="center_vertical">
 
                         <Button
                             style="?android:attr/buttonStyleSmall"
                             android:layout_width="0dp"
-                            android:layout_height="wrap_content"
+                            android:layout_height="match_parent"
                             android:text="@string/añadir"
                             android:id="@+id/btnExtraJ1"
                             android:layout_weight="3"
                             android:background="@drawable/btn_acierto_accion"
                             android:textColor="@color/colorLetraBtn"
-                            android:textSize="12sp" />
+                            android:textSize="22sp" />
                     </LinearLayout>
                 </LinearLayout>
             </LinearLayout>
@@ -790,16 +792,17 @@
             <LinearLayout
                 android:orientation="horizontal"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="3dp"
-                android:layout_weight="3">
+                android:layout_height="0dp"
+                android:layout_marginTop="6dp"
+                android:layout_weight="2"
+                android:gravity="center_vertical">
 
                 <Button
                     android:layout_width="0dp"
-                    android:layout_height="wrap_content"
+                    android:layout_height="match_parent"
                     android:text="@string/back"
                     android:id="@+id/deshacer"
-                    android:textSize="10sp"
+                    android:textSize="20sp"
                     android:gravity="center"
                     android:background="@drawable/btn_equipos_accion"
                     android:textColor="@color/colorLetraBtn"
@@ -808,10 +811,10 @@
 
                 <Button
                     android:layout_width="0dp"
-                    android:layout_height="wrap_content"
+                    android:layout_height="match_parent"
                     android:text="@string/finPartido"
                     android:id="@+id/finPartido"
-                    android:textSize="10sp"
+                    android:textSize="20sp"
                     android:gravity="center"
                     android:background="@drawable/btn_equipos_accion"
                     android:textColor="@color/colorLetraBtn"

@@ -3,6 +3,5 @@
     android:shape="rectangle">
     <stroke android:color="@color/marcoBtnDeshacer" android:width="2dp"/>
     <solid android:color="@color/btnDeshacer"/>
-    <corners android:radius="10dp"/>
     <padding android:left="10dp" android:right="10dp"/>
 </shape>

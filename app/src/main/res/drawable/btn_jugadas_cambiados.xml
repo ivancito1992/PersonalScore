@@ -3,6 +3,5 @@
     android:shape="rectangle">
     <stroke android:color="@color/marcoBtnJugadas" android:width="2dp"/>
     <solid android:color="@color/btnEquiposSelect"/>
-    <corners android:radius="2dp"/>
     <padding android:left="10dp" android:right="10dp"/>
 </shape>

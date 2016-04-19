@@ -4,17 +4,15 @@
     android:layout_height="match_parent"
     android:background="@drawable/fondo_stats_full">
 
-    <Space
-        android:layout_width="wrap_content"
-        android:layout_height="10dp" />
-
     <LinearLayout
         android:orientation="vertical"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_weight="20"
+        android:layout_height="0dp"
+        android:layout_weight="7"
         android:layout_gravity="center"
-        android:background="@drawable/btn_deshacer">
+        android:background="@drawable/btn_deshacer"
+        android:layout_marginTop="15dp"
+        android:layout_marginBottom="15dp">
 
         <TextView
             android:layout_width="match_parent"
@@ -26,9 +24,9 @@
             android:textColor="@color/colorLocal"
             android:gravity="center"
             android:layout_weight="1"
-            android:textSize="25sp"
-            android:paddingEnd="25dp"
-            android:paddingStart="25dp" />
+            android:textSize="50sp"
+            android:paddingEnd="40dp"
+            android:paddingStart="40dp" />
 
         <EditText
             android:layout_width="match_parent"
@@ -37,13 +35,14 @@
             android:ems="10"
             android:id="@+id/escribirLocal"
             android:layout_gravity="center_horizontal"
-            android:textColor="@color/colorLetraBtn"
+            android:textColor="@color/colorLocal"
             android:gravity="center"
             android:layout_weight="1"
-            android:textSize="20sp"
+            android:textSize="45sp"
             android:paddingEnd="10dp"
             android:paddingStart="10dp"
-            android:maxLength="15" />
+            android:maxLength="15"
+            android:backgroundTint="@color/colorLocal" />
 
         <TextView
             android:layout_width="match_parent"
@@ -55,9 +54,9 @@
             android:textColor="@color/colorVisitante"
             android:gravity="center"
             android:layout_weight="1"
-            android:textSize="25sp"
-            android:paddingEnd="25dp"
-            android:paddingStart="25dp" />
+            android:textSize="50sp"
+            android:paddingEnd="40dp"
+            android:paddingStart="40dp" />
 
         <EditText
             android:layout_width="match_parent"
@@ -66,13 +65,14 @@
             android:ems="10"
             android:id="@+id/escribirVisitante"
             android:layout_gravity="center_horizontal"
-            android:textColor="@color/colorLetraBtn"
+            android:textColor="@color/colorVisitante"
             android:gravity="center"
             android:layout_weight="1"
-            android:textSize="20sp"
+            android:textSize="45sp"
             android:paddingEnd="10dp"
             android:paddingStart="10dp"
-            android:maxLength="15" />
+            android:maxLength="15"
+            android:backgroundTint="@color/colorVisitante" />
 
         <TextView
             android:layout_width="match_parent"
@@ -84,9 +84,9 @@
             android:textColor="@color/colorLetraBtn"
             android:gravity="center"
             android:layout_weight="1"
-            android:textSize="25sp"
-            android:paddingEnd="25dp"
-            android:paddingStart="25dp" />
+            android:textSize="50sp"
+            android:paddingEnd="40dp"
+            android:paddingStart="40dp" />
 
         <EditText
             android:layout_width="match_parent"
@@ -98,26 +98,23 @@
             android:textColor="@color/colorLetraBtn"
             android:gravity="center"
             android:layout_weight="1"
-            android:textSize="20sp"
+            android:textSize="45sp"
             android:paddingEnd="10dp"
             android:paddingStart="10dp"
             android:maxLength="15"
-            android:singleLine="false" />
+            android:singleLine="false"
+            android:backgroundTint="#ffffff" />
     </LinearLayout>
-
-    <Space
-        android:layout_width="wrap_content"
-        android:layout_height="10dp" />
 
     <Button
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="0dp"
         android:text="@string/comenzar"
         android:id="@+id/comenzar"
         android:layout_gravity="center_horizontal"
         android:layout_weight="1"
         android:textColor="@color/colorLetraBtn"
-        android:textSize="25sp"
+        android:textSize="40sp"
         android:background="@drawable/btn_deshacer" />
 
 </LinearLayout>

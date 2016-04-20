@@ -10,7 +10,8 @@
     <LinearLayout
         android:orientation="horizontal"
         android:layout_width="match_parent"
-        android:layout_height="50dp">
+        android:layout_height="0dp"
+        android:layout_weight="1">
 
         <Button
             android:layout_width="0dp"
@@ -54,15 +55,16 @@
     <LinearLayout
         android:orientation="horizontal"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="0dp"
+        android:layout_weight="7">
 
         <LinearLayout
             android:orientation="vertical"
-            android:layout_width="90dp"
+            android:layout_width="80dp"
             android:layout_height="match_parent">
 
             <Button
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="0dp"
                 android:text="@string/trazoPase"
                 android:id="@+id/trazoPasarCompleta"
@@ -73,7 +75,7 @@
                 android:textStyle="bold" />
 
             <Button
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="0dp"
                 android:text="@string/trazoMovimiento"
                 android:id="@+id/trazoMoverCompleta"
@@ -84,7 +86,7 @@
                 android:textStyle="bold" />
 
             <Button
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="0dp"
                 android:text="@string/trazoBloqueo"
                 android:id="@+id/trazoBloquearCompleta"
@@ -95,7 +97,7 @@
                 android:textStyle="bold" />
 
             <Button
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="0dp"
                 android:text="@string/trazoTiro"
                 android:id="@+id/trazoTiroCompleta"
@@ -119,8 +121,8 @@
                 android:background="@drawable/pista_completa" />
 
             <ImageView
-                android:layout_width="25dp"
-                android:layout_height="25dp"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
                 android:id="@+id/num1Lcompleta"
                 android:background="@drawable/numeroazul1"
                 android:layout_marginRight="10dp"
@@ -128,8 +130,8 @@
                 android:layout_toStartOf="@+id/num2Lcompleta" />
 
             <ImageView
-                android:layout_width="25dp"
-                android:layout_height="25dp"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
                 android:id="@+id/num2Lcompleta"
                 android:background="@drawable/numeroazul2"
                 android:layout_marginRight="10dp"
@@ -137,8 +139,8 @@
                 android:layout_toStartOf="@+id/num3Lcompleta" />
 
             <ImageView
-                android:layout_width="25dp"
-                android:layout_height="25dp"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
                 android:id="@+id/num3Lcompleta"
                 android:background="@drawable/numeroazul3"
                 android:layout_marginRight="10dp"
@@ -146,8 +148,8 @@
                 android:layout_centerHorizontal="true" />
 
             <ImageView
-                android:layout_width="25dp"
-                android:layout_height="25dp"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
                 android:id="@+id/num4Lcompleta"
                 android:background="@drawable/numeroazul4"
                 android:layout_alignParentBottom="true"
@@ -155,16 +157,16 @@
                 android:layout_marginRight="10dp" />
 
             <ImageView
-                android:layout_width="25dp"
-                android:layout_height="25dp"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
                 android:id="@+id/num5Lcompleta"
                 android:background="@drawable/numeroazul5"
                 android:layout_alignParentBottom="true"
                 android:layout_toEndOf="@+id/num4Lcompleta" />
 
             <ImageView
-                android:layout_width="25dp"
-                android:layout_height="25dp"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
                 android:id="@+id/num1Vcompleta"
                 android:background="@drawable/numeronaranja1"
                 android:layout_marginRight="10dp"
@@ -172,8 +174,8 @@
                 android:layout_alignStart="@+id/num1Lcompleta" />
 
             <ImageView
-                android:layout_width="25dp"
-                android:layout_height="25dp"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
                 android:id="@+id/num2Vcompleta"
                 android:background="@drawable/numeronaranja2"
                 android:layout_marginRight="10dp"
@@ -181,8 +183,8 @@
                 android:layout_toStartOf="@+id/num3Vcompleta" />
 
             <ImageView
-                android:layout_width="25dp"
-                android:layout_height="25dp"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
                 android:id="@+id/num3Vcompleta"
                 android:background="@drawable/numeronaranja3"
                 android:layout_marginRight="10dp"
@@ -190,8 +192,8 @@
                 android:layout_centerHorizontal="true" />
 
             <ImageView
-                android:layout_width="25dp"
-                android:layout_height="25dp"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
                 android:id="@+id/num4Vcompleta"
                 android:background="@drawable/numeronaranja4"
                 android:layout_marginRight="10dp"
@@ -199,8 +201,8 @@
                 android:layout_alignStart="@+id/num4Lcompleta" />
 
             <ImageView
-                android:layout_width="25dp"
-                android:layout_height="25dp"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
                 android:id="@+id/num5Vcompleta"
                 android:background="@drawable/numeronaranja5"
                 android:layout_alignParentTop="true"

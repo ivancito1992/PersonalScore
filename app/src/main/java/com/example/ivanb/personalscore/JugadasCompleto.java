@@ -22,8 +22,8 @@ public class JugadasCompleto extends AppCompatActivity implements View.OnClickLi
 
     ImageView num1L, num2L, num3L, num4L, num5L, num1V, num2V, num3V, num4V, num5V;
 
-    int modificarX = 100;
-    int modificarY = 100;
+    int modificarX = 20;
+    int modificarY = 20;
 
     boolean estanBlock = false;
 

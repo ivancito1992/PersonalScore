@@ -118,13 +118,13 @@
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:id="@+id/paraPintarPistaCompleta"
-                android:background="@drawable/pista_completa" />
+                android:background="@drawable/completapista" />
 
             <ImageView
                 android:layout_width="30dp"
                 android:layout_height="30dp"
                 android:id="@+id/num1Lcompleta"
-                android:background="@drawable/numeroazul1"
+                android:background="@drawable/a1"
                 android:layout_marginRight="10dp"
                 android:layout_alignParentBottom="true"
                 android:layout_toStartOf="@+id/num2Lcompleta" />
@@ -133,7 +133,7 @@
                 android:layout_width="30dp"
                 android:layout_height="30dp"
                 android:id="@+id/num2Lcompleta"
-                android:background="@drawable/numeroazul2"
+                android:background="@drawable/a2"
                 android:layout_marginRight="10dp"
                 android:layout_alignParentBottom="true"
                 android:layout_toStartOf="@+id/num3Lcompleta" />
@@ -142,7 +142,7 @@
                 android:layout_width="30dp"
                 android:layout_height="30dp"
                 android:id="@+id/num3Lcompleta"
-                android:background="@drawable/numeroazul3"
+                android:background="@drawable/a3"
                 android:layout_marginRight="10dp"
                 android:layout_alignParentBottom="true"
                 android:layout_centerHorizontal="true" />
@@ -151,7 +151,7 @@
                 android:layout_width="30dp"
                 android:layout_height="30dp"
                 android:id="@+id/num4Lcompleta"
-                android:background="@drawable/numeroazul4"
+                android:background="@drawable/a4"
                 android:layout_alignParentBottom="true"
                 android:layout_toEndOf="@+id/num3Lcompleta"
                 android:layout_marginRight="10dp" />
@@ -160,7 +160,7 @@
                 android:layout_width="30dp"
                 android:layout_height="30dp"
                 android:id="@+id/num5Lcompleta"
-                android:background="@drawable/numeroazul5"
+                android:background="@drawable/a5"
                 android:layout_alignParentBottom="true"
                 android:layout_toEndOf="@+id/num4Lcompleta" />
 
@@ -168,7 +168,7 @@
                 android:layout_width="30dp"
                 android:layout_height="30dp"
                 android:id="@+id/num1Vcompleta"
-                android:background="@drawable/numeronaranja1"
+                android:background="@drawable/n1"
                 android:layout_marginRight="10dp"
                 android:layout_alignParentTop="true"
                 android:layout_alignStart="@+id/num1Lcompleta" />
@@ -177,7 +177,7 @@
                 android:layout_width="30dp"
                 android:layout_height="30dp"
                 android:id="@+id/num2Vcompleta"
-                android:background="@drawable/numeronaranja2"
+                android:background="@drawable/n2"
                 android:layout_marginRight="10dp"
                 android:layout_alignParentTop="true"
                 android:layout_toStartOf="@+id/num3Vcompleta" />
@@ -186,7 +186,7 @@
                 android:layout_width="30dp"
                 android:layout_height="30dp"
                 android:id="@+id/num3Vcompleta"
-                android:background="@drawable/numeronaranja3"
+                android:background="@drawable/n3"
                 android:layout_marginRight="10dp"
                 android:layout_alignParentTop="true"
                 android:layout_centerHorizontal="true" />
@@ -195,7 +195,7 @@
                 android:layout_width="30dp"
                 android:layout_height="30dp"
                 android:id="@+id/num4Vcompleta"
-                android:background="@drawable/numeronaranja4"
+                android:background="@drawable/n4"
                 android:layout_marginRight="10dp"
                 android:layout_alignParentTop="true"
                 android:layout_alignStart="@+id/num4Lcompleta" />
@@ -204,7 +204,7 @@
                 android:layout_width="30dp"
                 android:layout_height="30dp"
                 android:id="@+id/num5Vcompleta"
-                android:background="@drawable/numeronaranja5"
+                android:background="@drawable/n5"
                 android:layout_alignParentTop="true"
                 android:layout_alignStart="@+id/num5Lcompleta" />
         </RelativeLayout>

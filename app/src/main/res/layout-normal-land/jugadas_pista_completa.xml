@@ -118,7 +118,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:id="@+id/paraPintarPistaCompleta"
-                android:background="@drawable/completapista" />
+                android:background="@drawable/completapista2" />
 
             <ImageView
                 android:layout_width="30dp"

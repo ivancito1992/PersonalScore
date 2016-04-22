@@ -192,7 +192,6 @@
                         android:id="@+id/siVT3"
                         android:layout_weight="2"
                         android:layout_marginTop="4dp"
-                        android:layout_marginBottom="4dp"
                         android:background="@drawable/btn_acierto_accion"
                         android:textColor="@color/colorLetraBtn"
                         android:textSize="22sp" />

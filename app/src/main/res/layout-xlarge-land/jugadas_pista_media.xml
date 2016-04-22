@@ -18,7 +18,7 @@
             android:layout_height="wrap_content"
             android:id="@+id/pistaMedia"
             android:layout_alignParentTop="true"
-            android:background="@drawable/mediapista2"
+            android:background="@drawable/mediapista"
             android:layout_alignParentEnd="true"
             android:layout_alignParentStart="true" />
 

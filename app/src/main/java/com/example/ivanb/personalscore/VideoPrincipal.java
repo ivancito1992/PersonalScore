@@ -9,7 +9,7 @@ import android.widget.VideoView;
 
 public class VideoPrincipal extends Activity {
     VideoView presentacion;
-    int tiempoDeEspera = 9000;
+    int tiempoDeEspera = 10000;
     boolean activo = true;
 
     @Override
@@ -20,7 +20,7 @@ public class VideoPrincipal extends Activity {
         setContentView(R.layout.video);
         presentacion = (VideoView) findViewById(R.id.videoView_video);
 
-        Uri path = Uri.parse("android.resource://com.example.ivanb.personalscore/"+ R.raw.logointro);
+        Uri path = Uri.parse("android.resource://com.example.ivanb.personalscore/"+ R.raw.intrologo);
         presentacion.setVideoURI(path);
         presentacion.start();
         Thread esperar = new Thread(){

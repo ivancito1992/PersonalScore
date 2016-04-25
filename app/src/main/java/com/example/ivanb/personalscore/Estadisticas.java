@@ -545,7 +545,7 @@ public class Estadisticas extends AppCompatActivity implements View.OnClickListe
             puntosJugador =  "La puntuacion de "+tvJugador1.getText().toString()+" es de: "+Integer.toString(puntosJ1);
         }
 
-        stats1 = "Desde la lina de tiros libres sus estadisticas han sido: "+Integer.toString(contadorAciertosJ1TL)+" / "+Integer.toString(contadorTiradosJ1TL);
+        stats1 = "Desde la linea de tiros libres sus estadisticas han sido: "+Integer.toString(contadorAciertosJ1TL)+" / "+Integer.toString(contadorTiradosJ1TL);
         stats2 = "En canastas de dos puntos, sus estadisticas han sido: "+Integer.toString(contadorAciertosJ1T2)+" / "+Integer.toString(contadorTiradosJ1T2);
         stats3 = "Desde la lina de tres puntos sus estadisticas han sido: "+Integer.toString(contadorAciertosJ1T3)+" / "+Integer.toString(contadorTiradosJ1T3);
         statsAsistencias = "Ha repartido un total de: "+Integer.toString(contadorAsistenciasJ1)+" asistencia/s";

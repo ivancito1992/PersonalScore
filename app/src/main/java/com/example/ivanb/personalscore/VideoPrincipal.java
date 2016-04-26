@@ -6,14 +6,15 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.view.WindowManager;
 import android.widget.VideoView;
+import android.os.Handler;
 
 public class VideoPrincipal extends Activity {
     VideoView presentacion;
-    int tiempoDeEspera = 10000;
     boolean activo = true;
+    final int DURACION = 9800;
 
     @Override
-     public void onCreate(Bundle savedInstanceState){
+     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
                 WindowManager.LayoutParams.FLAG_FULLSCREEN);
@@ -23,30 +24,13 @@ public class VideoPrincipal extends Activity {
         Uri path = Uri.parse("android.resource://com.example.ivanb.personalscore/"+ R.raw.logointronegro);
         presentacion.setVideoURI(path);
         presentacion.start();
-        Thread esperar = new Thread(){
-            public void run(){
-                try{
-                    int esperado = 0;
-                    while(activo && esperado<tiempoDeEspera){
-                        sleep(100);
-                        if(activo){
-                            esperado += 100;
-                        }
-                    }
-                }
-                catch (InterruptedException e){
-
-                }
-                finally {
-                    siguiente();
-                }
+        new Handler().postDelayed(new Runnable() {
+            @Override
+            public void run() {
+                startActivity(new Intent(VideoPrincipal.this, MenuInicial.class));
+                finish();
             }
-        };
-        esperar.start();
-    }
+        }, DURACION);
 
-    private void siguiente() {
-        startActivity(new Intent(VideoPrincipal.this, MenuInicial.class));
-        finish();
     }
 }

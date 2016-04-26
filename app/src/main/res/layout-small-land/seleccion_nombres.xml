@@ -26,7 +26,7 @@
             android:textColor="@color/colorLocal"
             android:gravity="center"
             android:layout_weight="1"
-            android:textSize="25sp"
+            android:textSize="10sp"
             android:paddingEnd="25dp"
             android:paddingStart="25dp" />
 
@@ -40,7 +40,7 @@
             android:textColor="@color/colorLetraBtn"
             android:gravity="center"
             android:layout_weight="1"
-            android:textSize="20sp"
+            android:textSize="10sp"
             android:paddingEnd="10dp"
             android:paddingStart="10dp"
             android:maxLength="15" />
@@ -55,7 +55,7 @@
             android:textColor="@color/colorVisitante"
             android:gravity="center"
             android:layout_weight="1"
-            android:textSize="25sp"
+            android:textSize="10sp"
             android:paddingEnd="25dp"
             android:paddingStart="25dp" />
 
@@ -69,7 +69,7 @@
             android:textColor="@color/colorLetraBtn"
             android:gravity="center"
             android:layout_weight="1"
-            android:textSize="20sp"
+            android:textSize="10sp"
             android:paddingEnd="10dp"
             android:paddingStart="10dp"
             android:maxLength="15" />
@@ -84,7 +84,7 @@
             android:textColor="@color/colorLetraBtn"
             android:gravity="center"
             android:layout_weight="1"
-            android:textSize="25sp"
+            android:textSize="10sp"
             android:paddingEnd="25dp"
             android:paddingStart="25dp" />
 
@@ -98,7 +98,7 @@
             android:textColor="@color/colorLetraBtn"
             android:gravity="center"
             android:layout_weight="1"
-            android:textSize="20sp"
+            android:textSize="10sp"
             android:paddingEnd="10dp"
             android:paddingStart="10dp"
             android:maxLength="15"
@@ -117,7 +117,7 @@
         android:layout_gravity="center_horizontal"
         android:layout_weight="1"
         android:textColor="@color/colorLetraBtn"
-        android:textSize="25sp"
+        android:textSize="15sp"
         android:background="@drawable/btn_deshacer" />
 
 </LinearLayout>

@@ -17,8 +17,6 @@ public class MenuInicial extends AppCompatActivity implements View.OnClickListen
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        /*getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
-                WindowManager.LayoutParams.FLAG_FULLSCREEN);*/
         setContentView(R.layout.menu_principal);
 
         estadisticas = (Button) findViewById(R.id.btn_estadisticas);

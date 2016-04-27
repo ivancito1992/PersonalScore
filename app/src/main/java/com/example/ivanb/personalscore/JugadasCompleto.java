@@ -31,8 +31,7 @@ public class JugadasCompleto extends AppCompatActivity implements View.OnClickLi
 
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
-                WindowManager.LayoutParams.FLAG_FULLSCREEN);
+
         setContentView(R.layout.jugadas_pista_completa);
         borrar = (Button) findViewById(R.id.borrarPistaCompleta);
         borrar.setOnClickListener(this);
@@ -76,6 +75,20 @@ public class JugadasCompleto extends AppCompatActivity implements View.OnClickLi
         lineaTiro.setOnClickListener(this);
 
         Pintar.negar();
+    }
+
+    @Override
+    public void onWindowFocusChanged(boolean hasfocus){
+        super.onWindowFocusChanged(hasfocus);
+        View decorView = getWindow().getDecorView();
+        if(hasfocus){
+            decorView.setSystemUiVisibility(View.SYSTEM_UI_FLAG_LAYOUT_STABLE
+                    | View.SYSTEM_UI_FLAG_IMMERSIVE_STICKY
+                    | View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN
+                    | View.SYSTEM_UI_FLAG_LAYOUT_HIDE_NAVIGATION
+                    | View.SYSTEM_UI_FLAG_FULLSCREEN
+                    | View.SYSTEM_UI_FLAG_HIDE_NAVIGATION);
+        }
     }
 
     View.OnTouchListener handlerMover = new View.OnTouchListener(){

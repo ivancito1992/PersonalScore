@@ -8,7 +8,7 @@
         android:orientation="vertical"
         android:layout_width="wrap_content"
         android:layout_height="0dp"
-        android:layout_weight="5"
+        android:layout_weight="6"
         android:layout_gravity="center"
         android:background="@drawable/btn_deshacer"
         android:layout_marginTop="10dp"
@@ -74,6 +74,17 @@
             android:maxLength="15"
             android:backgroundTint="@color/colorVisitante" />
 
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_weight="6"
+        android:layout_marginBottom="10dp"
+        android:layout_gravity="center"
+        android:background="@drawable/btn_deshacer">
+
         <TextView
             android:layout_width="match_parent"
             android:layout_height="0dp"
@@ -104,6 +115,50 @@
             android:maxLength="15"
             android:singleLine="false"
             android:backgroundTint="#ffffff" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="@string/enqueequipo"
+            android:id="@+id/seleccionEquipo"
+            android:layout_gravity="center_horizontal"
+            android:textColor="@color/colorLetraBtn"
+            android:gravity="center"
+            android:layout_weight="1"
+            android:textSize="25dp"
+            android:paddingEnd="45dp"
+            android:paddingStart="45dp" />
+
+        <RadioGroup
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:orientation="horizontal"
+            android:layout_weight="1"
+            android:gravity="center">
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/seleccionlocal"
+                android:id="@+id/jugadorLocal"
+                android:gravity="left|center"
+                android:checked="false"
+                android:textSize="20sp"
+                android:textColor="@color/colorLocal"
+                android:buttonTint="@color/colorLocal" />
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/seleccionVisitante"
+                android:id="@+id/jugadorVisitante"
+                android:checked="false"
+                android:textSize="20sp"
+                android:textColor="@color/colorVisitante"
+                android:buttonTint="@color/colorVisitante"
+                android:layout_marginLeft="50dp" />
+        </RadioGroup>
     </LinearLayout>
 
     <Button
@@ -112,7 +167,7 @@
         android:text="@string/comenzar"
         android:id="@+id/comenzar"
         android:layout_gravity="center_horizontal"
-        android:layout_weight="1"
+        android:layout_weight="2"
         android:textColor="@color/colorLetraBtn"
         android:textSize="20sp"
         android:background="@drawable/btn_deshacer" />

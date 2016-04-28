@@ -25,7 +25,7 @@ import java.util.Date;
 
 public class Estadisticas extends AppCompatActivity implements View.OnClickListener {
 
-    TextView tvLocal, tvVisitante, tvJugador1, tvPuntosj1, tvEquipoLocal, tvEquipoVisitante;
+    TextView tvLocal, tvVisitante, tvJugador1, tvPuntosj1, tvEquipoLocal, tvEquipoVisitante, tvEquipodeJugador;
     TextView tvTextoj1tl, tvMetidasj1tl, tvBarraj1tl, tvTotalj1tl;
     TextView tvTextoj1t2, tvMetidasj1t2, tvBarraj1t2, tvTotalj1t2;
     TextView tvTextoj1t3, tvMetidasj1t3, tvBarraj1t3, tvTotalj1t3;
@@ -38,12 +38,12 @@ public class Estadisticas extends AppCompatActivity implements View.OnClickListe
     Button aciertoJ1TL, aciertoJ1T2, aciertoJ1T3, falloJ1TL, falloJ1T2, falloJ1T3;
     Button aumentarRebJ1, aumentarAsisJ1, aumentarExtraJ1, deshacerUltimo, finalizar;
 
-    RadioButton esLocal, esVisitante, esRobo, esTapon;
+    RadioButton esRobo, esTapon;
 
     int contadorAciertosJ1TL, contadorAciertosJ1T2, contadorAciertosJ1T3, contadorTiradosJ1TL, contadorTiradosJ1T2, contadorTiradosJ1T3, contadorRebotesJ1,
             contadorAsistenciasJ1, contadorRobosJ1, contadorTaponesJ1, marcadorLocal, marcadorVisitante, puntosJ1 = 0;
 
-    boolean siLTL, siLT2, siLT3, siVTL, siVT2, siVT3, siJ1TL, siJ1T2, siJ1T3, noJ1TL, noJ1T2, noJ1T3, reboteBJ1, asistenciaBJ1, roboBJ1, taponBJ1, esLocalj1, esVisitantej1;
+    boolean siLTL, siLT2, siLT3, siVTL, siVT2, siVT3, siJ1TL, siJ1T2, siJ1T3, noJ1TL, noJ1T2, noJ1T3, reboteBJ1, asistenciaBJ1, roboBJ1, taponBJ1, esLocalj1, esVisitantej1, esLocal, esVisitante;
 
     String puntosLocal, puntosVisitante, puntosJugador, stats1, stats2, stats3, statsAsistencias, statsRebotes, statsRobos, statsTapones, fecha, nombreFichero, textoEquipos, textoJugador;
 
@@ -84,13 +84,17 @@ public class Estadisticas extends AppCompatActivity implements View.OnClickListe
         tvEquipoVisitante.setText(bundle.getString("nev"));
         tvJugador1 = (TextView) findViewById(R.id.nombreJugador);
         tvJugador1.setText(bundle.getString("nej"));
+        tvEquipodeJugador = (TextView) findViewById(R.id.nombreEquipodeJugador);
+        tvEquipodeJugador.setText(bundle.getString("sej"));
+        esLocal = bundle.getBoolean("boolsej");
+        if(esLocal) {
+            tvEquipodeJugador.setTextColor(0xff2996ef);
+        }
+        if(!esLocal){
+            tvEquipodeJugador.setTextColor(0xffff8956);
+        }
 
-        esLocal = (RadioButton) findViewById(R.id.esLocalJ1);
-        esLocal.setOnClickListener(this);
-        esLocal.setText(bundle.getString("nel"));
-        esVisitante = (RadioButton) findViewById(R.id.esVisitanteJ1);
-        esVisitante.setOnClickListener(this);
-        esVisitante.setText(bundle.getString("nev"));
+
         esRobo = (RadioButton) findViewById(R.id.esRoboJ1);
         esTapon = (RadioButton) findViewById(R.id.esTaponJ1);
 
@@ -106,9 +110,9 @@ public class Estadisticas extends AppCompatActivity implements View.OnClickListe
         Typeface tfTexto = Typeface.createFromAsset(getAssets(),font_path_texto);
         tvEquipoLocal.setTypeface(tfTexto);
         tvEquipoVisitante.setTypeface(tfTexto);
+        tvEquipodeJugador.setTypeface(tfTexto);
         tvJugador1.setTypeface(tfTexto);
-        esLocal.setTypeface(tfTexto);
-        esVisitante.setTypeface(tfTexto);
+
         tvTextoj1tl.setTypeface(tfTexto);
         tvMetidasj1tl.setTypeface(tfTexto);
         tvTotalj1tl.setTypeface(tfTexto);
@@ -187,15 +191,6 @@ public class Estadisticas extends AppCompatActivity implements View.OnClickListe
     @Override
     public void onClick(View v) {
         switch (v.getId()){
-            case R.id.esLocalJ1:
-                esLocalj1 = true;
-                esVisitante.setEnabled(false);
-                break;
-            case R.id.esVisitanteJ1:
-                esVisitantej1 = true;
-                esLocal.setEnabled(false);
-                break;
-
             case R.id.siLTL:
                 siLTL = true; siLT2 = false; siLT3 = false; siVTL = false; siVT2 = false; siVT3 = false;
                 siJ1TL = false; siJ1T2 = false; siJ1T3 = false; noJ1TL = false; noJ1T2 = false; noJ1T3 = false;
@@ -255,12 +250,12 @@ public class Estadisticas extends AppCompatActivity implements View.OnClickListe
                 siJ1TL = true; siJ1T2 = false; siJ1T3 = false; noJ1TL = false; noJ1T2 = false; noJ1T3 = false;
                 reboteBJ1 = false; asistenciaBJ1 = false; roboBJ1 = false; taponBJ1 = false;
 
-                if(esLocalj1){
+                if(esLocal){
                     marcadorLocal++;
                     tvLocal.setText(Integer.toString(marcadorLocal));
                 }
 
-                if(esVisitantej1){
+                if(!esLocal){
                     marcadorVisitante++;
                     tvVisitante.setText(Integer.toString(marcadorVisitante));
                 }
@@ -277,12 +272,12 @@ public class Estadisticas extends AppCompatActivity implements View.OnClickListe
                 siJ1TL = false; siJ1T2 = true; siJ1T3 = false; noJ1TL = false; noJ1T2 = false; noJ1T3 = false;
                 reboteBJ1 = false; asistenciaBJ1 = false; roboBJ1 = false; taponBJ1 = false;
 
-                if(esLocalj1){
+                if(esLocal){
                     marcadorLocal = marcadorLocal + 2;
                     tvLocal.setText(Integer.toString(marcadorLocal));
                 }
 
-                if(esVisitantej1){
+                if(!esLocal){
                     marcadorVisitante = marcadorVisitante + 2;
                     tvVisitante.setText(Integer.toString(marcadorVisitante));
                 }
@@ -299,12 +294,12 @@ public class Estadisticas extends AppCompatActivity implements View.OnClickListe
                 siJ1TL = false; siJ1T2 = false; siJ1T3 = true; noJ1TL = false; noJ1T2 = false; noJ1T3 = false;
                 reboteBJ1 = false; asistenciaBJ1 = false; roboBJ1 = false; taponBJ1 = false;
 
-                if(esLocalj1){
+                if(esLocal){
                     marcadorLocal = marcadorLocal + 3;
                     tvLocal.setText(Integer.toString(marcadorLocal));
                }
 
-                if(esVisitantej1){
+                if(!esLocal){
                     marcadorVisitante = marcadorVisitante + 3;
                     tvVisitante.setText(Integer.toString(marcadorVisitante));
                }
@@ -420,11 +415,11 @@ public class Estadisticas extends AppCompatActivity implements View.OnClickListe
                     break;
                 }
                 if(siJ1TL && puntosJ1 > 0 && contadorAciertosJ1TL > 0 && contadorTiradosJ1TL > 0){
-                    if(esLocalj1 && marcadorLocal > 0){
+                    if(esLocal && marcadorLocal > 0){
                         marcadorLocal--;
                         tvLocal.setText(Integer.toString(marcadorLocal));
                     }
-                    if(esVisitantej1 && marcadorVisitante > 0){
+                    if(!esLocal && marcadorVisitante > 0){
                         marcadorVisitante--;
                         tvVisitante.setText(Integer.toString(marcadorVisitante));
                     }
@@ -438,11 +433,11 @@ public class Estadisticas extends AppCompatActivity implements View.OnClickListe
                     break;
                 }
                 if(siJ1T2 && puntosJ1 > 0 && contadorAciertosJ1T2 > 0 && contadorTiradosJ1T2 > 0) {
-                    if (esLocalj1 && marcadorLocal > 0) {
+                    if (esLocal && marcadorLocal > 0) {
                         marcadorLocal = marcadorLocal - 2;
                         tvLocal.setText(Integer.toString(marcadorLocal));
                     }
-                    if (esVisitantej1 && marcadorVisitante > 0) {
+                    if (!esLocal && marcadorVisitante > 0) {
                         marcadorVisitante = marcadorVisitante - 2;
                         tvVisitante.setText(Integer.toString(marcadorVisitante));
                     }
@@ -456,11 +451,11 @@ public class Estadisticas extends AppCompatActivity implements View.OnClickListe
                     break;
                 }
                 if(siJ1T3 && puntosJ1 > 0 && contadorAciertosJ1T3 > 0 && contadorTiradosJ1T3 > 0) {
-                    if (esLocalj1 && marcadorLocal > 0) {
+                    if (esLocal && marcadorLocal > 0) {
                         marcadorLocal = marcadorLocal - 3;
                         tvLocal.setText(Integer.toString(marcadorLocal));
                     }
-                    if (esVisitantej1 && marcadorVisitante > 0) {
+                    if (!esLocal && marcadorVisitante > 0) {
                         marcadorVisitante = marcadorVisitante - 3;
                         tvVisitante.setText(Integer.toString(marcadorVisitante));
                     }
@@ -545,16 +540,13 @@ public class Estadisticas extends AppCompatActivity implements View.OnClickListe
     }
     public void generarTXT(){
         nombreFichero = "Partido.txt";
-        puntosLocal = "La puntuacion del equipo "+esLocal.getText().toString()+" ha sido: "+Integer.toString(marcadorLocal);
-        puntosVisitante = "La puntuacion del equipo "+esVisitante.getText().toString()+" ha sido: "+Integer.toString(marcadorVisitante);
-        if(esLocalj1){
-            puntosJugador =  "La puntuacion de "+tvJugador1.getText().toString()+" que juega en el equipo "+esLocal.getText().toString()+" es de: "+Integer.toString(puntosJ1);
+        puntosLocal = "La puntuacion del equipo "+tvEquipoLocal.getText().toString()+" ha sido: "+Integer.toString(marcadorLocal);
+        puntosVisitante = "La puntuacion del equipo "+tvEquipoVisitante.getText().toString()+" ha sido: "+Integer.toString(marcadorVisitante);
+        if(esLocal){
+            puntosJugador =  "La puntuacion de "+tvJugador1.getText().toString()+" que juega en el equipo "+tvEquipoLocal.getText().toString()+" es de: "+Integer.toString(puntosJ1);
         }
-        else if(esVisitantej1){
-            puntosJugador =  "La puntuacion de "+tvJugador1.getText().toString()+" que juega en el equipo "+esVisitante.getText().toString()+" es de: "+Integer.toString(puntosJ1);
-        }
-        else{
-            puntosJugador =  "La puntuacion de "+tvJugador1.getText().toString()+" es de: "+Integer.toString(puntosJ1);
+        if(!esLocal){
+            puntosJugador =  "La puntuacion de "+tvJugador1.getText().toString()+" que juega en el equipo "+tvEquipoVisitante.getText().toString()+" es de: "+Integer.toString(puntosJ1);
         }
 
         stats1 = "Desde la linea de tiros libres sus estadisticas han sido: "+Integer.toString(contadorAciertosJ1TL)+" / "+Integer.toString(contadorTiradosJ1TL);

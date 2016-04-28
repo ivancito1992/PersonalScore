@@ -228,68 +228,26 @@
                     android:layout_height="match_parent"
                     android:layout_weight="3">
 
-                    <LinearLayout
-                        android:orientation="horizontal"
+                    <TextView
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:id="@+id/datosJugador1"
-                        android:gravity="center_vertical"
-                        android:layout_weight="1">
+                        android:layout_height="0dp"
+                        android:id="@+id/nombreEquipodeJugador"
+                        android:layout_weight="1"
+                        android:layout_marginLeft="5dp"
+                        android:gravity="left|center_vertical"
+                        android:textSize="30sp"
+                        android:textColor="@color/colorLetraBtn" />
 
-                        <RadioGroup
-                            android:layout_width="0dp"
-                            android:layout_height="match_parent"
-                            android:orientation="horizontal"
-                            android:gravity="left|center_vertical"
-                            android:layout_weight="2">
-
-                            <RadioButton
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:text="@string/esLocal"
-                                android:id="@+id/esLocalJ1"
-                                android:checked="false"
-                                android:textColor="@color/colorLocal"
-                                android:layout_weight="1"
-                                android:textSize="22sp"
-                                android:buttonTint="@color/colorLocal" />
-
-                            <RadioButton
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:text="@string/esVisitante"
-                                android:id="@+id/esVisitanteJ1"
-                                android:checked="false"
-                                android:textColor="@color/colorVisitante"
-                                android:layout_weight="1"
-                                android:textSize="22sp"
-                                android:buttonTint="@color/colorVisitante" />
-                        </RadioGroup>
-
-                    </LinearLayout>
-
-                    <LinearLayout
-                        android:orientation="horizontal"
+                    <TextView
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:id="@+id/linearLayout"
-                        android:gravity="center_vertical"
-                        android:layout_weight="1">
-
-                        <TextView
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:textAppearance="?android:attr/textAppearanceLarge"
-                            android:id="@+id/nombreJugador"
-                            android:textSize="30sp"
-                            android:gravity="left|center_vertical"
-                            android:textColor="@color/colorLetraBtn"
-                            android:paddingTop="1dp"
-                            android:paddingBottom="1dp"
-                            android:layout_marginLeft="5dp" />
-
-                    </LinearLayout>
-
+                        android:layout_height="0dp"
+                        android:textAppearance="?android:attr/textAppearanceLarge"
+                        android:id="@+id/nombreJugador"
+                        android:layout_weight="1"
+                        android:textSize="30sp"
+                        android:gravity="left|center_vertical"
+                        android:textColor="@color/colorLetraBtn"
+                        android:layout_marginLeft="5dp" />
                 </LinearLayout>
 
                 <TextView

@@ -4,19 +4,24 @@ package com.example.ivanb.personalscore;
 import android.content.Intent;
 import android.graphics.Typeface;
 import android.os.Bundle;
+import android.provider.MediaStore;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.RadioButton;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class SeleccionNombre extends AppCompatActivity implements View.OnClickListener {
 
-    TextView textoLocal, textoVisitante, textoJugador, tvEquipoLocal, tvEquipoVisitante, tvJugador;
+    TextView textoLocal, textoVisitante, textoJugador, tvEquipoLocal, tvEquipoVisitante, tvEquipoJugador;
     EditText nombreLocal, nombreVisitante, nombreJugador;
     Button continuar;
-    String cadenaLocal, cadenaVisitante, cadenaJugador;
+    RadioButton jugadorLocal, jugadorVisitante;
+    String cadenaLocal, cadenaVisitante, cadenaJugador, cadenaEquipo;
+    boolean esLocal, equipoElegido = false;
 
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -30,7 +35,9 @@ public class SeleccionNombre extends AppCompatActivity implements View.OnClickLi
         nombreJugador = (EditText) findViewById(R.id.escribirJugador);
         tvEquipoLocal = (TextView) findViewById(R.id.equipoLocal);
         tvEquipoVisitante = (TextView) findViewById(R.id.equipoVisitante);
-        //tvJugador = (TextView) findViewById(R.id.)
+        tvEquipoJugador = (TextView) findViewById(R.id.seleccionEquipo);
+        jugadorLocal = (RadioButton) findViewById(R.id.jugadorLocal);
+        jugadorVisitante = (RadioButton) findViewById(R.id.jugadorVisitante);
 
         continuar = (Button) findViewById(R.id.comenzar);
         continuar.setOnClickListener(this);
@@ -41,6 +48,10 @@ public class SeleccionNombre extends AppCompatActivity implements View.OnClickLi
         textoLocal.setTypeface(fuente);
         textoVisitante.setTypeface(fuente);
         textoJugador.setTypeface(fuente);
+        tvEquipoJugador.setTypeface(fuente);
+
+        jugadorVisitante.setTypeface(fuente);
+        jugadorLocal.setTypeface(fuente);
 
         nombreLocal.setTypeface(fuente);
         nombreVisitante.setTypeface(fuente);
@@ -65,24 +76,47 @@ public class SeleccionNombre extends AppCompatActivity implements View.OnClickLi
     public void onClick(View v) {
         switch (v.getId()){
             case R.id.comenzar:
-                cadenaLocal = nombreLocal.getText().toString();
-                cadenaVisitante = nombreVisitante.getText().toString();
-                cadenaJugador = nombreJugador.getText().toString();
-                if (cadenaLocal.isEmpty()){
-                    cadenaLocal = "Home";
+                if(!jugadorLocal.isChecked()&& !jugadorVisitante.isChecked()){
+                    equipoElegido = false;
                 }
-                if (cadenaVisitante.isEmpty()){
-                    cadenaVisitante = "Away";
+                else{
+                    equipoElegido = true;
                 }
-                if (cadenaJugador.isEmpty()){
-                    cadenaJugador = "Nombre Jugador";
+                if(!equipoElegido){
+                    Toast t = Toast.makeText(getApplicationContext(), "Elige un equipo para el jugador antes de continuar", Toast.LENGTH_SHORT);
+                    t.show();
                 }
-                Intent i = new Intent(this, Estadisticas.class);
-                i.putExtra("nel", cadenaLocal);
-                i.putExtra("nev", cadenaVisitante);
-                i.putExtra("nej", cadenaJugador);
-                startActivity(i);
-                break;
+                else {
+                    cadenaLocal = nombreLocal.getText().toString();
+                    cadenaVisitante = nombreVisitante.getText().toString();
+                    cadenaJugador = nombreJugador.getText().toString();
+                    if (cadenaLocal.isEmpty()) {
+                        cadenaLocal = "Home";
+                    }
+                    if (cadenaVisitante.isEmpty()) {
+                        cadenaVisitante = "Away";
+                    }
+                    if (cadenaJugador.isEmpty()) {
+                        cadenaJugador = "Nombre Jugador";
+                    }
+                    if(jugadorLocal.isChecked()){
+                        esLocal = true;
+                        cadenaEquipo = cadenaLocal;
+
+                    }
+                    if(jugadorVisitante.isChecked()){
+                        esLocal = false;
+                        cadenaEquipo = cadenaVisitante;
+                    }
+                    Intent i = new Intent(this, Estadisticas.class);
+                    i.putExtra("nel", cadenaLocal);
+                    i.putExtra("nev", cadenaVisitante);
+                    i.putExtra("nej", cadenaJugador);
+                    i.putExtra("boolsej", esLocal);
+                    i.putExtra("sej", cadenaEquipo);
+                    startActivity(i);
+                    break;
+                }
         }
     }
 }

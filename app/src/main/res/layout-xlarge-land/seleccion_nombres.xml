@@ -8,7 +8,7 @@
         android:orientation="vertical"
         android:layout_width="wrap_content"
         android:layout_height="0dp"
-        android:layout_weight="7"
+        android:layout_weight="6"
         android:layout_gravity="center"
         android:background="@drawable/btn_deshacer"
         android:layout_marginTop="15dp"
@@ -24,7 +24,7 @@
             android:textColor="@color/colorLocal"
             android:gravity="center"
             android:layout_weight="1"
-            android:textSize="50sp"
+            android:textSize="45sp"
             android:paddingEnd="40dp"
             android:paddingStart="40dp" />
 
@@ -38,7 +38,7 @@
             android:textColor="@color/colorLocal"
             android:gravity="center"
             android:layout_weight="1"
-            android:textSize="45sp"
+            android:textSize="38sp"
             android:paddingEnd="10dp"
             android:paddingStart="10dp"
             android:maxLength="15"
@@ -54,7 +54,7 @@
             android:textColor="@color/colorVisitante"
             android:gravity="center"
             android:layout_weight="1"
-            android:textSize="50sp"
+            android:textSize="45sp"
             android:paddingEnd="40dp"
             android:paddingStart="40dp" />
 
@@ -68,15 +68,25 @@
             android:textColor="@color/colorVisitante"
             android:gravity="center"
             android:layout_weight="1"
-            android:textSize="45sp"
+            android:textSize="38sp"
             android:paddingEnd="10dp"
             android:paddingStart="10dp"
             android:maxLength="15"
             android:backgroundTint="@color/colorVisitante" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_weight="6"
+        android:background="@drawable/btn_deshacer"
+        android:layout_gravity="center"
+        android:layout_marginBottom="10dp">
 
         <TextView
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="0dp"
             android:textAppearance="?android:attr/textAppearanceLarge"
             android:text="@string/nombreJugador"
             android:id="@+id/nombreJugador"
@@ -84,13 +94,15 @@
             android:textColor="@color/colorLetraBtn"
             android:gravity="center"
             android:layout_weight="1"
-            android:textSize="50sp"
-            android:paddingEnd="40dp"
-            android:paddingStart="40dp" />
+            android:textSize="45dp"
+            android:paddingEnd="45dp"
+            android:paddingStart="45dp"
+            android:paddingLeft="40dp"
+            android:paddingRight="40dp" />
 
         <EditText
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="0dp"
             android:inputType="textPersonName"
             android:ems="10"
             android:id="@+id/escribirJugador"
@@ -98,12 +110,62 @@
             android:textColor="@color/colorLetraBtn"
             android:gravity="center"
             android:layout_weight="1"
-            android:textSize="45sp"
+            android:textSize="38sp"
             android:paddingEnd="10dp"
             android:paddingStart="10dp"
             android:maxLength="15"
             android:singleLine="false"
-            android:backgroundTint="#ffffff" />
+            android:backgroundTint="#ffffff"
+            android:paddingLeft="40dp"
+            android:paddingRight="40dp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="@string/enqueequipo"
+            android:id="@+id/seleccionEquipo"
+            android:layout_gravity="center_horizontal"
+            android:textColor="@color/colorLetraBtn"
+            android:gravity="center"
+            android:layout_weight="1"
+            android:textSize="45dp"
+            android:paddingEnd="45dp"
+            android:paddingStart="45dp"
+            android:paddingLeft="40dp"
+            android:paddingRight="40dp" />
+
+        <RadioGroup
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:orientation="horizontal"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:paddingLeft="40dp"
+            android:paddingRight="40dp">
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/seleccionlocal"
+                android:id="@+id/jugadorLocal"
+                android:gravity="left|center"
+                android:checked="false"
+                android:textSize="38sp"
+                android:textColor="@color/colorLocal"
+                android:buttonTint="@color/colorLocal" />
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/seleccionVisitante"
+                android:id="@+id/jugadorVisitante"
+                android:checked="false"
+                android:textSize="38sp"
+                android:textColor="@color/colorVisitante"
+                android:buttonTint="@color/colorVisitante"
+                android:layout_marginLeft="50dp" />
+        </RadioGroup>
     </LinearLayout>
 
     <Button
@@ -112,7 +174,7 @@
         android:text="@string/comenzar"
         android:id="@+id/comenzar"
         android:layout_gravity="center_horizontal"
-        android:layout_weight="1"
+        android:layout_weight="2"
         android:textColor="@color/colorLetraBtn"
         android:textSize="40sp"
         android:background="@drawable/btn_deshacer" />

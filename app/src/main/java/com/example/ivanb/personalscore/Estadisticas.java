@@ -77,6 +77,9 @@ public class Estadisticas extends AppCompatActivity implements View.OnClickListe
         tvBarraExtraj1 = (TextView) findViewById(R.id.barraExtraJ1);
         tvNumTaponesj1 = (TextView) findViewById(R.id.numTaponesJ1);
 
+        esRobo = (RadioButton) findViewById(R.id.esRoboJ1);
+        esTapon = (RadioButton) findViewById(R.id.esTaponJ1);
+
         Bundle bundle = getIntent().getExtras();
         tvEquipoLocal = (TextView) findViewById(R.id.equipoLocal);
         tvEquipoLocal.setText(bundle.getString("nel"));
@@ -87,16 +90,8 @@ public class Estadisticas extends AppCompatActivity implements View.OnClickListe
         tvEquipodeJugador = (TextView) findViewById(R.id.nombreEquipodeJugador);
         tvEquipodeJugador.setText(bundle.getString("sej"));
         esLocal = bundle.getBoolean("boolsej");
-        if(esLocal) {
-            tvEquipodeJugador.setTextColor(0xff2996ef);
-        }
-        if(!esLocal){
-            tvEquipodeJugador.setTextColor(0xffff8956);
-        }
 
 
-        esRobo = (RadioButton) findViewById(R.id.esRoboJ1);
-        esTapon = (RadioButton) findViewById(R.id.esTaponJ1);
 
         /* CAMBIAR FUENTE DE LOS TEXTOS */
         String font_path_marcador = "fonts/scoreboard.ttf";
@@ -172,6 +167,33 @@ public class Estadisticas extends AppCompatActivity implements View.OnClickListe
 
         esVisitantej1 = false;
         esLocalj1 = false;
+
+        if(esLocal) {
+            tvEquipodeJugador.setTextColor(0xff2996ef);
+            /*tvTextoj1tl.setTextColor(0xff2996ef);
+            tvTextoj1t2.setTextColor(0xff2996ef);
+            tvTextoj1t3.setTextColor(0xff2996ef);
+            tvTextoAsistenciasj1.setTextColor(0xff2996ef);
+            tvTextoRebotesj1.setTextColor(0xff2996ef);
+            esRobo.setTextColor(0xff2996ef);
+            esTapon.setTextColor(0xff2996ef);
+            aciertoJ1TL.setBackground(getDrawable(R.drawable.btn_acierto_accion_eslocal));
+            aciertoJ1T2.setBackground(getDrawable(R.drawable.btn_acierto_accion_eslocal));
+            aciertoJ1T3.setBackground(getDrawable(R.drawable.btn_acierto_accion_eslocal));*/
+        }
+        if(!esLocal){
+            tvEquipodeJugador.setTextColor(0xffff8956);
+            /*tvTextoj1tl.setTextColor(0xffff8956);
+            tvTextoj1t2.setTextColor(0xffff8956);
+            tvTextoj1t3.setTextColor(0xffff8956);
+            tvTextoAsistenciasj1.setTextColor(0xffff8956);
+            tvTextoRebotesj1.setTextColor(0xffff8956);
+            esRobo.setTextColor(0xffff8956);
+            esTapon.setTextColor(0xffff8956);
+            aciertoJ1TL.setBackground(getDrawable(R.drawable.btn_acierto_accion_esvisitante));
+            aciertoJ1T2.setBackground(getDrawable(R.drawable.btn_acierto_accion_esvisitante));
+            aciertoJ1T3.setBackground(getDrawable(R.drawable.btn_acierto_accion_esvisitante));*/
+        }
     }
 
     @Override

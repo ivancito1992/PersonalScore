@@ -5,8 +5,10 @@ package com.example.ivanb.personalscore;
 import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.graphics.Bitmap;
 import android.graphics.PointF;
 import android.os.Bundle;
+import android.os.Environment;
 import android.provider.MediaStore;
 import android.support.v7.app.AppCompatActivity;
 import android.view.MotionEvent;
@@ -17,11 +19,20 @@ import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.Toast;
 
+import java.io.ByteArrayOutputStream;
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.OutputStream;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+
 
 public class JugadasMediaPista extends AppCompatActivity implements View.OnClickListener{
 
     Button borrar, vista, bloquear, guardar, lineaPase, lineaMovimiento, lineaBloqueo, lineaTiro;
-
+    String fecha, ubicacion;
     ImageView num1, num2, num3, num4, num5;
     int modificarX = 20;
     int modificarY = 20;
@@ -63,6 +74,7 @@ public class JugadasMediaPista extends AppCompatActivity implements View.OnClick
         lineaTiro.setOnClickListener(this);
 
         Pintar.negar();
+        ubicacion = Environment.getExternalStorageDirectory().getPath();
 
    }
 
@@ -153,26 +165,19 @@ public class JugadasMediaPista extends AppCompatActivity implements View.OnClick
         }
         if(v.getId()==R.id.guardarJugMedia){
             AlertDialog.Builder saveDialog = new AlertDialog.Builder(this);
-            saveDialog.setTitle("Guardar Imagen");
+            saveDialog.setTitle("Guardar Jugada");
             saveDialog.setMessage("¿Quieres guardar la jugada en la galeria?");
             saveDialog.setPositiveButton("Si", new DialogInterface.OnClickListener(){
                 public void onClick(DialogInterface dialog, int which){
                     //save drawing
                     jugada.setDrawingCacheEnabled(true);
-                    String imgSaved = MediaStore.Images.Media.insertImage(
-                            getContentResolver(), jugada.getDrawingCache(),
-                            "JugadaMediaPista.png", "drawing");
-                    if(imgSaved!=null){
-                        Toast savedToast = Toast.makeText(getApplicationContext(),
-                                "La jugada ha sido guardada en la galeria", Toast.LENGTH_SHORT);
-                        savedToast.show();
-                    }
-                    else{
-                        Toast unsavedToast = Toast.makeText(getApplicationContext(),
-                                "Oops! No se ha podido guardar la jugada", Toast.LENGTH_SHORT);
-                        unsavedToast.show();
-                    }
+                    generarJPG();
                     jugada.destroyDrawingCache();
+                    try {
+                        moverJPG();
+                    } catch (IOException e) {
+                        e.printStackTrace();
+                    }
                 }
             });
             saveDialog.setNegativeButton("Cancelar", new DialogInterface.OnClickListener(){
@@ -181,6 +186,53 @@ public class JugadasMediaPista extends AppCompatActivity implements View.OnClick
                 }
             });
             saveDialog.show();
+        }
+    }
+    public void moverJPG() throws IOException {
+        fecha = new SimpleDateFormat("ddMMyyyy_HHmmss").format(new Date());
+        String nombre = "MediaPista.jpg";
+        final String antiguoDir = ubicacion + File.separator + nombre;
+        File ubicFicheroInnaccesible = new File(antiguoDir);
+        FileInputStream fis = null;
+
+        fis = new FileInputStream(ubicFicheroInnaccesible);
+
+        String nuevoDir = "/storage/sdcard0/JugadasMakingWinners/MediaPista";
+        File ubicFicheroAccesible = new File(nuevoDir);
+        if(!ubicFicheroAccesible.exists()){
+            ubicFicheroAccesible.mkdir();
+        }
+        String aux = nuevoDir+"/MediaPista_"+fecha+".txt";
+        OutputStream ficheroAccesible = new FileOutputStream(aux);
+
+        byte[] buffer = new byte[1024];
+        int length;
+        while((length = fis.read(buffer))> 0){
+            ficheroAccesible.write(buffer,0,length);
+        }
+        ficheroAccesible.flush();
+        ficheroAccesible.close();
+        fis.close();
+        finish();
+    }
+
+    public void generarJPG(){
+        fecha = new SimpleDateFormat("ddMMyyyy_HHmmss").format(new Date());
+        Bitmap b = Bitmap.createBitmap(jugada.getDrawingCache());
+        jugada.setDrawingCacheEnabled(false);
+        ByteArrayOutputStream bytes = new ByteArrayOutputStream();
+        b.compress(Bitmap.CompressFormat.JPEG,100,bytes);
+        String aux = "MediaPista.jpg";
+        File f = new File(ubicacion + File.separator + aux);
+
+        try{
+            f.createNewFile();
+            FileOutputStream fo = new FileOutputStream(f);
+            fo.write(bytes.toByteArray());
+            fo.close();
+        }
+        catch (Exception e){
+
         }
     }
 }

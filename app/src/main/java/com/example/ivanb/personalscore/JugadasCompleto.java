@@ -187,6 +187,9 @@ public class JugadasCompleto extends AppCompatActivity implements View.OnClickLi
                     } catch (IOException e) {
                         e.printStackTrace();
                     }
+                    Toast savedToast = Toast.makeText(getApplicationContext(),
+                            "La jugada ha sido guardada en la galeria", Toast.LENGTH_SHORT);
+                    savedToast.show();
                     finish();
                 }
             });
@@ -214,7 +217,7 @@ public class JugadasCompleto extends AppCompatActivity implements View.OnClickLi
         }
 
         String nuevoDir2 = "/storage/sdcard0/Pictures/JugadasMakingWinners/PistaCompleta";
-        File ubicFicheroAccesible2 = new File(nuevoDir);
+        File ubicFicheroAccesible2 = new File(nuevoDir2);
         if(!ubicFicheroAccesible2.exists()){
             ubicFicheroAccesible2.mkdir();
         }
@@ -230,9 +233,7 @@ public class JugadasCompleto extends AppCompatActivity implements View.OnClickLi
         ficheroAccesible.flush();
         ficheroAccesible.close();
         fis.close();
-        Toast savedToast = Toast.makeText(getApplicationContext(),
-                "La jugada ha sido guardada en la galeria", Toast.LENGTH_SHORT);
-        savedToast.show();
+
     }
 
     public void generarJPG(){

@@ -115,6 +115,7 @@ public class SeleccionNombre extends AppCompatActivity implements View.OnClickLi
                     i.putExtra("boolsej", esLocal);
                     i.putExtra("sej", cadenaEquipo);
                     startActivity(i);
+                    finish();
                     break;
                 }
         }

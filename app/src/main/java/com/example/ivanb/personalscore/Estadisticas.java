@@ -549,7 +549,6 @@ public class Estadisticas extends AppCompatActivity implements View.OnClickListe
                         Toast t = Toast.makeText(getApplicationContext(), "El resultado se ha guardado", Toast.LENGTH_SHORT);
                         t.show();
                         finish();
-
                     }
                 });
                 saveDialog.setNegativeButton("Cancelar", new DialogInterface.OnClickListener() {
@@ -562,25 +561,33 @@ public class Estadisticas extends AppCompatActivity implements View.OnClickListe
     }
     public void generarTXT(){
         nombreFichero = "Partido.txt";
-        puntosLocal = "La puntuacion del equipo "+tvEquipoLocal.getText().toString()+" ha sido: "+Integer.toString(marcadorLocal);
-        puntosVisitante = "La puntuacion del equipo "+tvEquipoVisitante.getText().toString()+" ha sido: "+Integer.toString(marcadorVisitante);
+        puntosLocal = "La puntuacion del equipo "+tvEquipoLocal.getText().toString()
+                +" ha sido: "+Integer.toString(marcadorLocal);
+        puntosVisitante = "La puntuacion del equipo "+tvEquipoVisitante.getText().toString()
+                +" ha sido: "+Integer.toString(marcadorVisitante);
         if(esLocal){
-            puntosJugador =  "La puntuacion de "+tvJugador1.getText().toString()+" que juega en el equipo "+tvEquipoLocal.getText().toString()+" es de: "+Integer.toString(puntosJ1);
+            puntosJugador =  "La puntuacion de "+tvJugador1.getText().toString()+" que juega en el equipo "
+                    +tvEquipoLocal.getText().toString()+" es de: "+Integer.toString(puntosJ1);
         }
         if(!esLocal){
-            puntosJugador =  "La puntuacion de "+tvJugador1.getText().toString()+" que juega en el equipo "+tvEquipoVisitante.getText().toString()+" es de: "+Integer.toString(puntosJ1);
+            puntosJugador =  "La puntuacion de "+tvJugador1.getText().toString()+" que juega en el equipo "
+                    +tvEquipoVisitante.getText().toString()+" es de: "+Integer.toString(puntosJ1);
         }
 
-        stats1 = "Desde la linea de tiros libres sus estadisticas han sido: "+Integer.toString(contadorAciertosJ1TL)+" / "+Integer.toString(contadorTiradosJ1TL);
-        stats2 = "En canastas de dos puntos, sus estadisticas han sido: "+Integer.toString(contadorAciertosJ1T2)+" / "+Integer.toString(contadorTiradosJ1T2);
-        stats3 = "Desde la linea de tres puntos sus estadisticas han sido: "+Integer.toString(contadorAciertosJ1T3)+" / "+Integer.toString(contadorTiradosJ1T3);
+        stats1 = "Desde la linea de tiros libres sus estadisticas han sido: "
+                +Integer.toString(contadorAciertosJ1TL)+" / "+Integer.toString(contadorTiradosJ1TL);
+        stats2 = "En canastas de dos puntos, sus estadisticas han sido: "
+                +Integer.toString(contadorAciertosJ1T2)+" / "+Integer.toString(contadorTiradosJ1T2);
+        stats3 = "Desde la linea de tres puntos sus estadisticas han sido: "
+                +Integer.toString(contadorAciertosJ1T3)+" / "+Integer.toString(contadorTiradosJ1T3);
         statsAsistencias = "Ha repartido un total de: "+Integer.toString(contadorAsistenciasJ1)+" asistencia/s";
         statsRebotes = "Ha cogido un total de: "+Integer.toString(contadorRebotesJ1)+" rebote/s";
         statsRobos = "Ha conseguido: "+Integer.toString(contadorRobosJ1)+" robo/s";
         statsTapones = "Y ha puesto un total de: "+Integer.toString(contadorTaponesJ1)+" tapon/es";
 
         textoEquipos = puntosLocal+"\r\n"+puntosVisitante+"\r\n"+"--------------------------------------"+"\r\n";
-        textoJugador = puntosJugador+"\r\n"+stats1+"\r\n"+stats2+"\r\n"+stats3+"\r\n"+statsAsistencias+"\r\n"+statsRebotes+"\r\n"+statsRobos+"\r\n"+statsTapones;
+        textoJugador = puntosJugador+"\r\n"+stats1+"\r\n"+stats2+"\r\n"+stats3+"\r\n"
+                +statsAsistencias+"\r\n"+statsRebotes+"\r\n"+statsRobos+"\r\n"+statsTapones;
         try {
             OutputStreamWriter file = new OutputStreamWriter(openFileOutput(nombreFichero, Activity.MODE_PRIVATE));
             file.write(textoEquipos);
@@ -595,7 +602,7 @@ public class Estadisticas extends AppCompatActivity implements View.OnClickListe
         fecha = new SimpleDateFormat("ddMMyyyy_HHmmss").format(new Date());
         final String antiguoDir = "/data/data/com.example.ivanb.personalscore/files/Partido.txt";
         File ubicFicheroInnaccesible = new File(antiguoDir);
-        FileInputStream fis = null;
+        FileInputStream fis;
 
         fis = new FileInputStream(ubicFicheroInnaccesible);
 

@@ -32,7 +32,7 @@ import java.util.Date;
 public class JugadasMediaPista extends AppCompatActivity implements View.OnClickListener{
 
     Button borrar, vista, bloquear, guardar, lineaPase, lineaMovimiento, lineaBloqueo, lineaTiro;
-    String fecha, ubicacion;
+    String fecha, ubicacion, u2;
     ImageView num1, num2, num3, num4, num5;
     int modificarX = 20;
     int modificarY = 20;
@@ -75,6 +75,8 @@ public class JugadasMediaPista extends AppCompatActivity implements View.OnClick
 
         Pintar.negar();
         ubicacion = Environment.getExternalStorageDirectory().getPath();
+
+
 
    }
 
@@ -178,6 +180,8 @@ public class JugadasMediaPista extends AppCompatActivity implements View.OnClick
                     } catch (IOException e) {
                         e.printStackTrace();
                     }
+                    finish();
+
                 }
             });
             saveDialog.setNegativeButton("Cancelar", new DialogInterface.OnClickListener(){
@@ -190,22 +194,21 @@ public class JugadasMediaPista extends AppCompatActivity implements View.OnClick
     }
     public void moverJPG() throws IOException {
         fecha = new SimpleDateFormat("ddMMyyyy_HHmmss").format(new Date());
-        String nombre = "MediaPista.jpg";
-        final String antiguoDir = ubicacion + File.separator + nombre;
+        final String antiguoDir = "/storage/sdcard0/jugadaMP.jpg";
         File ubicFicheroInnaccesible = new File(antiguoDir);
         FileInputStream fis = null;
 
         fis = new FileInputStream(ubicFicheroInnaccesible);
 
-        String nuevoDir = "/storage/sdcard0/JugadasMakingWinners/MediaPista";
+        String nuevoDir = "/storage/sdcard0/JugadasMakingWinners";
         File ubicFicheroAccesible = new File(nuevoDir);
         if(!ubicFicheroAccesible.exists()){
             ubicFicheroAccesible.mkdir();
         }
-        String aux = nuevoDir+"/MediaPista_"+fecha+".txt";
+        String aux = nuevoDir+"/MediaPista_"+fecha+".jpg";
         OutputStream ficheroAccesible = new FileOutputStream(aux);
 
-        byte[] buffer = new byte[1024];
+        byte[] buffer = new byte[4096];
         int length;
         while((length = fis.read(buffer))> 0){
             ficheroAccesible.write(buffer,0,length);
@@ -213,7 +216,6 @@ public class JugadasMediaPista extends AppCompatActivity implements View.OnClick
         ficheroAccesible.flush();
         ficheroAccesible.close();
         fis.close();
-        finish();
     }
 
     public void generarJPG(){
@@ -222,17 +224,15 @@ public class JugadasMediaPista extends AppCompatActivity implements View.OnClick
         jugada.setDrawingCacheEnabled(false);
         ByteArrayOutputStream bytes = new ByteArrayOutputStream();
         b.compress(Bitmap.CompressFormat.JPEG,100,bytes);
-        String aux = "MediaPista.jpg";
-        File f = new File(ubicacion + File.separator + aux);
+        File f = new File(Environment.getExternalStorageDirectory() + File.separator + "jugadaMP.jpg");
 
         try{
             f.createNewFile();
-            FileOutputStream fo = new FileOutputStream(f);
+            OutputStream fo = new FileOutputStream(f);
             fo.write(bytes.toByteArray());
             fo.close();
         }
-        catch (Exception e){
+        catch (Exception e){}
 
-        }
     }
 }

@@ -196,16 +196,23 @@ public class JugadasMediaPista extends AppCompatActivity implements View.OnClick
         fecha = new SimpleDateFormat("ddMMyyyy_HHmmss").format(new Date());
         final String antiguoDir = "/storage/sdcard0/jugadaMP.jpg";
         File ubicFicheroInnaccesible = new File(antiguoDir);
-        FileInputStream fis = null;
+        FileInputStream fis;
 
         fis = new FileInputStream(ubicFicheroInnaccesible);
 
-        String nuevoDir = "/storage/sdcard0/JugadasMakingWinners";
+        String nuevoDir = "/storage/sdcard0/Pictures/JugadasMakingWinners";
         File ubicFicheroAccesible = new File(nuevoDir);
         if(!ubicFicheroAccesible.exists()){
             ubicFicheroAccesible.mkdir();
         }
-        String aux = nuevoDir+"/MediaPista_"+fecha+".jpg";
+
+        String nuevoDir2 = "/storage/sdcard0/Pictures/JugadasMakingWinners/MediaPista";
+        File ubicFicheroAccesible2 = new File(nuevoDir);
+        if(!ubicFicheroAccesible2.exists()){
+            ubicFicheroAccesible2.mkdir();
+        }
+
+        String aux = nuevoDir2+"/MediaPista_"+fecha+".jpg";
         OutputStream ficheroAccesible = new FileOutputStream(aux);
 
         byte[] buffer = new byte[4096];
@@ -216,6 +223,9 @@ public class JugadasMediaPista extends AppCompatActivity implements View.OnClick
         ficheroAccesible.flush();
         ficheroAccesible.close();
         fis.close();
+        Toast savedToast = Toast.makeText(getApplicationContext(),
+                "La jugada ha sido guardada en la galeria", Toast.LENGTH_SHORT);
+        savedToast.show();
     }
 
     public void generarJPG(){

@@ -5,31 +5,47 @@
     android:background="@drawable/fondo_stats_full">
 
 
-    <Button
+    <LinearLayout
+        android:orientation="horizontal"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:text="@string/buscarJugadas"
-        android:id="@+id/cargarImagen"
-        android:background="@drawable/btn_deshacer"
-        android:textColor="@color/colorLetraBtn"
-        android:textSize="30sp"
-        android:layout_weight="2" />
+        android:layout_weight="12">
 
-    <ImageView
-        android:layout_width="wrap_content"
-        android:layout_height="0dp"
-        android:id="@+id/visorJugada"
-        android:layout_weight="10"
-        android:layout_gravity="center" />
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:text="@string/buscarJugadas"
+            android:id="@+id/cargarImagen"
+            android:background="@drawable/btn_deshacer"
+            android:textColor="@color/colorLetraBtn"
+            android:textSize="25sp"
+            android:layout_weight="2"
+            android:longClickable="false"
+            android:singleLine="false"
+            android:textAlignment="center" />
 
-    <Button
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:id="@+id/visorJugada"
+            android:layout_weight="14"
+            android:layout_gravity="center" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:text="@string/volver"
-        android:id="@+id/volver"
-        android:layout_gravity="center_horizontal"
-        android:layout_weight="2"
-        android:textColor="@color/colorLetraBtn"
-        android:textSize="30sp"
-        android:background="@drawable/btn_deshacer" />
+        android:layout_weight="2">
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="@string/volver"
+            android:id="@+id/volver"
+            android:layout_gravity="center_horizontal"
+            android:textColor="@color/colorLetraBtn"
+            android:textSize="30sp"
+            android:background="@drawable/btn_deshacer" />
+    </LinearLayout>
 </LinearLayout>

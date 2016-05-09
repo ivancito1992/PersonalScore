@@ -1,8 +1,6 @@
 package com.example.ivanb.personalscore;
 
 import android.content.Intent;
-import android.graphics.Bitmap;
-import android.net.Uri;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
@@ -48,7 +46,7 @@ public class SeleccionJugadas extends AppCompatActivity implements View.OnClickL
             startActivity(new Intent(SeleccionJugadas.this, JugadasMediaPista.class));
         }
         if(v.getId()==R.id.verJugadas){
-            startActivity(new Intent(SeleccionJugadas.this, VerJugadas.class));
+            startActivity(new Intent(SeleccionJugadas.this, VisorJugadas.class));
         }
         if(v.getId()==R.id.volver){
             startActivity(new Intent(SeleccionJugadas.this, MenuInicial.class));

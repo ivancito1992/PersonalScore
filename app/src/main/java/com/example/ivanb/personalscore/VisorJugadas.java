@@ -12,7 +12,7 @@ import android.widget.Button;
 import android.widget.ImageView;
 
 
-public class verJugadas extends AppCompatActivity {
+public class VisorJugadas extends AppCompatActivity {
 
     private AlertDialog _photoDialog;
     private Uri mImageUri;

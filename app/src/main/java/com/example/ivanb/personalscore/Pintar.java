@@ -91,6 +91,7 @@ public class Pintar extends View {
         drawPaint.setAntiAlias(true);
         drawPaint.setColor(0x00000000);
         canvasPaint = new Paint(Paint.DITHER_FLAG);
+        negar();
     }
 
     public static void negar(){
@@ -138,7 +139,7 @@ public class Pintar extends View {
         negar();
         drawPath = new Path();
         drawPaint = new Paint();
-        drawPaint.setColor(0xff770000);
+        drawPaint.setColor(0xffff5e00);
 
         drawPaint.setAntiAlias(true);
         drawPaint.setStrokeWidth(7);

@@ -566,7 +566,7 @@ public class Estadisticas extends AppCompatActivity implements View.OnClickListe
         puntosVisitante = "La puntuacion del equipo "+tvEquipoVisitante.getText().toString()
                 +" ha sido: "+Integer.toString(marcadorVisitante);
         if(esLocal){
-            puntosJugador =  "La puntuacion de "+tvJugador1.getText().toString()+" que juega en el equipo "
+            puntosJugador =  "La puntuacion de "+tvJugador1.getText().toString()+", que juega en el equipo "
                     +tvEquipoLocal.getText().toString()+" es de: "+Integer.toString(puntosJ1);
         }
         if(!esLocal){

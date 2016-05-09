@@ -42,7 +42,7 @@
     <color name="marcoBtnEquipos">#b4000000</color>
 
     <color name="colorTrazoNormal">#ff0000</color>
-    <color name="colorTrazoBloqueo">#770000</color>
+    <color name="colorTrazoBloqueo">#ff5e00</color>
     <color name="colorTrazoPase">#00ffff</color>
     <color name="colorTrazoTiro">#00cc00</color>
     <color name="fondoJugadas">#434343</color>

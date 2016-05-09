@@ -101,4 +101,12 @@ public class VisorJugadas extends AppCompatActivity {
     private void setImage(Bitmap bitmap){
         jugadaViewer.setImageBitmap(bitmap);
     }
+
+    public void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+        if (requestCode == ACTIVITY_SELECT_IMAGE && resultCode == RESULT_OK) {
+            mImageUri = data.getData();
+            getImage(mImageUri);
+        }
+    }
 }

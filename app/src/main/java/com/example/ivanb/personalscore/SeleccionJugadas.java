@@ -17,8 +17,8 @@ public class SeleccionJugadas extends AppCompatActivity implements View.OnClickL
         super.onCreate(savedInstanceState);
         setContentView(R.layout.seleccion_jugadas);
 
-        verJugada = (Button) findViewById(R.id.tutEstadisticas);
-        crearJugadas = (Button) findViewById(R.id.tutJugadas);
+        verJugada = (Button) findViewById(R.id.verJugadas);
+        crearJugadas = (Button) findViewById(R.id.crearJugadas);
         volver = (Button) findViewById(R.id.volver);
 
         volver.setOnClickListener(this);
@@ -48,7 +48,7 @@ public class SeleccionJugadas extends AppCompatActivity implements View.OnClickL
             startActivity(new Intent(SeleccionJugadas.this, JugadasMediaPista.class));
         }
         if(v.getId()==R.id.verJugadas){
-            startActivity(new Intent(SeleccionJugadas.this, TutorialJugadas.class));
+            startActivity(new Intent(SeleccionJugadas.this, VerJugadas.class));
         }
         if(v.getId()==R.id.volver){
             startActivity(new Intent(SeleccionJugadas.this, MenuInicial.class));

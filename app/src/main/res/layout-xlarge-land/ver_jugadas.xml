@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/fondo_stats_full">
+
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:text="@string/buscarJugadas"
+        android:id="@+id/cargarImagen"
+        android:background="@drawable/btn_deshacer"
+        android:textColor="@color/colorLetraBtn"
+        android:textSize="40sp"
+        android:layout_weight="2" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:id="@+id/visorJugada"
+        android:layout_weight="10"
+        android:layout_gravity="center" />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:text="@string/volver"
+        android:id="@+id/volver"
+        android:layout_gravity="center_horizontal"
+        android:layout_weight="2"
+        android:textColor="@color/colorLetraBtn"
+        android:textSize="40sp"
+        android:background="@drawable/btn_deshacer" />
+</LinearLayout>

@@ -59,6 +59,9 @@
     <string name="trazoTiro">Linea de tiro</string>
     <string name="jugada5">5</string>
     <string name="guardar">Guardar Jugada</string>
+    <string name="verJugadas">Ver jugadas</string>
+    <string name="crearJugadas">Crear jugadas</string>
+    <string name="buscarJugadas">Buscar jugada</string>
 
     <!-- TEXTO PARA CLASES JAVA -->
     <string name="iconosFijados">Iconos Fijos</string>

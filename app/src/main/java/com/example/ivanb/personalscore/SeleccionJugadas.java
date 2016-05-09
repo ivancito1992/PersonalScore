@@ -1,28 +1,32 @@
 package com.example.ivanb.personalscore;
 
 import android.content.Intent;
+import android.graphics.Bitmap;
+import android.net.Uri;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
 
 
-public class SeleccionTutorial extends AppCompatActivity implements View.OnClickListener {
+public class SeleccionJugadas extends AppCompatActivity implements View.OnClickListener {
 
-    Button estadisticas, jugadas, volver;
+    Button verJugada, crearJugadas, volver;
 
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.seleccion_tutorial);
+        setContentView(R.layout.seleccion_jugadas);
 
-        estadisticas = (Button) findViewById(R.id.tutEstadisticas);
-        jugadas = (Button) findViewById(R.id.tutJugadas);
+        verJugada = (Button) findViewById(R.id.tutEstadisticas);
+        crearJugadas = (Button) findViewById(R.id.tutJugadas);
         volver = (Button) findViewById(R.id.volver);
 
         volver.setOnClickListener(this);
-        estadisticas.setOnClickListener(this);
-        jugadas.setOnClickListener(this);
+        verJugada.setOnClickListener(this);
+        crearJugadas.setOnClickListener(this);
+
     }
+
 
     @Override
     public void onWindowFocusChanged(boolean hasfocus){
@@ -40,14 +44,14 @@ public class SeleccionTutorial extends AppCompatActivity implements View.OnClick
 
     @Override
     public void onClick(View v) {
-        if(v.getId()==R.id.tutEstadisticas){
-            startActivity(new Intent(SeleccionTutorial.this, TutorialEstadisticas.class));
+        if(v.getId()==R.id.crearJugadas){
+            startActivity(new Intent(SeleccionJugadas.this, JugadasMediaPista.class));
         }
-        if(v.getId()==R.id.tutJugadas){
-            startActivity(new Intent(SeleccionTutorial.this, TutorialJugadas.class));
+        if(v.getId()==R.id.verJugadas){
+            startActivity(new Intent(SeleccionJugadas.this, TutorialJugadas.class));
         }
         if(v.getId()==R.id.volver){
-            startActivity(new Intent(SeleccionTutorial.this, MenuInicial.class));
+            startActivity(new Intent(SeleccionJugadas.this, MenuInicial.class));
             finish();
         }
 

@@ -38,7 +38,7 @@ public class VisorJugadas extends AppCompatActivity implements View.OnClickListe
         if (Intent.ACTION_SEND.equals(action) && type != null) {
             if ("text/plain".equals(type)) {
                 fromShare = true;
-            } else if (type.startsWith("image/")) {
+            } else if (type.startsWith("JugadasMakingWinners/")) {
                 fromShare = true;
                 mImageUri = intent
                         .getParcelableExtra(Intent.EXTRA_STREAM);

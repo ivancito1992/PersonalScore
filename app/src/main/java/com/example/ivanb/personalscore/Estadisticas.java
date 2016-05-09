@@ -599,7 +599,10 @@ public class Estadisticas extends AppCompatActivity implements View.OnClickListe
         }
     }
     public void moverTXT() throws IOException{
-        fecha = new SimpleDateFormat("ddMMyyyy_HHmmss").format(new Date());
+        fecha = new SimpleDateFormat("ddMMyyyy").format(new Date());
+        String local, visitante;
+        local = tvEquipoLocal.getText().toString();
+        visitante = tvEquipoVisitante.getText().toString();
         final String antiguoDir = "/data/data/com.example.ivanb.personalscore/files/Partido.txt";
         File ubicFicheroInnaccesible = new File(antiguoDir);
         FileInputStream fis;
@@ -611,7 +614,7 @@ public class Estadisticas extends AppCompatActivity implements View.OnClickListe
         if(!ubicFicheroAccesible.exists()){
             ubicFicheroAccesible.mkdir();
         }
-        String aux = nuevoDir+"/Partido_"+fecha+".txt";
+        String aux = nuevoDir+"/"+local+" VS "+visitante+"_"+fecha+".txt";
         OutputStream ficheroAccesible = new FileOutputStream(aux);
 
         byte[] buffer = new byte[1024];

@@ -28,7 +28,6 @@ public class verJugadas extends AppCompatActivity {
         setContentView(R.layout.ver_jugadas);
 
         photoUtils = new PhotoUtils(this);
-        // Get intent, action and MIME type
         Intent intent = getIntent();
         String action = intent.getAction();
         String type = intent.getType();

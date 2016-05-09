@@ -12,7 +12,7 @@ import android.widget.Button;
 import android.widget.ImageView;
 
 
-public class VisorJugadas extends AppCompatActivity {
+public class VisorJugadas extends AppCompatActivity implements View.OnClickListener{
 
     private AlertDialog _photoDialog;
     private Uri mImageUri;
@@ -21,11 +21,15 @@ public class VisorJugadas extends AppCompatActivity {
     private Button cargarImagen;
     private ImageView jugadaViewer;
     boolean fromShare;
+    Button volver;
 
 
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.ver_jugadas);
+
+        volver = (Button) findViewById(R.id.volver);
+        volver.setOnClickListener(this);
 
         photoUtils = new PhotoUtils(this);
         Intent intent = getIntent();
@@ -73,8 +77,8 @@ public class VisorJugadas extends AppCompatActivity {
         if (_photoDialog == null) {
             AlertDialog.Builder builder = new AlertDialog.Builder(this);
             builder.setTitle("Ver Jugadas");
-
-            builder.setNegativeButton("Galeria", new DialogInterface.OnClickListener() {
+            builder.setMessage("¿Quieres buscar y cargar la jugada desde la galeria?");
+            builder.setPositiveButton("Si", new DialogInterface.OnClickListener() {
 
                 @Override
                 public void onClick(DialogInterface dialog, int which) {
@@ -83,6 +87,11 @@ public class VisorJugadas extends AppCompatActivity {
                     startActivityForResult(galleryIntent, ACTIVITY_SELECT_IMAGE);
                 }
 
+            });
+            builder.setNegativeButton("Cancelar", new DialogInterface.OnClickListener(){
+                public void onClick(DialogInterface dialog, int which){
+                    dialog.cancel();
+                }
             });
             _photoDialog = builder.create();
 
@@ -107,6 +116,13 @@ public class VisorJugadas extends AppCompatActivity {
         if (requestCode == ACTIVITY_SELECT_IMAGE && resultCode == RESULT_OK) {
             mImageUri = data.getData();
             getImage(mImageUri);
+        }
+    }
+
+    public void onClick(View v) {
+        if (v.getId() == R.id.volver) {
+            startActivity(new Intent(VisorJugadas.this, SeleccionJugadas.class));
+            finish();
         }
     }
 }

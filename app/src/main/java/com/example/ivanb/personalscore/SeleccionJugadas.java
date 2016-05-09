@@ -44,9 +44,11 @@ public class SeleccionJugadas extends AppCompatActivity implements View.OnClickL
     public void onClick(View v) {
         if(v.getId()==R.id.crearJugadas){
             startActivity(new Intent(SeleccionJugadas.this, JugadasMediaPista.class));
+            finish();
         }
         if(v.getId()==R.id.verJugadas){
             startActivity(new Intent(SeleccionJugadas.this, VisorJugadas.class));
+            finish();
         }
         if(v.getId()==R.id.volver){
             startActivity(new Intent(SeleccionJugadas.this, MenuInicial.class));

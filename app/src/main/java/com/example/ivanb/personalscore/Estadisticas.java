@@ -614,7 +614,7 @@ public class Estadisticas extends AppCompatActivity implements View.OnClickListe
         if(!ubicFicheroAccesible.exists()){
             ubicFicheroAccesible.mkdir();
         }
-        String aux = nuevoDir+"/"+local+" VS "+visitante+"_"+fecha+".txt";
+        String aux = nuevoDir+"/"+local+" VS "+visitante+" "+fecha+".txt";
         OutputStream ficheroAccesible = new FileOutputStream(aux);
 
         byte[] buffer = new byte[1024];

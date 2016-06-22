@@ -103,7 +103,6 @@ public class JugadasCompleto extends AppCompatActivity implements View.OnClickLi
     }
 
     View.OnTouchListener handlerMover = new View.OnTouchListener(){
-
         @Override
         public boolean onTouch(View v, MotionEvent event) {
             PointF DownPT = new PointF();
